@@ -1,0 +1,112 @@
+name: Generate Test Summaries
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: generate-summaries
+  cancel-in-progress: true
+
+jobs:
+  generate-summaries:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: main
+        token: ${{ secrets.ACCESS_TOKEN }}
+    - name: Configure Git
+      run: |
+        git config --global user.name "apicurio-ci"
+        git config --global user.email "apicurio.ci@gmail.com"
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Find directories without index.html
+      id: find-dirs
+      run: |
+        # Find all subdirectories that don't have an index.html file
+        directories=()
+        for dir in */; do
+          if [ -d "$dir" ] && [ ! -f "${dir}index.html" ]; then
+            # Remove trailing slash
+            dir_name=${dir%/}
+            # Check if directory name matches workflow pattern (YYYY-MM-DD-RUNID)
+            if [[ $dir_name =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]+$ ]]; then
+              directories+=("$dir_name")
+            fi
+          fi
+        done
+        
+        # Convert array to JSON for output
+        if [ ${#directories[@]} -eq 0 ]; then
+          echo "directories=[]" >> $GITHUB_OUTPUT
+          echo "has_directories=false" >> $GITHUB_OUTPUT
+        else
+          # Create JSON array
+          json_dirs=$(printf ',"%s"' "${directories[@]}")
+          json_dirs="[${json_dirs:1}]"
+          echo "directories=$json_dirs" >> $GITHUB_OUTPUT
+          echo "has_directories=true" >> $GITHUB_OUTPUT
+        fi
+        
+        echo "Found directories without index.html: ${directories[*]}"
+        
+    - name: Generate workflow summaries
+      if: steps.find-dirs.outputs.has_directories == 'true'
+      run: |
+        # Parse the JSON array of directories
+        directories='${{ steps.find-dirs.outputs.directories }}'
+        echo "Processing directories: $directories"
+        
+        # Process each directory
+        echo "$directories" | jq -r '.[]' | while read -r dir; do
+          if [ -d "$dir" ]; then
+            echo "Generating summary for directory: $dir"
+            python3 generate-workflow-summary.py "$dir"
+            if [ $? -eq 0 ]; then
+              echo "✅ Successfully generated summary for $dir"
+            else
+              echo "❌ Failed to generate summary for $dir"
+            fi
+          else
+            echo "⚠️  Directory $dir not found, skipping"
+          fi
+        done
+        
+    - name: Update main index
+      run: |
+        echo "Running update-index.py script..."
+        python3 update-index.py
+        if [ $? -eq 0 ]; then
+          echo "✅ Successfully updated main index"
+        else
+          echo "❌ Failed to update main index"
+          exit 1
+        fi
+        
+    - name: Check for changes
+      id: check-changes
+      run: |
+        if git diff --quiet; then
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+          echo "No changes detected"
+        else
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          echo "Changes detected:"
+          git diff --name-only
+        fi
+        
+    - name: Commit and push changes
+      if: steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        git add .
+        git commit -m "Auto-generate test summaries and update index [skip ci]"
+        git push
