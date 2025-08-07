@@ -29,13 +29,13 @@ jobs:
       with:
         python-version: '3.9'
         
-    - name: Find directories without index.html
+    - name: Find all test result directories
       id: find-dirs
       run: |
-        # Find all subdirectories that don't have an index.html file
+        # Find all subdirectories that match the workflow pattern
         directories=()
         for dir in */; do
-          if [ -d "$dir" ] && [ ! -f "${dir}index.html" ]; then
+          if [ -d "$dir" ]; then
             # Remove trailing slash
             dir_name=${dir%/}
             # Check if directory name matches workflow pattern (YYYY-MM-DD-RUNID)
@@ -57,7 +57,7 @@ jobs:
           echo "has_directories=true" >> $GITHUB_OUTPUT
         fi
         
-        echo "Found directories without index.html: ${directories[*]}"
+        echo "Found test result directories: ${directories[*]}"
         
     - name: Generate workflow summaries
       if: steps.find-dirs.outputs.has_directories == 'true'
