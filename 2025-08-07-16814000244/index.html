@@ -287,7 +287,7 @@
         
         <div class="summary-cards">
             <div class="card success">
-                <div class="card-number">6</div>
+                <div class="card-number">7</div>
                 <div class="card-label">Integration Test Jobs</div>
             </div>
             <div class="card info">
@@ -299,7 +299,7 @@
                 <div class="card-label">Security Scan Jobs</div>
             </div>
             <div class="card danger">
-                <div class="card-number">441/450</div>
+                <div class="card-number">540/551</div>
                 <div class="card-label">Integration Tests Passed</div>
             </div>
         </div>
@@ -309,6 +309,140 @@
             <div class="section">
                 <h2 class="section-title">Integration Tests</h2>
                 <div class="job-grid">
+
+                    <div class="job-card">
+                        <div class="job-header expandable" onclick="toggleDetails('os419_strimzi043_integrationtests_integration')">
+                            <div>
+                                <div class="job-title">os419_strimzi043_integrationtests</div>
+                                <div class="job-config">Integration Tests on OpenShift 4.19 with Strimzi Kafka 0.04.3</div>
+                            </div>
+                            <span class="status-badge status-passed">passed</span>
+                        </div>
+                        <div class="job-content">
+                            <div class="test-results">
+                                <div class="test-stat">
+                                    <div class="test-stat-number total">101</div>
+                                    <div class="test-stat-label">Total</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number passed">99</div>
+                                    <div class="test-stat-label">Passed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number failed">0</div>
+                                    <div class="test-stat-label">Failed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number skipped">2</div>
+                                    <div class="test-stat-label">Skipped</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="os419_strimzi043_integrationtests_integration" class="details">
+                            <h4>Test Suites:</h4>
+                            <div class="suite-list">
+
+                                <div class="suite-item">
+                                    <span class="suite-name">SchemasConfluentIT</span>
+                                    <span class="suite-stats passed">
+                                        9/9 passed (7.2s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">AvroNatsSerdeIT</span>
+                                    <span class="suite-stats passed">
+                                        1/1 passed (2.4s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">RulesResourceConfluentIT</span>
+                                    <span class="suite-stats passed">
+                                        1/1 passed (0.6s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">BasicConfluentSerDesIT</span>
+                                    <span class="suite-stats passed">
+                                        8/8 passed (38.9s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">AvroPulsarSerdeIT</span>
+                                    <span class="suite-stats passed">
+                                        1/1 passed (25.5s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">MetadataConfluentIT</span>
+                                    <span class="suite-stats passed">
+                                        1/1 passed (0.4s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">JsonSchemaSerdeIT</span>
+                                    <span class="suite-stats passed">
+                                        6/6 passed (20.6s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">RulesResourceIT</span>
+                                    <span class="suite-stats passed">
+                                        5/5 passed (9.4s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">AllArtifactTypesIT</span>
+                                    <span class="suite-stats passed">
+                                        7/7 passed (24.4s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">ProtobufSerdeIT</span>
+                                    <span class="suite-stats passed">
+                                        17/17 passed (58.2s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">MetadataIT</span>
+                                    <span class="suite-stats passed">
+                                        2/2 passed (3.5s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">RegistryConverterIT</span>
+                                    <span class="suite-stats passed">
+                                        9/9 passed (10.0s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">ArtifactsIT</span>
+                                    <span class="suite-stats passed">
+                                        13/13 passed (36.4s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">AvroSerdeIT</span>
+                                    <span class="suite-stats passed">
+                                        19/21 passed (103.4s)
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="job-card">
                         <div class="job-header expandable" onclick="toggleDetails('os419_pg12_integrationtests_integration')">
@@ -1809,9 +1943,9 @@
         </div>
         
         <div class="footer">
-            <p>Generated on 2025-08-07 20:39:30 | 
+            <p>Generated on 2025-08-07 20:40:48 | 
             Workflow Run ID: 16814000244 | 
-            Total Jobs: 13</p>
+            Total Jobs: 14</p>
         </div>
     </div>
     
