@@ -297,7 +297,7 @@ python generate-workflow-summary.py &lt;workflow-name&gt;
         </div>
         
         <div class="footer">
-            <p>Apicurio Registry Quality Engineering | Last updated: 2025-08-06 16:12:44 | Auto-generated from directory scan</p>
+            <p>Apicurio Registry Quality Engineering | Last updated: 2025-08-07 13:01:44 | Auto-generated from directory scan</p>
         </div>
     </div>
     
@@ -310,15 +310,11 @@ python generate-workflow-summary.py &lt;workflow-name&gt;
             // This is a static list - in practice, this would be generated server-side
             // or the directories would be scanned dynamically
             const workflowDirectories = [
+                '2025-08-07-16803119767',
                 '2025-08-06-16784598619',
                 '2025-08-06-16780041188',
                 '2025-08-05-16756786569',
-                '2025-08-05-16755050560',
-                '2025-07-31-16658524629',
-                '2025-07-31-16655637916',
-                '2025-07-31-16654129399',
-                '2025-07-31-16651820908',
-                '2025-07-31-16637496194'
+                '2025-08-05-16755050560'
             ];
             
             workflowDirectories.forEach(dir => {
@@ -351,7 +347,7 @@ python generate-workflow-summary.py &lt;workflow-name&gt;
         function checkForIndex(workflowName) {
             // In a real implementation, this would check if index.html exists
             // For now, we'll simulate based on recent workflows
-            return ['2025-08-06-16784598619', '2025-08-06-16780041188', '2025-08-05-16756786569', '2025-08-05-16755050560', '2025-07-31-16658524629', '2025-07-31-16655637916', '2025-07-31-16654129399', '2025-07-31-16651820908', '2025-07-31-16637496194'].includes(workflowName);
+            return ['2025-08-07-16803119767', '2025-08-06-16784598619', '2025-08-06-16780041188', '2025-08-05-16756786569', '2025-08-05-16755050560'].includes(workflowName);
         }
         
         function estimateJobCount(workflowName) {
