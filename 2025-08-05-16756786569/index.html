@@ -239,6 +239,17 @@
             font-size: 0.9em;
         }
         
+        .suite-name a {
+            color: #dc3545;
+            text-decoration: none;
+            border-bottom: 1px dotted #dc3545;
+        }
+        
+        .suite-name a:hover {
+            color: #a71d2a;
+            border-bottom: 1px solid #a71d2a;
+        }
+        
         .suite-stats {
             font-size: 0.9em;
         }
@@ -287,7 +298,7 @@
                 <div class="card-number">0</div>
                 <div class="card-label">Security Scan Jobs</div>
             </div>
-            <div class="card success">
+            <div class="card danger">
                 <div class="card-number">95/101</div>
                 <div class="card-label">Integration Tests Passed</div>
             </div>
@@ -318,7 +329,7 @@
                                     <div class="test-stat-label">Passed</div>
                                 </div>
                                 <div class="test-stat">
-                                    <div class="test-stat-number failed">0</div>
+                                    <div class="test-stat-number failed">4</div>
                                     <div class="test-stat-label">Failed</div>
                                 </div>
                                 <div class="test-stat">
@@ -332,30 +343,9 @@
                             <div class="suite-list">
 
                                 <div class="suite-item">
-                                    <span class="suite-name">RegistryConverterIT</span>
-                                    <span class="suite-stats failed">
-                                        8/9 passed (10.9s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">AvroSerdeIT</span>
-                                    <span class="suite-stats failed">
-                                        16/21 passed (96.9s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">JsonSchemaSerdeIT</span>
+                                    <span class="suite-name">SchemasConfluentIT</span>
                                     <span class="suite-stats passed">
-                                        6/6 passed (22.8s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">ProtobufSerdeIT</span>
-                                    <span class="suite-stats passed">
-                                        17/17 passed (66.9s)
+                                        9/9 passed (26.6s)
                                     </span>
                                 </div>
 
@@ -367,9 +357,9 @@
                                 </div>
 
                                 <div class="suite-item">
-                                    <span class="suite-name">AvroPulsarSerdeIT</span>
+                                    <span class="suite-name">RulesResourceConfluentIT</span>
                                     <span class="suite-stats passed">
-                                        1/1 passed (28.9s)
+                                        1/1 passed (1.9s)
                                     </span>
                                 </div>
 
@@ -381,30 +371,9 @@
                                 </div>
 
                                 <div class="suite-item">
-                                    <span class="suite-name">AllArtifactTypesIT</span>
+                                    <span class="suite-name">AvroPulsarSerdeIT</span>
                                     <span class="suite-stats passed">
-                                        7/7 passed (31.0s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">ArtifactsIT</span>
-                                    <span class="suite-stats passed">
-                                        13/13 passed (43.9s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">MetadataIT</span>
-                                    <span class="suite-stats passed">
-                                        2/2 passed (4.2s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">RulesResourceIT</span>
-                                    <span class="suite-stats passed">
-                                        5/5 passed (12.7s)
+                                        1/1 passed (28.9s)
                                     </span>
                                 </div>
 
@@ -416,16 +385,58 @@
                                 </div>
 
                                 <div class="suite-item">
-                                    <span class="suite-name">RulesResourceConfluentIT</span>
+                                    <span class="suite-name">JsonSchemaSerdeIT</span>
                                     <span class="suite-stats passed">
-                                        1/1 passed (1.9s)
+                                        6/6 passed (22.8s)
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
-                                    <span class="suite-name">SchemasConfluentIT</span>
+                                    <span class="suite-name">RulesResourceIT</span>
                                     <span class="suite-stats passed">
-                                        9/9 passed (26.6s)
+                                        5/5 passed (12.7s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">AllArtifactTypesIT</span>
+                                    <span class="suite-stats passed">
+                                        7/7 passed (31.0s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">ProtobufSerdeIT</span>
+                                    <span class="suite-stats passed">
+                                        17/17 passed (66.9s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">MetadataIT</span>
+                                    <span class="suite-stats passed">
+                                        2/2 passed (4.2s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name"><a href="os419_inmemory_integrationtests/test-results/failsafe-reports/io.apicurio.tests.converters.RegistryConverterIT.txt" target="_blank" title="View raw test output">RegistryConverterIT</a></span>
+                                    <span class="suite-stats failed">
+                                        8/9 passed (10.9s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">ArtifactsIT</span>
+                                    <span class="suite-stats passed">
+                                        13/13 passed (43.9s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name"><a href="os419_inmemory_integrationtests/test-results/failsafe-reports/io.apicurio.tests.serdes.apicurio.AvroSerdeIT.txt" target="_blank" title="View raw test output">AvroSerdeIT</a></span>
+                                    <span class="suite-stats failed">
+                                        16/21 passed (96.9s)
                                     </span>
                                 </div>
 
@@ -490,7 +501,7 @@
         </div>
         
         <div class="footer">
-            <p>Generated on 2025-08-06 16:12:40 | 
+            <p>Generated on 2025-08-07 20:39:29 | 
             Workflow Run ID: 16756786569 | 
             Total Jobs: 4</p>
         </div>
