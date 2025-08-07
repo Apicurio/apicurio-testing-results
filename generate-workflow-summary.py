@@ -444,7 +444,7 @@ class WorkflowSummaryGenerator:
         # Calculate overall statistics
         total_integration_tests = sum(job['integration_tests']['summary']['total'] for job in integration_jobs)
         passed_integration_tests = sum(job['integration_tests']['summary']['passed'] for job in integration_jobs)
-        failed_integration_tests = sum(job['integration_tests']['summary']['failed'] for job in integration_jobs)
+        failed_integration_tests = sum(job['integration_tests']['summary']['failed'] + job['integration_tests']['summary']['errors'] for job in integration_jobs)
         
         total_dast_issues = sum(job['dast_scans']['total_issues'] for job in dast_jobs)
         
@@ -689,6 +689,17 @@ class WorkflowSummaryGenerator:
             font-size: 0.9em;
         }}
         
+        .suite-name a {{
+            color: #dc3545;
+            text-decoration: none;
+            border-bottom: 1px dotted #dc3545;
+        }}
+        
+        .suite-name a:hover {{
+            color: #a71d2a;
+            border-bottom: 1px solid #a71d2a;
+        }}
+        
         .suite-stats {{
             font-size: 0.9em;
         }}
@@ -777,7 +788,7 @@ class WorkflowSummaryGenerator:
                                     <div class="test-stat-label">Passed</div>
                                 </div>
                                 <div class="test-stat">
-                                    <div class="test-stat-number failed">{tests['summary']['failed']}</div>
+                                    <div class="test-stat-number failed">{tests['summary']['failed'] + tests['summary']['errors']}</div>
                                     <div class="test-stat-label">Failed</div>
                                 </div>
                                 <div class="test-stat">
@@ -792,9 +803,18 @@ class WorkflowSummaryGenerator:
 """
                 for suite in tests['test_suites']:
                     suite_status = 'passed' if suite['failures'] == 0 and suite['errors'] == 0 else 'failed'
+                    suite_display_name = html.escape(suite['name'].split('.')[-1])
+                    
+                    # If suite failed, create a link to the raw test output file
+                    if suite_status == 'failed':
+                        raw_output_path = f"{job['name']}/test-results/failsafe-reports/{suite['name']}.txt"
+                        suite_name_html = f'<a href="{raw_output_path}" target="_blank" title="View raw test output">{suite_display_name}</a>'
+                    else:
+                        suite_name_html = suite_display_name
+                    
                     html_content += f"""
                                 <div class="suite-item">
-                                    <span class="suite-name">{html.escape(suite['name'].split('.')[-1])}</span>
+                                    <span class="suite-name">{suite_name_html}</span>
                                     <span class="suite-stats {suite_status}">
                                         {suite['passed']}/{suite['tests']} passed ({suite['time']:.1f}s)
                                     </span>

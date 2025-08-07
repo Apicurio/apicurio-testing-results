@@ -239,6 +239,17 @@
             font-size: 0.9em;
         }
         
+        .suite-name a {
+            color: #dc3545;
+            text-decoration: none;
+            border-bottom: 1px dotted #dc3545;
+        }
+        
+        .suite-name a:hover {
+            color: #a71d2a;
+            border-bottom: 1px solid #a71d2a;
+        }
+        
         .suite-stats {
             font-size: 0.9em;
         }
@@ -287,7 +298,7 @@
                 <div class="card-number">2</div>
                 <div class="card-label">Security Scan Jobs</div>
             </div>
-            <div class="card success">
+            <div class="card danger">
                 <div class="card-number">539/551</div>
                 <div class="card-label">Integration Tests Passed</div>
             </div>
@@ -714,7 +725,7 @@
                                     <div class="test-stat-label">Passed</div>
                                 </div>
                                 <div class="test-stat">
-                                    <div class="test-stat-number failed">0</div>
+                                    <div class="test-stat-number failed">1</div>
                                     <div class="test-stat-label">Failed</div>
                                 </div>
                                 <div class="test-stat">
@@ -749,7 +760,7 @@
                                 </div>
 
                                 <div class="suite-item">
-                                    <span class="suite-name">ProtobufSerdeIT</span>
+                                    <span class="suite-name"><a href="os419_pg17_integrationtests/test-results/failsafe-reports/io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT.txt" target="_blank" title="View raw test output">ProtobufSerdeIT</a></span>
                                     <span class="suite-stats failed">
                                         16/17 passed (65.2s)
                                     </span>
@@ -982,7 +993,7 @@
                                     <div class="test-stat-label">Passed</div>
                                 </div>
                                 <div class="test-stat">
-                                    <div class="test-stat-number failed">0</div>
+                                    <div class="test-stat-number failed">1</div>
                                     <div class="test-stat-label">Failed</div>
                                 </div>
                                 <div class="test-stat">
@@ -1038,7 +1049,7 @@
                                 </div>
 
                                 <div class="suite-item">
-                                    <span class="suite-name">BasicConfluentSerDesIT</span>
+                                    <span class="suite-name"><a href="os419_strimzi047_integrationtests/test-results/failsafe-reports/io.apicurio.tests.serdes.confluent.BasicConfluentSerDesIT.txt" target="_blank" title="View raw test output">BasicConfluentSerDesIT</a></span>
                                     <span class="suite-stats failed">
                                         7/8 passed (41.5s)
                                     </span>
@@ -2003,7 +2014,7 @@
         </div>
         
         <div class="footer">
-            <p>Generated on 2025-08-07 09:13:52 | 
+            <p>Generated on 2025-08-07 09:32:46 | 
             Workflow Run ID: 16803119767 | 
             Total Jobs: 15</p>
         </div>
