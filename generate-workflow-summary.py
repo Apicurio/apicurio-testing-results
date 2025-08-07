@@ -958,8 +958,16 @@ class WorkflowSummaryGenerator:
                             <span class="status-badge status-{status_class}">{status.replace('_', ' ').title()}</span>
                         </div>
                         <div class="job-content">
-                            <p><strong>Total Issues Found:</strong> {scans['total_issues']}</p>
-                            <p><strong>Scans Completed:</strong> {len(scans['scans'])}</p>
+                            <div class="test-results">
+                                <div class="test-stat">
+                                    <div class="test-stat-number total">{len(scans['scans'])}</div>
+                                    <div class="test-stat-label">Scans Completed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number {'failed' if scans['total_issues'] > 0 else 'passed'}">{scans['total_issues']}</div>
+                                    <div class="test-stat-label">Total Issues</div>
+                                </div>
+                            </div>
                         </div>
                         <div id="{job['name']}_dast" class="details">
                             <h4>Scan Details:</h4>
