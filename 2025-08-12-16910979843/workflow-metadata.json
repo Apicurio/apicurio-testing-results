@@ -26,9 +26,11 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "",
+    "started_at": "2025-08-12T14:26:13Z",
     "completed_at": "2025-08-12T15:10:59Z",
-    "timezone": "UTC"
+    "timezone": "UTC",
+    "duration_seconds": "4337",
+    "duration_formatted": "01:12:17"
   },
   "status": {
     "overall_result": "unknown"
