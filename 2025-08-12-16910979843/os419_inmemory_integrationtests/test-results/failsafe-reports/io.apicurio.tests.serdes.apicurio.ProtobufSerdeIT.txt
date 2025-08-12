@@ -1,0 +1,63 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 66.59 s <<< FAILURE! -- in io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT
+io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT.testAutoRegisterDeriveClassProtobufType -- Time elapsed: 4.707 s <<< ERROR!
+java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.RecordDeserializationException: Error deserializing VALUE for partition topic-b3dd4363_6ac6_499d_8c89_2b72853c20e5-0 at offset 0. If needed, please seek past the record to continue consumption.
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at io.apicurio.tests.serdes.apicurio.KafkaSerdesTester.consumeMessages(KafkaSerdesTester.java:207)
+	at io.apicurio.tests.serdes.apicurio.SimpleSerdesTesterBuilder$SimpleSerdesTester.test(SimpleSerdesTesterBuilder.java:156)
+	at io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT.testAutoRegisterDeriveClassProtobufType(ProtobufSerdeIT.java:416)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.apache.kafka.common.errors.RecordDeserializationException: Error deserializing VALUE for partition topic-b3dd4363_6ac6_499d_8c89_2b72853c20e5-0 at offset 0. If needed, please seek past the record to continue consumption.
+	at org.apache.kafka.clients.consumer.internals.CompletedFetch.newRecordDeserializationException(CompletedFetch.java:346)
+	at org.apache.kafka.clients.consumer.internals.CompletedFetch.parseRecord(CompletedFetch.java:330)
+	at org.apache.kafka.clients.consumer.internals.CompletedFetch.fetchRecords(CompletedFetch.java:284)
+	at org.apache.kafka.clients.consumer.internals.FetchCollector.fetchRecords(FetchCollector.java:169)
+	at org.apache.kafka.clients.consumer.internals.FetchCollector.collectFetch(FetchCollector.java:135)
+	at org.apache.kafka.clients.consumer.internals.Fetcher.collectFetch(Fetcher.java:146)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.pollForFetches(ClassicKafkaConsumer.java:699)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.poll(ClassicKafkaConsumer.java:623)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.poll(ClassicKafkaConsumer.java:596)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:874)
+	at io.apicurio.tests.serdes.apicurio.KafkaSerdesTester.lambda$consumeMessages$5(KafkaSerdesTester.java:179)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.RuntimeException: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.apicurio.registry.resolver.cache.ERCache.retry(ERCache.java:242)
+	at io.apicurio.registry.resolver.cache.ERCache.getValue(ERCache.java:173)
+	at io.apicurio.registry.resolver.cache.ERCache.getByContentId(ERCache.java:152)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveSchemaByContentId(DefaultSchemaResolver.java:197)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveSchemaByArtifactReference(DefaultSchemaResolver.java:171)
+	at io.apicurio.registry.serde.AbstractDeserializer.resolve(AbstractDeserializer.java:104)
+	at io.apicurio.registry.serde.AbstractDeserializer.deserializeData(AbstractDeserializer.java:82)
+	at io.apicurio.registry.serde.KafkaDeserializer.deserialize(KafkaDeserializer.java:33)
+	at io.apicurio.registry.serde.KafkaDeserializer.deserialize(KafkaDeserializer.java:50)
+	at io.apicurio.registry.serde.protobuf.ProtobufKafkaDeserializer.deserialize(ProtobufKafkaDeserializer.java:55)
+	at io.apicurio.registry.serde.protobuf.ProtobufKafkaDeserializer.deserialize(ProtobufKafkaDeserializer.java:14)
+	at org.apache.kafka.common.serialization.Deserializer.deserialize(Deserializer.java:81)
+	at org.apache.kafka.clients.consumer.internals.CompletedFetch.parseRecord(CompletedFetch.java:327)
+	... 11 more
+Caused by: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:437)
+	at io.kiota.http.vertx.VertXRequestAdapter.sendPrimitive(VertXRequestAdapter.java:193)
+	at io.apicurio.registry.rest.client.groups.item.artifacts.item.versions.item.content.ContentRequestBuilder.get(ContentRequestBuilder.java:67)
+	at io.apicurio.registry.rest.client.groups.item.artifacts.item.versions.item.content.ContentRequestBuilder.get(ContentRequestBuilder.java:50)
+	at io.apicurio.registry.resolver.client.RegistryClientFacadeImpl.getSchemaByGAV(RegistryClientFacadeImpl.java:75)
+	at io.apicurio.registry.resolver.AbstractSchemaResolver.lambda$resolveReferences$2(AbstractSchemaResolver.java:196)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at io.apicurio.registry.resolver.AbstractSchemaResolver.resolveReferences(AbstractSchemaResolver.java:191)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.lambda$resolveSchemaByContentId$1(DefaultSchemaResolver.java:208)
+	at io.apicurio.registry.resolver.cache.ERCache.lambda$getValue$0(ERCache.java:174)
+	at io.apicurio.registry.resolver.cache.ERCache.retry(ERCache.java:227)
+	... 23 more
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:431)
+	... 33 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
