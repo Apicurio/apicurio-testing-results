@@ -11,8 +11,76 @@ Usage:
 
 import os
 import re
+import json
 from pathlib import Path
 from datetime import datetime
+
+
+def calculate_duration(started_at, completed_at):
+    """Calculate duration between two ISO timestamps."""
+    if not started_at or not completed_at:
+        return None
+    
+    try:
+        from datetime import datetime
+        start = datetime.fromisoformat(started_at.replace('Z', '+00:00'))
+        end = datetime.fromisoformat(completed_at.replace('Z', '+00:00'))
+        duration = end - start
+        
+        # Format as HH:MM:SS
+        total_seconds = int(duration.total_seconds())
+        hours = total_seconds // 3600
+        minutes = (total_seconds % 3600) // 60
+        seconds = total_seconds % 60
+        
+        return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+    except Exception:
+        return None
+
+
+def load_workflow_metadata(dir_path):
+    """Load workflow metadata from workflow-metadata.json if it exists."""
+    metadata_file = dir_path / 'workflow-metadata.json'
+    if metadata_file.exists():
+        try:
+            with open(metadata_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                
+                # Extract the requested information
+                actor = data.get('workflow', {}).get('actor', 'Unknown')
+                release_version = data.get('inputs', {}).get('release_version', 'Unknown')
+                
+                execution = data.get('execution', {})
+                started_at = execution.get('started_at', '').strip()
+                duration_formatted = execution.get('duration_formatted', None)
+                
+                # If no duration but we have start and end times, calculate it
+                if not duration_formatted:
+                    completed_at = execution.get('completed_at', '').strip()
+                    if started_at and completed_at:
+                        duration_formatted = calculate_duration(started_at, completed_at)
+                
+                # Clean up empty strings
+                if not started_at:
+                    started_at = None
+                if not duration_formatted:
+                    duration_formatted = None
+                
+                return {
+                    'actor': actor if actor != 'Unknown' else None,
+                    'release_version': release_version if release_version != 'Unknown' else None,
+                    'started_at': started_at,
+                    'duration_formatted': duration_formatted
+                }
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"Warning: Could not parse metadata for {dir_path.name}: {e}")
+    
+    return {
+        'actor': None,
+        'release_version': None,
+        'started_at': None,
+        'duration_formatted': None
+    }
 
 
 def scan_workflow_directories():
@@ -33,6 +101,9 @@ def scan_workflow_directories():
                 # Count job directories
                 job_count = len([d for d in dir_path.iterdir() if d.is_dir()])
                 
+                # Load workflow metadata
+                metadata = load_workflow_metadata(dir_path)
+                
                 workflows.append({
                     'name': dir_path.name,
                     'year': year,
@@ -40,7 +111,11 @@ def scan_workflow_directories():
                     'day': day,
                     'run_id': run_id,
                     'has_index': has_index,
-                    'job_count': job_count
+                    'job_count': job_count,
+                    'actor': metadata['actor'],
+                    'release_version': metadata['release_version'],
+                    'started_at': metadata['started_at'],
+                    'duration_formatted': metadata['duration_formatted']
                 })
     
     return workflows
@@ -58,18 +133,56 @@ def update_index_html(workflows):
     with open(index_file, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Generate JavaScript array for workflows
+    # Generate JavaScript data for workflows with metadata
     js_workflows = []
     for workflow in workflows:
-        js_workflows.append(f"'{workflow['name']}'")
+        # Create a JavaScript object with all the metadata
+        metadata_js = "{"
+        metadata_js += f"name: '{workflow['name']}'"
+        metadata_js += f", hasIndex: {str(workflow['has_index']).lower()}"
+        metadata_js += f", jobCount: {workflow['job_count']}"
+        
+        if workflow['actor']:
+            metadata_js += f", actor: '{workflow['actor']}'"
+        else:
+            metadata_js += ", actor: null"
+            
+        if workflow['release_version']:
+            metadata_js += f", releaseVersion: '{workflow['release_version']}'"
+        else:
+            metadata_js += ", releaseVersion: null"
+            
+        if workflow['started_at']:
+            metadata_js += f", startedAt: '{workflow['started_at']}'"
+        else:
+            metadata_js += ", startedAt: null"
+            
+        if workflow['duration_formatted']:
+            metadata_js += f", duration: '{workflow['duration_formatted']}'"
+        else:
+            metadata_js += ", duration: null"
+            
+        metadata_js += "}"
+        js_workflows.append(metadata_js)
     
     workflows_js = ',\n                '.join(js_workflows)
     
-    # Replace the workflow directories array in the JavaScript
-    pattern = r'(const workflowDirectories = \[)(.*?)(\];)'
+    # Replace the workflow directories/data array with the new workflow metadata
+    # Try both the old and new variable names
+    pattern1 = r'(const workflowDirectories = \[)(.*?)(\];)'
+    pattern2 = r'(const workflowData = \[)(.*?)(\];)'
+    
     replacement = f'\\1\n                {workflows_js}\n            \\3'
     
-    updated_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+    if re.search(pattern1, content, flags=re.DOTALL):
+        updated_content = re.sub(pattern1, replacement, content, flags=re.DOTALL)
+        # Update the variable name
+        updated_content = updated_content.replace('const workflowDirectories = [', 'const workflowData = [')
+    elif re.search(pattern2, content, flags=re.DOTALL):
+        updated_content = re.sub(pattern2, replacement, content, flags=re.DOTALL)
+    else:
+        print("Warning: Could not find workflow data array to update")
+        updated_content = content
     
     # Update the checkForIndex function with actual workflow data
     workflows_with_index = [w['name'] for w in workflows if w['has_index']]

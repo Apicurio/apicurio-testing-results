@@ -37,6 +37,7 @@ class WorkflowSummaryGenerator:
         self.workflow_dir = Path(workflow_dir)
         self.workflow_name = self.workflow_dir.name
         self.results = {}
+        self.workflow_metadata = None
         
         # Extract date and run ID from directory name (format: YYYY-MM-DD-RUNID)
         match = re.match(r'(\d{4}-\d{2}-\d{2})-(\d+)', self.workflow_name)
@@ -46,6 +47,23 @@ class WorkflowSummaryGenerator:
         else:
             self.date = "Unknown"
             self.run_id = "Unknown"
+        
+        # Load workflow metadata if available
+        self._load_workflow_metadata()
+    
+    def _load_workflow_metadata(self):
+        """Load workflow metadata from workflow-metadata.json if it exists."""
+        metadata_file = self.workflow_dir / 'workflow-metadata.json'
+        if metadata_file.exists():
+            try:
+                with open(metadata_file, 'r', encoding='utf-8') as f:
+                    self.workflow_metadata = json.load(f)
+                print(f"Loaded workflow metadata from: {metadata_file}")
+            except (json.JSONDecodeError, IOError) as e:
+                print(f"Warning: Could not load workflow metadata: {e}")
+                self.workflow_metadata = None
+        else:
+            print(f"No workflow metadata found at: {metadata_file}")
     
     def analyze_results(self):
         """Analyze all test results in the workflow directory."""
@@ -433,6 +451,179 @@ class WorkflowSummaryGenerator:
         
         return results
     
+    def _generate_metadata_section(self) -> str:
+        """Generate HTML for workflow metadata section."""
+        if not self.workflow_metadata:
+            return ""
+        
+        workflow = self.workflow_metadata.get('workflow', {})
+        inputs = self.workflow_metadata.get('inputs', {})
+        execution = self.workflow_metadata.get('execution', {})
+        environment = self.workflow_metadata.get('environment', {})
+        jobs = self.workflow_metadata.get('jobs', [])
+        
+        # Format execution times
+        started_at = execution.get('started_at', '')
+        completed_at = execution.get('completed_at', '')
+        duration = execution.get('duration_formatted', 'Unknown')
+        
+        if started_at:
+            try:
+                from datetime import datetime
+                start_time = datetime.fromisoformat(started_at.replace('Z', '+00:00'))
+                formatted_start = start_time.strftime('%Y-%m-%d %H:%M:%S UTC')
+            except Exception:
+                formatted_start = started_at
+        else:
+            formatted_start = 'Unknown'
+        
+        if completed_at:
+            try:
+                from datetime import datetime
+                end_time = datetime.fromisoformat(completed_at.replace('Z', '+00:00'))
+                formatted_end = end_time.strftime('%Y-%m-%d %H:%M:%S UTC')
+            except Exception:
+                formatted_end = completed_at
+        else:
+            formatted_end = 'Unknown' if not started_at else 'In Progress'
+        
+        # Generate the metadata section HTML
+        metadata_html = f"""
+        <div class="metadata-section">
+            <div class="metadata-grid">
+                <div class="metadata-item">
+                    <div class="metadata-label">Actor</div>
+                    <div class="metadata-value">{html.escape(workflow.get('actor', 'Unknown'))}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Started At</div>
+                    <div class="metadata-value">{html.escape(formatted_start)}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Duration</div>
+                    <div class="metadata-value">{html.escape(duration)}</div>
+                </div>
+            </div>"""
+        
+        # Add inputs section if inputs are available
+        if inputs:
+            metadata_html += f"""
+            <div class="inputs-section">
+                <div class="inputs-header">Workflow Inputs</div>
+                <div class="inputs-grid">"""
+            
+            # Dynamically display all inputs found
+            for input_key, input_value in inputs.items():
+                # Convert key to human-readable label
+                label = input_key.replace('_', ' ').title()
+                # Handle different value types
+                if isinstance(input_value, (dict, list)):
+                    value_str = json.dumps(input_value, indent=2)
+                else:
+                    value_str = str(input_value)
+                
+                metadata_html += f"""
+                    <div class="input-item">
+                        <div class="input-label">{html.escape(label)}</div>
+                        <div class="input-value">{html.escape(value_str)}</div>
+                    </div>"""
+            
+            metadata_html += """
+                </div>
+            </div>"""
+        
+        # Add jobs timeline if jobs are available
+        if jobs:
+            # Calculate job statistics
+            total_jobs = len(jobs)
+            success_jobs = len([j for j in jobs if j.get('conclusion') == 'success'])
+            failure_jobs = len([j for j in jobs if j.get('conclusion') == 'failure'])
+            other_jobs = total_jobs - success_jobs - failure_jobs
+            
+            metadata_html += f"""
+            <div class="jobs-timeline">
+                <div class="timeline-header" onclick="toggleJobsList()">
+                    <div class="timeline-title">GitHub Actions Jobs</div>
+                    <div class="timeline-stats">
+                        <div class="stat-item">
+                            <span>Total:</span>
+                            <span><strong>{total_jobs}</strong></span>
+                        </div>
+                        <div class="stat-item stat-success">
+                            <span>✓</span>
+                            <span><strong>{success_jobs}</strong></span>
+                        </div>
+                        <div class="stat-item stat-failure">
+                            <span>✗</span>
+                            <span><strong>{failure_jobs}</strong></span>
+                        </div>
+                        <div class="stat-item stat-other">
+                            <span>○</span>
+                            <span><strong>{other_jobs}</strong></span>
+                        </div>
+                        <div class="expand-icon" id="jobs-expand-icon">▼</div>
+                    </div>
+                </div>
+                <div class="jobs-list" id="jobs-list">"""
+            
+            # Sort jobs by start time for timeline display
+            sorted_jobs = sorted(jobs, key=lambda x: x.get('started_at', ''))
+            
+            # Show ALL jobs (no limit)
+            for job in sorted_jobs:
+                job_name = job.get('name', 'Unknown Job')
+                conclusion = job.get('conclusion', 'unknown')
+                
+                # Map conclusion to status class
+                status_class_map = {
+                    'success': 'success',
+                    'failure': 'failure',
+                    'cancelled': 'cancelled',
+                    'skipped': 'skipped',
+                    'in_progress': 'in_progress',
+                    None: 'in_progress'
+                }
+                status_class = status_class_map.get(conclusion, 'cancelled')
+                
+                # Calculate job duration if available
+                job_started = job.get('started_at', '')
+                job_completed = job.get('completed_at', '')
+                job_duration = 'Unknown'
+                
+                if job_started and job_completed:
+                    try:
+                        from datetime import datetime
+                        start = datetime.fromisoformat(job_started.replace('Z', '+00:00'))
+                        end = datetime.fromisoformat(job_completed.replace('Z', '+00:00'))
+                        duration_seconds = int((end - start).total_seconds())
+                        
+                        if duration_seconds < 60:
+                            job_duration = f"{duration_seconds}s"
+                        else:
+                            minutes = duration_seconds // 60
+                            seconds = duration_seconds % 60
+                            job_duration = f"{minutes}m {seconds}s"
+                    except Exception:
+                        pass
+                
+                metadata_html += f"""
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">{html.escape(job_name)}</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">{job_duration}</span>
+                            <span class="job-timeline-status job-status-{status_class}">{conclusion or 'in progress'}</span>
+                        </div>
+                    </div>"""
+            
+            metadata_html += """
+                </div>
+            </div>"""
+        
+        metadata_html += """
+        </div>"""
+        
+        return metadata_html
+    
     def generate_html(self) -> str:
         """Generate HTML summary report."""
         
@@ -448,12 +639,25 @@ class WorkflowSummaryGenerator:
         
         total_dast_issues = sum(job['dast_scans']['total_issues'] for job in dast_jobs)
         
+        # Get workflow title and subtitle from metadata if available
+        workflow_title = "Apicurio Registry Test Results"
+        workflow_subtitle = f"Workflow Run: {self.workflow_name} | Date: {self.date}"
+        
+        if self.workflow_metadata:
+            workflow_info = self.workflow_metadata.get('workflow', {})
+            workflow_name = workflow_info.get('name', 'Unknown Workflow')
+            actor = workflow_info.get('actor', 'Unknown')
+            run_number = workflow_info.get('run_number', 'Unknown')
+            
+            workflow_title = f"{workflow_name} - Results"
+            workflow_subtitle = f"Run #{run_number} by {actor} | {self.date}"
+
         html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apicurio Registry Test Results - {self.workflow_name}</title>
+    <title>{workflow_title} - {self.workflow_name}</title>
     <style>
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -489,6 +693,190 @@ class WorkflowSummaryGenerator:
             margin: 10px 0 0 0;
             opacity: 0.9;
             font-size: 1.2em;
+        }}
+        
+        .metadata-section {{
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-bottom: 1px solid #ddd;
+        }}
+        
+        .metadata-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }}
+        
+        .metadata-item {{
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }}
+        
+        .metadata-label {{
+            font-size: 0.8em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }}
+        
+        .metadata-value {{
+            font-weight: 500;
+            color: #333;
+            font-size: 1.1em;
+        }}
+        
+        .jobs-timeline {{
+            margin-top: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #28a745;
+        }}
+        
+        .timeline-header {{
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }}
+        
+        .timeline-header:hover {{
+            background: #e9ecef;
+        }}
+        
+        .timeline-title {{
+            font-size: 1.1em;
+        }}
+        
+        .timeline-stats {{
+            display: flex;
+            gap: 15px;
+            font-size: 0.9em;
+            font-weight: normal;
+        }}
+        
+        .stat-item {{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }}
+        
+        .stat-success {{
+            color: #28a745;
+        }}
+        
+        .stat-failure {{
+            color: #dc3545;
+        }}
+        
+        .stat-other {{
+            color: #6c757d;
+        }}
+        
+        .expand-icon {{
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }}
+        
+        .expand-icon.expanded {{
+            transform: rotate(180deg);
+        }}
+        
+        .jobs-list {{
+            margin-top: 10px;
+            display: none;
+        }}
+        
+        .jobs-list.expanded {{
+            display: block;
+        }}
+        
+        .job-timeline-item {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+        }}
+        
+        .job-timeline-item:last-child {{
+            border-bottom: none;
+        }}
+        
+        .job-timeline-name {{
+            flex: 1;
+            color: #333;
+        }}
+        
+        .job-timeline-status {{
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }}
+        
+        .job-status-success {{ background: #d4edda; color: #155724; }}
+        .job-status-failure {{ background: #f8d7da; color: #721c24; }}
+        .job-status-skipped {{ background: #fff3cd; color: #856404; }}
+        .job-status-cancelled {{ background: #e2e3e5; color: #383d41; }}
+        .job-status-in_progress {{ background: #cce5ff; color: #004085; }}
+        
+        .inputs-section {{
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #17a2b8;
+            margin-top: 20px;
+        }}
+        
+        .inputs-header {{
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1em;
+        }}
+        
+        .inputs-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }}
+        
+        .input-item {{
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #e9ecef;
+        }}
+        
+        .input-label {{
+            font-size: 0.8em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }}
+        
+        .input-value {{
+            font-weight: 500;
+            color: #333;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.95em;
+            word-break: break-all;
         }}
         
         .summary-cards {{
@@ -731,10 +1119,15 @@ class WorkflowSummaryGenerator:
 <body>
     <div class="container">
         <div class="header">
-            <h1>Apicurio Registry Test Results</h1>
-            <div class="subtitle">Workflow Run: {self.workflow_name} | Date: {self.date}</div>
-        </div>
+            <h1>{workflow_title}</h1>
+            <div class="subtitle">{workflow_subtitle}</div>
+        </div>"""
+
+        # Add metadata section if workflow metadata is available
+        if self.workflow_metadata:
+            html_content += self._generate_metadata_section()
         
+        html_content += f"""
         <div class="summary-cards">
             <div class="card success">
                 <div class="card-number">{len(integration_jobs)}</div>
@@ -1038,6 +1431,19 @@ class WorkflowSummaryGenerator:
                 element.classList.remove('show');
             }} else {{
                 element.classList.add('show');
+            }}
+        }}
+        
+        function toggleJobsList() {{
+            const jobsList = document.getElementById('jobs-list');
+            const expandIcon = document.getElementById('jobs-expand-icon');
+            
+            if (jobsList.classList.contains('expanded')) {{
+                jobsList.classList.remove('expanded');
+                expandIcon.classList.remove('expanded');
+            }} else {{
+                jobsList.classList.add('expanded');
+                expandIcon.classList.add('expanded');
             }}
         }}
     </script>
