@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 25.61 s <<< FAILURE! -- in io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT
+io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT.testEvolveAvroApicurio -- Time elapsed: 4.455 s <<< ERROR!
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:437)
+	at io.kiota.http.vertx.VertXRequestAdapter.send(VertXRequestAdapter.java:167)
+	at io.apicurio.registry.rest.client.groups.item.artifacts.item.versions.VersionsRequestBuilder.post(VersionsRequestBuilder.java:117)
+	at io.apicurio.registry.rest.client.groups.item.artifacts.item.versions.VersionsRequestBuilder.post(VersionsRequestBuilder.java:94)
+	at io.apicurio.tests.ApicurioRegistryBaseIT.createArtifactVersion(ApicurioRegistryBaseIT.java:223)
+	at io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT.testEvolveAvroApicurio(AvroPulsarSerdeIT.java:138)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:431)
+	... 8 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
