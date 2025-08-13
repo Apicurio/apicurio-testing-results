@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apicurio Registry Test Results - 2025-08-13-16924909598</title>
+    <title>Test Apicurio Registry Release - Results - 2025-08-13-16924909598</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -465,8 +465,273 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Apicurio Registry Test Results</h1>
-            <div class="subtitle">Workflow Run: 2025-08-13-16924909598 | Date: 2025-08-13</div>
+            <h1>Test Apicurio Registry Release - Results</h1>
+            <div class="subtitle">Run #54 by EricWittmann | 2025-08-13</div>
+        </div>
+        <div class="metadata-section">
+            <div class="metadata-grid">
+                <div class="metadata-item">
+                    <div class="metadata-label">Actor</div>
+                    <div class="metadata-value">EricWittmann</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Started At</div>
+                    <div class="metadata-value">Unknown</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Duration</div>
+                    <div class="metadata-value">02:38:07</div>
+                </div>
+            </div>
+            <div class="inputs-section">
+                <div class="inputs-header">Workflow Inputs</div>
+                <div class="inputs-grid">
+                    <div class="input-item">
+                        <div class="input-label">Release Version</div>
+                        <div class="input-value">3.0.9</div>
+                    </div>
+                    <div class="input-item">
+                        <div class="input-label">Tests Tag</div>
+                        <div class="input-value">main</div>
+                    </div>
+                </div>
+            </div>
+            <div class="jobs-timeline">
+                <div class="timeline-header" onclick="toggleJobsList()">
+                    <div class="timeline-title">GitHub Actions Jobs</div>
+                    <div class="timeline-stats">
+                        <div class="stat-item">
+                            <span>Total:</span>
+                            <span><strong>30</strong></span>
+                        </div>
+                        <div class="stat-item stat-success">
+                            <span>✓</span>
+                            <span><strong>28</strong></span>
+                        </div>
+                        <div class="stat-item stat-failure">
+                            <span>✗</span>
+                            <span><strong>1</strong></span>
+                        </div>
+                        <div class="stat-item stat-other">
+                            <span>○</span>
+                            <span><strong>1</strong></span>
+                        </div>
+                        <div class="expand-icon" id="jobs-expand-icon">▼</div>
+                    </div>
+                </div>
+                <div class="jobs-list" id="jobs-list">
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">record-start-time</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">4s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">OpenShift 4.19</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">44m 30s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Apicurio Registry (in-memory)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">2m 27s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">UI Tests (in mem)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">2m 3s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Apicurio Registry (pg 17)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">38s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">UI Tests (pg17)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">1m 15s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Apicurio Registry (pg12)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">37s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Integration Tests (pg12)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">9m 51s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Apicurio Registry (mysql)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">1m 28s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Integration Tests (pg17)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">11m 53s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Integration Tests (in mem)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">11m 45s</span>
+                            <span class="job-timeline-status job-status-failure">failure</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Apicurio Registry (strimzi 0.47)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">2m 55s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">UI Tests (mysql)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">1m 29s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Integration Tests (mysql)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">11m 27s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">UI Tests (strimzi 0.47)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">1m 17s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Apicurio Registry (strimzi 0.43)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">2m 48s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Integration Tests (strimzi 0.47)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">12m 0s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Apicurio Registry (authn)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">4m 6s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">UI Tests (strimzi 0.43)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">1m 26s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Integration Tests (strimzi 0.43)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">11m 26s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Destroy Registry (pg12)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">20s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Integration Tests (authn)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">6m 9s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">DAST Scan (in mem)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">0s</span>
+                            <span class="job-timeline-status job-status-skipped">skipped</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Destroy Registry (pg17)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">25s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Destroy Registry (inmemory)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">23s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Destroy Registry (mysql)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">35s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">DAST Scan (authn)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">13m 9s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Destroy Registry (strimzi 0.47)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">23s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Destroy Registry (strimzi 0.43)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">30s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                    <div class="job-timeline-item">
+                        <div class="job-timeline-name">Destroy Registry (authn)</div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.8em; color: #666;">24s</span>
+                            <span class="job-timeline-status job-status-success">success</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="summary-cards">
             <div class="card success">
@@ -2144,7 +2409,7 @@
         </div>
         
         <div class="footer">
-            <p>Generated on 2025-08-13 02:37:40 | 
+            <p>Generated on 2025-08-13 02:38:21 | 
             Workflow Run ID: 16924909598 | 
             Total Jobs: 14</p>
         </div>
