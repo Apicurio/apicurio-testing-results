@@ -26,10 +26,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "",
-    "completed_at": "2025-08-13T21:07:14Z",
-    "duration_seconds": 76034,
-    "duration_formatted": "21:07:14"
+    "started_at": "2025-08-13T19:15:21Z",
+    "completed_at": "2025-08-13T21:14:08Z",
+    "duration_seconds": 7127,
+    "duration_formatted": "01:58:47"
   },
   "status": {
     "overall_result": "unknown"
