@@ -40,7 +40,12 @@ jobs:
             dir_name=${dir%/}
             # Check if directory name matches workflow pattern (YYYY-MM-DD-RUNID)
             if [[ $dir_name =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]+$ ]]; then
-              directories+=("$dir_name")
+              # Check if workflow-metadata.json exists in the directory
+              if [ -f "$dir_name/workflow-metadata.json" ]; then
+                directories+=("$dir_name")
+              else
+                echo "Skipping $dir_name: missing workflow-metadata.json"
+              fi
             fi
           fi
         done
