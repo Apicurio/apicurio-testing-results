@@ -27,9 +27,9 @@
   },
   "execution": {
     "started_at": "",
-    "completed_at": "2025-08-14T22:30:12Z",
-    "duration_seconds": 81012,
-    "duration_formatted": "22:30:12"
+    "completed_at": "2025-08-14T23:27:39Z",
+    "duration_seconds": 84459,
+    "duration_formatted": "23:27:39"
   },
   "status": {
     "overall_result": "unknown"
@@ -338,11 +338,71 @@
   {
     "name": "Destroy OpenShift 4.19",
     "id": 48132197858,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-08-14T22:30:06Z",
+    "completed_at": "2025-08-14T22:36:13Z",
+    "runner_name": "GitHub Actions 1000025691",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "OpenShift 4.14",
+    "id": 48132498285,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-08-14T22:36:15Z",
+    "completed_at": "2025-08-14T23:11:43Z",
+    "runner_name": "GitHub Actions 1000025697",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Apicurio Registry (in-memory) [4.14]",
+    "id": 48134161773,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-08-14T23:11:46Z",
+    "completed_at": "2025-08-14T23:13:33Z",
+    "runner_name": "GitHub Actions 1000025698",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "UI Tests (in mem) [4.14]",
+    "id": 48134246182,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-08-14T23:13:36Z",
+    "completed_at": "2025-08-14T23:16:12Z",
+    "runner_name": "GitHub Actions 1000025699",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Integration Tests (in mem) [4.14]",
+    "id": 48134359020,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-08-14T23:16:14Z",
+    "completed_at": "2025-08-14T23:27:09Z",
+    "runner_name": "GitHub Actions 1000025709",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Destroy Registry (inmemory) [4.14]",
+    "id": 48134819150,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-08-14T23:27:11Z",
+    "completed_at": "2025-08-14T23:27:29Z",
+    "runner_name": "GitHub Actions 1000025713",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Destroy OpenShift 4.14",
+    "id": 48134831865,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-08-14T22:30:06Z",
+    "started_at": "2025-08-14T23:27:33Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000025691",
+    "runner_name": "GitHub Actions 1000025719",
     "runner_group_name": "GitHub Actions"
   }
 ]
