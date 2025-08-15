@@ -637,6 +637,10 @@ class WorkflowSummaryGenerator:
         passed_integration_tests = sum(job['integration_tests']['summary']['passed'] for job in integration_jobs)
         failed_integration_tests = sum(job['integration_tests']['summary']['failed'] + job['integration_tests']['summary']['errors'] for job in integration_jobs)
         
+        total_ui_tests = sum(job['ui_tests']['summary']['total'] for job in ui_jobs)
+        passed_ui_tests = sum(job['ui_tests']['summary']['passed'] for job in ui_jobs)
+        failed_ui_tests = sum(job['ui_tests']['summary']['failed'] for job in ui_jobs)
+        
         total_dast_issues = sum(job['dast_scans']['total_issues'] for job in dast_jobs)
         
         # Get workflow title and subtitle from metadata if available
@@ -1144,6 +1148,10 @@ class WorkflowSummaryGenerator:
             <div class="card {'danger' if failed_integration_tests > 0 else 'success'}">
                 <div class="card-number">{passed_integration_tests}/{total_integration_tests}</div>
                 <div class="card-label">Integration Tests Passed</div>
+            </div>
+            <div class="card {'danger' if failed_ui_tests > 0 else 'success'}">
+                <div class="card-number">{passed_ui_tests}/{total_ui_tests}</div>
+                <div class="card-label">UI Tests Passed</div>
             </div>
         </div>
         
