@@ -29,10 +29,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "",
-    "completed_at": "2025-08-20T00:34:35Z",
-    "duration_seconds": 2075,
-    "duration_formatted": "00:34:35"
+    "started_at": "2025-08-20T00:32:25Z",
+    "completed_at": "2025-08-20T00:35:26Z",
+    "duration_seconds": 181,
+    "duration_formatted": "00:03:01"
   },
   "status": {
     "overall_result": "unknown"
@@ -341,11 +341,81 @@
   {
     "name": "Destroy OpenShift 4.19",
     "id": 48447900091,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-08-20T00:34:26Z",
+    "completed_at": "2025-08-20T00:35:10Z",
+    "runner_name": "GitHub Actions 1000026572",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "OpenShift 4.14",
+    "id": 48447936004,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "started_at": "2025-08-20T00:35:11Z",
+    "completed_at": "2025-08-20T00:35:10Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Apicurio Registry (in-memory) [4.14]",
+    "id": 48447936016,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "started_at": "2025-08-20T00:35:11Z",
+    "completed_at": "2025-08-20T00:35:10Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "UI Tests (in mem) [4.14]",
+    "id": 48447936095,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "started_at": "2025-08-20T00:35:11Z",
+    "completed_at": "2025-08-20T00:35:11Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Integration Tests (in mem) [4.14]",
+    "id": 48447936193,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "started_at": "2025-08-20T00:35:11Z",
+    "completed_at": "2025-08-20T00:35:11Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy OpenShift 4.14",
+    "id": 48447936270,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-08-20T00:35:13Z",
+    "completed_at": "2025-08-20T00:35:20Z",
+    "runner_name": "GitHub Actions 1000026578",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Destroy Registry (inmemory) [4.14]",
+    "id": 48447936354,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "started_at": "2025-08-20T00:35:11Z",
+    "completed_at": "2025-08-20T00:35:11Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Save Workflow Metadata",
+    "id": 48447942697,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-08-20T00:34:26Z",
+    "started_at": "2025-08-20T00:35:22Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000026572",
+    "runner_name": "GitHub Actions 1000026579",
     "runner_group_name": "GitHub Actions"
   }
 ]
