@@ -29,9 +29,9 @@
   },
   "execution": {
     "started_at": "",
-    "completed_at": "2025-09-03T13:09:18Z",
-    "duration_seconds": 47358,
-    "duration_formatted": "13:09:18"
+    "completed_at": "2025-09-03T13:09:39Z",
+    "duration_seconds": 47379,
+    "duration_formatted": "13:09:39"
   },
   "status": {
     "overall_result": "unknown"
@@ -340,12 +340,72 @@
   {
     "name": "Destroy OpenShift 4.19",
     "id": 49500556412,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-09-03T13:09:07Z",
-    "completed_at": null,
+    "completed_at": "2025-09-03T13:09:24Z",
     "runner_name": "GitHub Actions 1000028943",
     "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "OpenShift 4.14",
+    "id": 49500589092,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T13:09:24Z",
+    "completed_at": "2025-09-03T13:09:24Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Apicurio Registry (in-memory) [4.14]",
+    "id": 49500589463,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T13:09:25Z",
+    "completed_at": "2025-09-03T13:09:24Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy OpenShift 4.14",
+    "id": 49500589606,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-09-03T13:09:27Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000028947",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Integration Tests (in mem) [4.14]",
+    "id": 49500589729,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T13:09:25Z",
+    "completed_at": "2025-09-03T13:09:24Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy Registry (inmemory) [4.14]",
+    "id": 49500589765,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T13:09:25Z",
+    "completed_at": "2025-09-03T13:09:24Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "UI Tests (in mem) [4.14]",
+    "id": 49500589830,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T13:09:25Z",
+    "completed_at": "2025-09-03T13:09:24Z",
+    "runner_name": null,
+    "runner_group_name": null
   }
 ]
 }
