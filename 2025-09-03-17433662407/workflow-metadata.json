@@ -28,10 +28,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "",
-    "completed_at": "2025-09-03T13:09:39Z",
-    "duration_seconds": 47379,
-    "duration_formatted": "13:09:39"
+    "started_at": "2025-09-03T12:37:27Z",
+    "completed_at": "2025-09-03T13:09:54Z",
+    "duration_seconds": 1947,
+    "duration_formatted": "00:32:27"
   },
   "status": {
     "overall_result": "unknown"
@@ -370,10 +370,10 @@
   {
     "name": "Destroy OpenShift 4.14",
     "id": 49500589606,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-09-03T13:09:27Z",
-    "completed_at": null,
+    "completed_at": "2025-09-03T13:09:44Z",
     "runner_name": "GitHub Actions 1000028947",
     "runner_group_name": "GitHub Actions"
   },
@@ -406,6 +406,16 @@
     "completed_at": "2025-09-03T13:09:24Z",
     "runner_name": null,
     "runner_group_name": null
+  },
+  {
+    "name": "Save Workflow Metadata",
+    "id": 49500621231,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-09-03T13:09:47Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000028951",
+    "runner_group_name": "GitHub Actions"
   }
 ]
 }
