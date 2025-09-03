@@ -29,9 +29,9 @@
   },
   "execution": {
     "started_at": "",
-    "completed_at": "2025-09-03T12:14:18Z",
-    "duration_seconds": 44058,
-    "duration_formatted": "12:14:18"
+    "completed_at": "2025-09-03T12:14:35Z",
+    "duration_seconds": 44075,
+    "duration_formatted": "12:14:35"
   },
   "status": {
     "overall_result": "unknown"
@@ -340,12 +340,72 @@
   {
     "name": "Destroy OpenShift 4.19",
     "id": 49495852369,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-09-03T12:14:07Z",
-    "completed_at": null,
+    "completed_at": "2025-09-03T12:14:21Z",
     "runner_name": "GitHub Actions 1000028828",
     "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Apicurio Registry (in-memory) [4.14]",
+    "id": 49495877444,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T12:14:22Z",
+    "completed_at": "2025-09-03T12:14:22Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "OpenShift 4.14",
+    "id": 49495877514,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T12:14:22Z",
+    "completed_at": "2025-09-03T12:14:22Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy OpenShift 4.14",
+    "id": 49495877526,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-09-03T12:14:26Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000028832",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "UI Tests (in mem) [4.14]",
+    "id": 49495877587,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T12:14:22Z",
+    "completed_at": "2025-09-03T12:14:22Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Integration Tests (in mem) [4.14]",
+    "id": 49495877604,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T12:14:22Z",
+    "completed_at": "2025-09-03T12:14:22Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy Registry (inmemory) [4.14]",
+    "id": 49495877686,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-03T12:14:22Z",
+    "completed_at": "2025-09-03T12:14:22Z",
+    "runner_name": null,
+    "runner_group_name": null
   }
 ]
 }
