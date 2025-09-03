@@ -1,0 +1,62 @@
+---------------------------------------------
+Performing the Initial Config...
+---------------------------------------------
+Generating application config at: /opt/app-root/src/config.js
+Config successfully writen to file.
+---------------------------------------------
+Patching base hrefs...
+---------------------------------------------
+Updating base href in index.html file at: /opt/app-root/src/index.html
+Successfully updated the base href value.
+---------------------------------------------
+Config Complete. Nginx Server Started.....
+---------------------------------------------
+10.129.2.2 - - [03/Sep/2025:12:39:46 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:39:53 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:39:56 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:03 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:06 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:13 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:16 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:23 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:26 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:33 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:36 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:43 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:46 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:53 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:40:56 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:03 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:06 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:13 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:16 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:23 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:26 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:33 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:36 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:43 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:46 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:53 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:41:56 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:03 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:06 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:13 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:16 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:23 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:26 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:33 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:36 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:43 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:46 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:53 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:42:56 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:03 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:06 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:13 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:16 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:23 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:26 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:33 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:36 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:43 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.129.2.2 - - [03/Sep/2025:12:43:46 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
