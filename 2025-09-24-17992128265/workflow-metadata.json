@@ -1,0 +1,82 @@
+{
+  "workflow": {
+    "name": "Release Tests - Apicurio Registry Operator",
+    "run_id": "17992128265",
+    "run_number": "2",
+    "run_attempt": "1",
+    "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/test-registry-operator.yaml@refs/heads/operator-tests-updates",
+    "sha": "a46225326d278d891500e8f16fd032ddc7d8fa7c",
+    "ref": "refs/heads/operator-tests-updates",
+    "repository": "Apicurio/apicurio-testing",
+    "actor": "jsenko",
+    "triggering_actor": "jsenko",
+    "event_name": "workflow_dispatch"
+  },
+  "inputs": {
+  "cluster-name": "jsenko",
+  "isDownstream": "false",
+  "release-version": "3.0.15",
+  "skipClusterInstall": "true",
+  "tests-tag": "main"
+},
+  "environment": {
+    "openshift_version": "4.19",
+    "cluster_name": "ci419",
+    "control_plane_nodes": 3,
+    "compute_nodes": 6,
+    "aws_region": "us-east-1",
+    "keycloak_version": "26.3.1",
+    "rapidast_tag": "development"
+  },
+  "execution": {
+    "started_at": "",
+    "completed_at": "2025-09-24T23:14:58Z",
+    "duration_seconds": 83698,
+    "duration_formatted": "23:14:58"
+  },
+  "status": {
+    "overall_result": "unknown"
+  },
+  "jobs": [
+  {
+    "name": "record-start-time",
+    "id": 51184237800,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-09-24T23:14:46Z",
+    "completed_at": "2025-09-24T23:14:48Z",
+    "runner_name": "GitHub Actions 1000032707",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "OpenShift 4.19",
+    "id": 51184241732,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-24T23:14:49Z",
+    "completed_at": "2025-09-24T23:14:49Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy OpenShift 4.19",
+    "id": 51184241780,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-09-24T23:14:51Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000032708",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Apicurio Registry Operator",
+    "id": 51184241802,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-24T23:14:49Z",
+    "completed_at": "2025-09-24T23:14:49Z",
+    "runner_name": null,
+    "runner_group_name": null
+  }
+]
+}
