@@ -1,0 +1,537 @@
+chmod: changing permissions of '/var/run/postgresql': Operation not permitted
+The files belonging to this database system will be owned by user "1000760000".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data/pgdata ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+
+waiting for server to start....2025-09-26 11:02:18.485 UTC [30] LOG:  starting PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-26 11:02:18.486 UTC [30] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-26 11:02:18.495 UTC [33] LOG:  database system was shut down at 2025-09-26 11:02:18 UTC
+2025-09-26 11:02:18.505 UTC [30] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+2025-09-26 11:02:18.851 UTC [30] LOG:  received fast shutdown request
+waiting for server to shut down....2025-09-26 11:02:18.853 UTC [30] LOG:  aborting any active transactions
+2025-09-26 11:02:18.855 UTC [30] LOG:  background worker "logical replication launcher" (PID 36) exited with exit code 1
+2025-09-26 11:02:18.855 UTC [31] LOG:  shutting down
+2025-09-26 11:02:18.856 UTC [31] LOG:  checkpoint starting: shutdown immediate
+2025-09-26 11:02:18.890 UTC [31] LOG:  checkpoint complete: wrote 925 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.027 s, sync=0.004 s, total=0.035 s; sync files=301, longest=0.002 s, average=0.001 s; distance=4256 kB, estimate=4256 kB; lsn=0/1915960, redo lsn=0/1915960
+2025-09-26 11:02:18.897 UTC [30] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2025-09-26 11:02:18.985 UTC [1] LOG:  starting PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-26 11:02:18.985 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-09-26 11:02:18.985 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-09-26 11:02:18.987 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-26 11:02:18.991 UTC [46] LOG:  database system was shut down at 2025-09-26 11:02:18 UTC
+2025-09-26 11:02:18.996 UTC [1] LOG:  database system is ready to accept connections
+2025-09-26 11:07:19.035 UTC [44] LOG:  checkpoint starting: time
+2025-09-26 11:07:38.688 UTC [44] LOG:  checkpoint complete: wrote 199 buffers (1.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=19.644 s, sync=0.004 s, total=19.654 s; sync files=161, longest=0.001 s, average=0.001 s; distance=1007 kB, estimate=1007 kB; lsn=0/1A11898, redo lsn=0/1A11808
+2025-09-26 11:12:19.788 UTC [44] LOG:  checkpoint starting: time
+2025-09-26 11:12:28.118 UTC [44] LOG:  checkpoint complete: wrote 84 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.322 s, sync=0.003 s, total=8.330 s; sync files=49, longest=0.002 s, average=0.001 s; distance=47 kB, estimate=911 kB; lsn=0/1A1D7B8, redo lsn=0/1A1D728
+2025-09-26 11:14:28.641 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:14:28.641 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, CUSTOMERS.Value) already exists.
+2025-09-26 11:14:28.641 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:14:28.662 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:14:28.662 UTC [167] DETAIL:  Key (contenthash)=(a19fb4aaf3cb355045e8cafad865a0b6d36f11ea7a0c220a846d53b87309b5d0) already exists.
+2025-09-26 11:14:28.662 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:14:28.701 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:14:28.701 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, CUSTOMERS-value) already exists.
+2025-09-26 11:14:28.701 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:14:28.753 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:14:28.753 UTC [167] DETAIL:  Key (contenthash)=(035de5c544d12c27ef06e5ac1536aba19f077ee26bc56422c093bc7d4b01f245) already exists.
+2025-09-26 11:14:28.753 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:14:28.799 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:14:28.799 UTC [167] DETAIL:  Key (contenthash)=(5e2d928ba5f68b20f1f326ed65ce536a0568a9661c235c994b7ea565fd815631) already exists.
+2025-09-26 11:14:28.799 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:14:28.802 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:14:28.802 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, extjson-value) already exists.
+2025-09-26 11:14:28.802 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:15:16.826 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:15:16.826 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-09ae0a61_f7c3_4415_ba8d_f2645bc4952e-value) already exists.
+2025-09-26 11:15:16.826 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:15:16.836 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:15:16.836 UTC [167] DETAIL:  Key (contenthash)=(9350dab865e5f46b9289c21232f2eddbdfcad80dc12d58a91703b20ef6e5a7f7) already exists.
+2025-09-26 11:15:16.836 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:15:16.872 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:15:16.872 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-09ae0a61_f7c3_4415_ba8d_f2645bc4952e-value) already exists.
+2025-09-26 11:15:16.872 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:15:16.881 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:15:16.881 UTC [167] DETAIL:  Key (contenthash)=(5b317c9d1e7d157e13cae320b43ea560d3fa1bfab378915fa0845b7cfab0d62d) already exists.
+2025-09-26 11:15:16.881 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:13.166 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:13.166 UTC [167] DETAIL:  Key (contenthash)=(abdda2279b1c7c84ce851bf477f95d6f17705760b517cbc8d42f4998087f4c6b) already exists.
+2025-09-26 11:16:13.166 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:17.807 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:17.807 UTC [167] DETAIL:  Key (contenthash)=(abdda2279b1c7c84ce851bf477f95d6f17705760b517cbc8d42f4998087f4c6b) already exists.
+2025-09-26 11:16:17.807 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:19.030 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:19.030 UTC [167] DETAIL:  Key (contenthash)=(abdda2279b1c7c84ce851bf477f95d6f17705760b517cbc8d42f4998087f4c6b) already exists.
+2025-09-26 11:16:19.030 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:23.690 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:23.690 UTC [167] DETAIL:  Key (contenthash)=(abdda2279b1c7c84ce851bf477f95d6f17705760b517cbc8d42f4998087f4c6b) already exists.
+2025-09-26 11:16:23.690 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:29.747 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:29.747 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:16:29.747 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:30.788 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:30.788 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:16:30.788 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.296 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.296 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.296 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.298 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.298 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.298 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.325 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.325 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.325 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.327 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.327 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.327 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.351 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.351 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.351 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.354 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.354 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.354 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.378 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.378 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.378 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.380 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.380 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.380 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.402 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.402 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.402 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.404 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.404 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.404 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.426 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.426 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.426 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.428 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.428 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.428 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.451 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.451 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.451 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.453 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.453 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.453 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.480 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.480 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.480 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.482 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.482 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.482 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:32.518 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:32.518 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:32.518 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:32.520 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:32.520 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-493ef37c_965c_4339_8146_c26971cf71f3-value) already exists.
+2025-09-26 11:16:32.520 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.361 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.361 UTC [167] DETAIL:  Key (contenthash)=(13cbacce2ad84ad555841b0813185e09384904727db587af2202c905f3d8b051) already exists.
+2025-09-26 11:16:36.361 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.363 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.363 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, google/protobuf/timestamp.proto) already exists.
+2025-09-26 11:16:36.363 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.391 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.391 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.391 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.429 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.429 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.429 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.432 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.432 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.432 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.460 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.460 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.460 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.462 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.462 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.462 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.491 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.491 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.491 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.493 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.493 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.493 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.519 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.519 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.519 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.521 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.521 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.521 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.560 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.560 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.560 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.562 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.562 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.562 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.589 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.589 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.589 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.591 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.591 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.591 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.621 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.621 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.621 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.623 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.623 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.623 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.655 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.655 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.655 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.657 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.657 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.657 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:16:36.688 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:16:36.688 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:16:36.688 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:16:36.690 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:16:36.690 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-0eb4e772_7958_4d7e_bcd7_bea1ea8d02a8-value) already exists.
+2025-09-26 11:16:36.690 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:01.507 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:01.507 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:01.507 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:02.548 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:02.548 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:02.548 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.727 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.727 UTC [167] DETAIL:  Key (contenthash)=(13cbacce2ad84ad555841b0813185e09384904727db587af2202c905f3d8b051) already exists.
+2025-09-26 11:17:03.727 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.729 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.729 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, google/protobuf/timestamp.proto) already exists.
+2025-09-26 11:17:03.729 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.749 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.749 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.749 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.780 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.780 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.780 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.782 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.782 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.782 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.812 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.812 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.812 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.814 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.814 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.814 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.836 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.836 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.836 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.838 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.838 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.838 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.858 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.858 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.858 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.861 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.861 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.861 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.883 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.883 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.883 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.885 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.885 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.885 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.909 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.909 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.909 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.912 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.912 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.912 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.939 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.939 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.939 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.941 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.941 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.941 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.963 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.963 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.963 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.965 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.965 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.965 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:03.988 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:03.988 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:03.988 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:03.990 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:03.990 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-b706e2e4_d0fb_4768_964f_bd66761b6073-value) already exists.
+2025-09-26 11:17:03.990 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:07.644 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:07.644 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:07.644 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:08.686 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:08.686 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:08.686 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:09.721 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:09.721 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:09.721 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:14.455 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:14.455 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:14.455 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:15.490 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:15.490 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:15.490 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:19.214 UTC [44] LOG:  checkpoint starting: time
+2025-09-26 11:17:20.217 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:20.217 UTC [167] DETAIL:  Key (contenthash)=(ceca23ce31800459780f2377649c846385e66444b59418009d78b7e103001c01) already exists.
+2025-09-26 11:17:20.217 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.393 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.393 UTC [167] DETAIL:  Key (contenthash)=(13cbacce2ad84ad555841b0813185e09384904727db587af2202c905f3d8b051) already exists.
+2025-09-26 11:17:21.393 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.395 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.395 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, google/protobuf/timestamp.proto) already exists.
+2025-09-26 11:17:21.395 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.413 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.413 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.413 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.440 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.440 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.440 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.442 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.442 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.442 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.462 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.462 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.462 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.463 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.463 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.463 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.483 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.483 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.483 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.485 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.485 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.485 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.503 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.503 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.503 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.506 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.506 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.506 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.525 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.525 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.525 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.527 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.527 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.527 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.547 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.547 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.547 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.549 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.549 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.549 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.569 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.569 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.569 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.571 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.571 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.571 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.594 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.594 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.594 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.596 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.596 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.596 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:21.622 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:17:21.622 UTC [167] DETAIL:  Key (contenthash)=(f501586d6eea22aa542b982e3209292a167994c0c8e27e2a4509f8f7be9cc1f7) already exists.
+2025-09-26 11:17:21.622 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:17:21.625 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:17:21.625 UTC [167] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, topic-fabfb332_2030_4ae2_80da_d27756f443b0-value) already exists.
+2025-09-26 11:17:21.625 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:17:27.746 UTC [44] LOG:  checkpoint complete: wrote 86 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.521 s, sync=0.006 s, total=8.533 s; sync files=55, longest=0.002 s, average=0.001 s; distance=436 kB, estimate=864 kB; lsn=0/1AB3768, redo lsn=0/1A8A9D0
+2025-09-26 11:18:29.224 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:29.224 UTC [167] DETAIL:  Key (contenthash)=(06f6b1543415fe7aa170c304bf87d179f59075cf5532394b50ce7876664488e7) already exists.
+2025-09-26 11:18:29.224 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:32.458 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:32.458 UTC [167] DETAIL:  Key (contenthash)=(440f4c14fe1a1f30faccfe0004c87a59454024bb9e7ee6594df882b6725b58ee) already exists.
+2025-09-26 11:18:32.458 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:33.525 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:33.525 UTC [167] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2025-09-26 11:18:33.525 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:35.708 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:35.708 UTC [167] DETAIL:  Key (contenthash)=(b83a3a9b80b568092f2af515593d8a7519aff6d9a24418a66a093faaf9449e12) already exists.
+2025-09-26 11:18:35.708 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:36.799 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:36.799 UTC [167] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2025-09-26 11:18:36.799 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:39.007 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:39.007 UTC [167] DETAIL:  Key (contenthash)=(40876797711030d4e072509a4b25981d05c077c363815ff009b74d63b8eaf1c7) already exists.
+2025-09-26 11:18:39.007 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:40.106 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:40.106 UTC [167] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2025-09-26 11:18:40.106 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:42.594 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:42.594 UTC [167] DETAIL:  Key (contenthash)=(0f2750b53ad57bb25a282fb21cfcbbfdfbd79e0560a33bad70681fc0b8b59955) already exists.
+2025-09-26 11:18:42.594 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:43.669 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:43.669 UTC [167] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2025-09-26 11:18:43.669 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:45.854 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:45.854 UTC [167] DETAIL:  Key (contenthash)=(05c8921f8f41632e0253c0d5885068e08b732f89c8a19ff7f19564dab6ddfdc7) already exists.
+2025-09-26 11:18:45.854 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:46.927 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:46.927 UTC [167] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2025-09-26 11:18:46.927 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:49.293 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:49.293 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:49.293 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:49.332 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:49.332 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:49.332 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:50.630 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:50.630 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:50.630 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:51.696 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:51.696 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:51.696 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:51.717 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:51.717 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:51.717 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:51.791 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:51.791 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:51.791 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:54.999 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:54.999 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:54.999 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:57.131 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:57.131 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:57.131 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:58.170 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:18:58.170 UTC [167] DETAIL:  Key (groupid, artifactid)=(de6bf83c-cb5b-4654-9114-98ea58df2466, 07d5ef41-3c4e-415d-bafc-5272b4766cac) already exists.
+2025-09-26 11:18:58.170 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:18:58.204 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:58.204 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:58.204 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:59.236 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:59.236 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:59.236 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:59.238 UTC [167] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2025-09-26 11:18:59.238 UTC [167] DETAIL:  Key (groupid, artifactid)=(5f98342c-1ce0-420c-986a-baa914f910b7, 8ebb0caf-e07e-4316-aeae-04efae74b9e4) already exists.
+2025-09-26 11:18:59.238 UTC [167] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2025-09-26 11:18:59.247 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:18:59.247 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:18:59.247 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:18:59.250 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_versions_1"
+2025-09-26 11:18:59.250 UTC [167] DETAIL:  Key (groupid, artifactid, version)=(5f98342c-1ce0-420c-986a-baa914f910b7, 8ebb0caf-e07e-4316-aeae-04efae74b9e4, 1.1) already exists.
+2025-09-26 11:18:59.250 UTC [167] STATEMENT:  INSERT INTO versions (globalId, groupId, artifactId, version, versionOrder, state, name, description, owner, createdOn, modifiedBy, modifiedOn, labels, contentId) VALUES ($1, $2, $3, $4, (SELECT maxVer FROM (SELECT MAX(versionOrder) + 1 AS maxVer FROM versions WHERE groupId = $5 AND artifactId = $6) temp), $7, $8, $9, $10, $11, $12, $13, $14, $15)
+2025-09-26 11:19:09.977 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:09.977 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:09.977 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:12.296 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:12.296 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:12.296 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:14.842 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:14.842 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:14.842 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:16.621 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:16.621 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:16.621 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:18.156 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:18.156 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:18.156 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:19.569 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:19.569 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:19.569 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:20.639 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:20.639 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:20.639 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:21.682 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:21.682 UTC [167] DETAIL:  Key (contenthash)=(2a62ceec6a7c2087d45ca4f4c0a9a79f62ff447608d41d761286232bad2469b2) already exists.
+2025-09-26 11:19:21.682 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:22.732 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:22.732 UTC [167] DETAIL:  Key (contenthash)=(3d6f7a8fe36a1991d228e6143a1a9918ad488bb8e863b1148de5c6da0f37249f) already exists.
+2025-09-26 11:19:22.732 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:23.861 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:23.861 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:23.861 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:24.892 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:24.892 UTC [167] DETAIL:  Key (contenthash)=(c20aa75c5bcf56536da47d26d1c1142c8121a56dc20d774a40decce2fdfccc7c) already exists.
+2025-09-26 11:19:24.892 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:25.970 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:25.970 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:25.970 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:27.099 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:27.099 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:27.099 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:28.132 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:28.132 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:28.132 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:29.172 UTC [167] ERROR:  duplicate key value violates unique constraint "artifact_rules_pkey"
+2025-09-26 11:19:29.172 UTC [167] DETAIL:  Key (groupid, artifactid, type)=(b3cd7698-1c33-40d6-b499-0952f6d8eef1, 31e130fb-5c6a-4028-97f7-07ec97fef7d1, VALIDITY) already exists.
+2025-09-26 11:19:29.172 UTC [167] STATEMENT:  INSERT INTO artifact_rules (groupId, artifactId, type, configuration) VALUES ($1, $2, $3, $4)
+2025-09-26 11:19:29.209 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:29.209 UTC [167] DETAIL:  Key (contenthash)=(d4f551c77d336d27c7b0fb8d57fb70ab26d5d7a7061bda99386bc824929e6449) already exists.
+2025-09-26 11:19:29.209 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:30.248 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:30.248 UTC [167] DETAIL:  Key (contenthash)=(d4f551c77d336d27c7b0fb8d57fb70ab26d5d7a7061bda99386bc824929e6449) already exists.
+2025-09-26 11:19:30.248 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:31.407 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:31.407 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:31.407 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:32.549 UTC [167] ERROR:  duplicate key value violates unique constraint "global_rules_pkey"
+2025-09-26 11:19:32.549 UTC [167] DETAIL:  Key (type)=(VALIDITY) already exists.
+2025-09-26 11:19:32.549 UTC [167] STATEMENT:  INSERT INTO global_rules (type, configuration) VALUES ($1, $2)
+2025-09-26 11:19:34.687 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:34.687 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:34.687 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:36.049 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:36.049 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:36.049 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:36.276 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:36.276 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:36.276 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:37.134 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:37.134 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:37.134 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:37.443 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:37.443 UTC [167] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:37.443 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:37.483 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:37.483 UTC [167] DETAIL:  Key (contenthash)=(2a62ceec6a7c2087d45ca4f4c0a9a79f62ff447608d41d761286232bad2469b2) already exists.
+2025-09-26 11:19:37.483 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:37.520 UTC [167] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:37.520 UTC [167] DETAIL:  Key (contenthash)=(3d6f7a8fe36a1991d228e6143a1a9918ad488bb8e863b1148de5c6da0f37249f) already exists.
+2025-09-26 11:19:37.520 UTC [167] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:40.766 UTC [168] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:40.766 UTC [168] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2025-09-26 11:19:40.766 UTC [168] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2025-09-26 11:19:40.811 UTC [168] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2025-09-26 11:19:40.811 UTC [168] DETAIL:  Key (contenthash)=(c20aa75c5bcf56536da47d26d1c1142c8121a56dc20d774a40decce2fdfccc7c) already exists.
+2025-09-26 11:19:40.811 UTC [168] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
