@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.smokeTests.apicurio.AllArtifactTypesIT
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 26.78 s <<< FAILURE! -- in io.apicurio.tests.smokeTests.apicurio.AllArtifactTypesIT
+io.apicurio.tests.smokeTests.apicurio.AllArtifactTypesIT.testJsonSchema -- Time elapsed: 2.691 s <<< ERROR!
+java.lang.IllegalStateException: java.lang.ClassCastException: class java.lang.RuntimeException cannot be cast to class com.microsoft.kiota.ApiException (java.lang.RuntimeException is in module java.base of loader 'bootstrap'; com.microsoft.kiota.ApiException is in unnamed module of loader 'app')
+	at io.apicurio.registry.utils.tests.TestUtils.assertClientError(TestUtils.java:401)
+	at io.apicurio.tests.smokeTests.apicurio.AllArtifactTypesIT.doTest(AllArtifactTypesIT.java:92)
+	at io.apicurio.tests.smokeTests.apicurio.AllArtifactTypesIT.testJsonSchema(AllArtifactTypesIT.java:130)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.ClassCastException: class java.lang.RuntimeException cannot be cast to class com.microsoft.kiota.ApiException (java.lang.RuntimeException is in module java.base of loader 'bootstrap'; com.microsoft.kiota.ApiException is in unnamed module of loader 'app')
+	at io.apicurio.registry.utils.tests.TestUtils.internalAssertClientError(TestUtils.java:428)
+	at io.apicurio.registry.utils.tests.TestUtils.assertClientError(TestUtils.java:399)
+	... 5 more
+
