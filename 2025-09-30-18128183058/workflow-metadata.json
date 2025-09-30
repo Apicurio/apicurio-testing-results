@@ -3,7 +3,7 @@
     "name": "Release Tests - Apicurio Registry Operator",
     "run_id": "18128183058",
     "run_number": "15",
-    "run_attempt": "3",
+    "run_attempt": "5",
     "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/test-registry-operator.yaml@refs/heads/operator-tests-updates",
     "sha": "fa9c72ad02fce499360126321cf885b10ec54d81",
     "ref": "refs/heads/operator-tests-updates",
@@ -29,10 +29,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "2025-09-30T13:47:34Z",
-    "completed_at": "2025-09-30T15:05:59Z",
-    "duration_seconds": 4705,
-    "duration_formatted": "01:18:25"
+    "started_at": "2025-09-30T17:21:03Z",
+    "completed_at": "2025-09-30T18:51:39Z",
+    "duration_seconds": 5436,
+    "duration_formatted": "01:30:36"
   },
   "status": {
     "overall_result": "unknown"
@@ -40,52 +40,52 @@
   "jobs": [
   {
     "name": "record-start-time",
-    "id": 51601213871,
+    "id": 51621892983,
     "status": "completed",
     "conclusion": "success",
-    "started_at": "2025-09-30T13:47:33Z",
-    "completed_at": "2025-09-30T13:47:37Z",
-    "runner_name": "GitHub Actions 1000034372",
+    "started_at": "2025-09-30T17:21:03Z",
+    "completed_at": "2025-09-30T17:21:05Z",
+    "runner_name": "GitHub Actions 1000034398",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Apicurio Registry Operator",
+    "id": 51621899935,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-09-30T17:21:07Z",
+    "completed_at": "2025-09-30T18:51:19Z",
+    "runner_name": "GitHub Actions 1000034399",
     "runner_group_name": "GitHub Actions"
   },
   {
     "name": "OpenShift 4.19",
-    "id": 51601226611,
+    "id": 51621899969,
     "status": "completed",
     "conclusion": "skipped",
-    "started_at": "2025-09-30T13:47:37Z",
-    "completed_at": "2025-09-30T13:47:37Z",
+    "started_at": "2025-09-30T17:21:05Z",
+    "completed_at": "2025-09-30T17:21:05Z",
     "runner_name": null,
     "runner_group_name": null
   },
   {
-    "name": "Apicurio Registry Operator",
-    "id": 51601226968,
-    "status": "completed",
-    "conclusion": "failure",
-    "started_at": "2025-09-30T13:47:40Z",
-    "completed_at": "2025-09-30T15:05:48Z",
-    "runner_name": "GitHub Actions 1000034373",
-    "runner_group_name": "GitHub Actions"
-  },
-  {
     "name": "Destroy OpenShift 4.19",
-    "id": 51609523347,
+    "id": 51629253927,
     "status": "completed",
     "conclusion": "skipped",
-    "started_at": "2025-09-30T15:05:48Z",
-    "completed_at": "2025-09-30T15:05:48Z",
+    "started_at": "2025-09-30T18:51:20Z",
+    "completed_at": "2025-09-30T18:51:20Z",
     "runner_name": null,
     "runner_group_name": null
   },
   {
     "name": "Save Workflow Metadata",
-    "id": 51609523798,
+    "id": 51629253935,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-09-30T15:05:51Z",
+    "started_at": "2025-09-30T18:51:23Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000034390",
+    "runner_name": "GitHub Actions 1000034400",
     "runner_group_name": "GitHub Actions"
   }
 ]
