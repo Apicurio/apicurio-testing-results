@@ -3,7 +3,7 @@
     "name": "Release Tests - Apicurio Registry Operator",
     "run_id": "18128183058",
     "run_number": "15",
-    "run_attempt": "1",
+    "run_attempt": "2",
     "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/test-registry-operator.yaml@refs/heads/operator-tests-updates",
     "sha": "fa9c72ad02fce499360126321cf885b10ec54d81",
     "ref": "refs/heads/operator-tests-updates",
@@ -29,10 +29,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "2025-09-30T11:21:49Z",
-    "completed_at": "2025-09-30T11:22:17Z",
-    "duration_seconds": 28,
-    "duration_formatted": "00:00:28"
+    "started_at": "2025-09-30T11:27:14Z",
+    "completed_at": "2025-09-30T12:51:59Z",
+    "duration_seconds": 5085,
+    "duration_formatted": "01:24:45"
   },
   "status": {
     "overall_result": "unknown"
@@ -40,53 +40,53 @@
   "jobs": [
   {
     "name": "record-start-time",
-    "id": 51588186246,
+    "id": 51588613880,
     "status": "completed",
     "conclusion": "success",
-    "started_at": "2025-09-30T11:21:48Z",
-    "completed_at": "2025-09-30T11:21:52Z",
-    "runner_name": "GitHub Actions 1000034251",
+    "started_at": "2025-09-30T11:27:14Z",
+    "completed_at": "2025-09-30T11:27:16Z",
+    "runner_name": "GitHub Actions 1000034259",
     "runner_group_name": "GitHub Actions"
   },
   {
     "name": "Apicurio Registry Operator",
-    "id": 51588194084,
+    "id": 51588619360,
     "status": "completed",
     "conclusion": "failure",
-    "started_at": "2025-09-30T11:21:55Z",
-    "completed_at": "2025-09-30T11:22:05Z",
-    "runner_name": "GitHub Actions 1000034252",
+    "started_at": "2025-09-30T11:27:19Z",
+    "completed_at": "2025-09-30T12:49:56Z",
+    "runner_name": "GitHub Actions 1000034260",
     "runner_group_name": "GitHub Actions"
   },
   {
     "name": "OpenShift 4.19",
-    "id": 51588194097,
+    "id": 51588619388,
     "status": "completed",
     "conclusion": "skipped",
-    "started_at": "2025-09-30T11:21:52Z",
-    "completed_at": "2025-09-30T11:21:52Z",
-    "runner_name": null,
-    "runner_group_name": null
-  },
-  {
-    "name": "Destroy OpenShift 4.19",
-    "id": 51588210158,
-    "status": "completed",
-    "conclusion": "skipped",
-    "started_at": "2025-09-30T11:22:05Z",
-    "completed_at": "2025-09-30T11:22:05Z",
+    "started_at": "2025-09-30T11:27:16Z",
+    "completed_at": "2025-09-30T11:27:16Z",
     "runner_name": null,
     "runner_group_name": null
   },
   {
     "name": "Save Workflow Metadata",
-    "id": 51588210220,
+    "id": 51595563658,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-09-30T11:22:07Z",
+    "started_at": "2025-09-30T12:51:51Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000034253",
+    "runner_name": "GitHub Actions 1000034282",
     "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Destroy OpenShift 4.19",
+    "id": 51595563688,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-09-30T12:49:56Z",
+    "completed_at": "2025-09-30T12:49:56Z",
+    "runner_name": null,
+    "runner_group_name": null
   }
 ]
 }
