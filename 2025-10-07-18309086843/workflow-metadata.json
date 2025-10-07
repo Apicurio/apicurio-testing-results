@@ -29,9 +29,9 @@
   },
   "execution": {
     "started_at": "",
-    "completed_at": "2025-10-07T10:03:30Z",
-    "duration_seconds": 36210,
-    "duration_formatted": "10:03:30"
+    "completed_at": "2025-10-07T10:03:39Z",
+    "duration_seconds": 36219,
+    "duration_formatted": "10:03:39"
   },
   "status": {
     "overall_result": "unknown"
@@ -390,10 +390,10 @@
   {
     "name": "Destroy OpenShift 4.19",
     "id": 52133294873,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "failure",
     "started_at": "2025-10-07T10:03:18Z",
-    "completed_at": null,
+    "completed_at": "2025-10-07T10:03:34Z",
     "runner_name": "GitHub Actions 1000035618",
     "runner_group_name": "GitHub Actions"
   },
