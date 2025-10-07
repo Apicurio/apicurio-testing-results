@@ -1,0 +1,161 @@
+{
+  "workflow": {
+    "name": "Test Apicurio Registry Release",
+    "run_id": "18309480572",
+    "run_number": "86",
+    "run_attempt": "1",
+    "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/test-registry-release.yaml@refs/heads/caching-updates",
+    "sha": "b06200a57bb8cabc43e224b4cb0279491dfec012",
+    "ref": "refs/heads/caching-updates",
+    "repository": "Apicurio/apicurio-testing",
+    "actor": "jsenko",
+    "triggering_actor": "jsenko",
+    "event_name": "workflow_dispatch"
+  },
+  "inputs": {
+  "isDownstream": "false",
+  "release-version": "3.0.15",
+  "skipClusterInstall": "false",
+  "tests-tag": "main"
+},
+  "environment": {
+    "openshift_version": "4.19",
+    "cluster_name": "ci419",
+    "control_plane_nodes": 3,
+    "compute_nodes": 6,
+    "aws_region": "us-east-1",
+    "keycloak_version": "26.3.1",
+    "rapidast_tag": "development"
+  },
+  "execution": {
+    "started_at": "",
+    "completed_at": "2025-10-07T10:42:51Z",
+    "duration_seconds": 38571,
+    "duration_formatted": "10:42:51"
+  },
+  "status": {
+    "overall_result": "unknown"
+  },
+  "jobs": [
+  {
+    "name": "OpenShift 4.19",
+    "id": 52134481388,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-10-07T10:17:39Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000035657",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "OpenShift 4.14",
+    "id": 52134481400,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-10-07T10:17:39Z",
+    "completed_at": "2025-10-07T10:42:07Z",
+    "runner_name": "GitHub Actions 1000035658",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "record-start-time",
+    "id": 52134481414,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-07T10:17:39Z",
+    "completed_at": "2025-10-07T10:17:41Z",
+    "runner_name": "GitHub Actions 1000035659",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Apicurio Registry (strimzi 0.43)",
+    "id": 52136368544,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-10-07T10:42:10Z",
+    "completed_at": "2025-10-07T10:42:26Z",
+    "runner_name": "GitHub Actions 1000035660",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Apicurio Registry (in-memory) [4.14]",
+    "id": 52136368620,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-10-07T10:42:07Z",
+    "completed_at": "2025-10-07T10:42:07Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Integration Tests (in mem) [4.14]",
+    "id": 52136368746,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-10-07T10:42:07Z",
+    "completed_at": "2025-10-07T10:42:07Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "UI Tests (in mem) [4.14]",
+    "id": 52136368801,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-10-07T10:42:07Z",
+    "completed_at": "2025-10-07T10:42:07Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy Registry (inmemory) [4.14]",
+    "id": 52136368854,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-10-07T10:42:07Z",
+    "completed_at": "2025-10-07T10:42:07Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy Registry (strimzi 0.43)",
+    "id": 52136392648,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-10-07T10:42:28Z",
+    "completed_at": "2025-10-07T10:42:35Z",
+    "runner_name": "GitHub Actions 1000035661",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "UI Tests (strimzi 0.43)",
+    "id": 52136392689,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-10-07T10:42:26Z",
+    "completed_at": "2025-10-07T10:42:26Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Integration Tests (strimzi 0.43)",
+    "id": 52136392722,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-10-07T10:42:26Z",
+    "completed_at": "2025-10-07T10:42:26Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy OpenShift 4.14",
+    "id": 52136403645,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-10-07T10:42:40Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000035662",
+    "runner_group_name": "GitHub Actions"
+  }
+]
+}
