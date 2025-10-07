@@ -1,0 +1,92 @@
+{
+  "workflow": {
+    "name": "Release Tests - Apicurio Registry Operator",
+    "run_id": "18309074914",
+    "run_number": "18",
+    "run_attempt": "1",
+    "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/test-registry-operator.yaml@refs/heads/caching-updates",
+    "sha": "cd1548169867d0841a093813da8f45b8fab63fa9",
+    "ref": "refs/heads/caching-updates",
+    "repository": "Apicurio/apicurio-testing",
+    "actor": "jsenko",
+    "triggering_actor": "jsenko",
+    "event_name": "workflow_dispatch"
+  },
+  "inputs": {
+  "cluster-name": "operator419",
+  "isDownstream": "false",
+  "release-version": "3.0.15",
+  "skipClusterInstall": "false",
+  "tests-tag": "main"
+},
+  "environment": {
+    "openshift_version": "4.19",
+    "cluster_name": "ci419",
+    "control_plane_nodes": 3,
+    "compute_nodes": 6,
+    "aws_region": "us-east-1",
+    "keycloak_version": "26.3.1",
+    "rapidast_tag": "development"
+  },
+  "execution": {
+    "started_at": "2025-10-07T10:02:09Z",
+    "completed_at": "2025-10-07T10:47:22Z",
+    "duration_seconds": 2713,
+    "duration_formatted": "00:45:13"
+  },
+  "status": {
+    "overall_result": "unknown"
+  },
+  "jobs": [
+  {
+    "name": "record-start-time",
+    "id": 52133196038,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-07T10:02:08Z",
+    "completed_at": "2025-10-07T10:02:12Z",
+    "runner_name": "GitHub Actions 1000035600",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "OpenShift 4.19",
+    "id": 52133205998,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-10-07T10:02:15Z",
+    "completed_at": "2025-10-07T10:47:01Z",
+    "runner_name": "GitHub Actions 1000035601",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Apicurio Registry Operator",
+    "id": 52136726317,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-10-07T10:47:01Z",
+    "completed_at": "2025-10-07T10:47:01Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Destroy OpenShift 4.19",
+    "id": 52136726361,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-10-07T10:47:03Z",
+    "completed_at": "2025-10-07T10:47:10Z",
+    "runner_name": "GitHub Actions 1000035668",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Save Workflow Metadata",
+    "id": 52136738200,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-10-07T10:47:13Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000035669",
+    "runner_group_name": "GitHub Actions"
+  }
+]
+}
