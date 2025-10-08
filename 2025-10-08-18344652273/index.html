@@ -716,7 +716,7 @@
                 <div class="card-label">UI Test Jobs</div>
             </div>
             <div class="card warning">
-                <div class="card-number">0</div>
+                <div class="card-number">1</div>
                 <div class="card-label">Security Scan Jobs</div>
             </div>
             <div class="card success">
@@ -2077,12 +2077,54 @@
                 </div>
             </div>
 
+            <div class="section">
+                <h2 class="section-title">Security Scans (DAST)</h2>
+                <div class="job-grid">
+
+                    <div class="job-card">
+                        <div class="job-header expandable" onclick="toggleDetails('os419_authn_dastscan_dast')">
+                            <div>
+                                <div class="job-title">os419_authn_dastscan</div>
+                                <div class="job-config">DAST Security Scan on OpenShift 4.19 with Authentication Tests</div>
+                            </div>
+                            <span class="status-badge status-success">Clean</span>
+                        </div>
+                        <div class="job-content">
+                            <div class="test-results">
+                                <div class="test-stat">
+                                    <div class="test-stat-number total">1</div>
+                                    <div class="test-stat-label">Scans Completed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number passed">0</div>
+                                    <div class="test-stat-label">Total Issues</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="os419_authn_dastscan_dast" class="details">
+                            <h4>Scan Details:</h4>
+
+                            <div class="suite-item">
+                                <span class="suite-name">registry-v3-authenticated</span>
+                                
+                                <div class="status-section">
+                                    <a href="os419_authn_dastscan/dast-results/registry-v3-authenticated/ApicurioRegistry/DAST-20251008-132432-RapiDAST-ApicurioRegistry/zap/zap-report.html" target="_blank" class="report-icon" title="View ZAP Security Report">🛡️</a>
+                                    <span class="suite-stats">0 issues</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
         
         <div class="footer">
-            <p>Generated on 2025-10-08 13:25:44 | 
+            <p>Generated on 2025-10-08 13:26:58 | 
             Workflow Run ID: 18344652273 | 
-            Total Jobs: 12</p>
+            Total Jobs: 13</p>
         </div>
     </div>
     
