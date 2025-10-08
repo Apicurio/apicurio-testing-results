@@ -1,0 +1,19 @@
+---------------------------------------------
+Performing the Initial Config...
+---------------------------------------------
+Generating application config at: /opt/app-root/src/config.js
+Config successfully writen to file.
+---------------------------------------------
+Patching base hrefs...
+---------------------------------------------
+Updating base href in index.html file at: /opt/app-root/src/index.html
+Successfully updated the base href value.
+---------------------------------------------
+Config Complete. Nginx Server Started.....
+---------------------------------------------
+10.128.2.2 - - [08/Oct/2025:17:31:48 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.32" "-"
+10.128.2.2 - - [08/Oct/2025:17:31:53 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.32" "-"
+10.128.2.2 - - [08/Oct/2025:17:31:58 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.32" "-"
+10.128.2.2 - - [08/Oct/2025:17:32:03 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.32" "-"
+10.128.2.2 - - [08/Oct/2025:17:32:08 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.32" "-"
+10.128.2.2 - - [08/Oct/2025:17:32:13 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.32" "-"
