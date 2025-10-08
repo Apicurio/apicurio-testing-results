@@ -701,11 +701,11 @@
         </div>
         <div class="summary-cards">
             <div class="card success">
-                <div class="card-number">1</div>
+                <div class="card-number">2</div>
                 <div class="card-label">Integration Test Jobs</div>
             </div>
             <div class="card info">
-                <div class="card-number">2</div>
+                <div class="card-number">3</div>
                 <div class="card-label">UI Test Jobs</div>
             </div>
             <div class="card warning">
@@ -713,11 +713,11 @@
                 <div class="card-label">Security Scan Jobs</div>
             </div>
             <div class="card success">
-                <div class="card-number">38/38</div>
+                <div class="card-number">46/46</div>
                 <div class="card-label">Integration Tests Passed</div>
             </div>
             <div class="card danger">
-                <div class="card-number">14/30</div>
+                <div class="card-number">21/45</div>
                 <div class="card-label">UI Tests Passed</div>
             </div>
         </div>
@@ -727,6 +727,49 @@
             <div class="section">
                 <h2 class="section-title">Integration Tests</h2>
                 <div class="job-grid">
+
+                    <div class="job-card">
+                        <div class="job-header expandable" onclick="toggleDetails('os419_authn_integrationtests_integration')">
+                            <div>
+                                <div class="job-title">os419_authn_integrationtests</div>
+                                <div class="job-config">Integration Tests on OpenShift 4.19 with Authentication Tests</div>
+                            </div>
+                            <span class="status-badge status-passed">passed</span>
+                        </div>
+                        <div class="job-content">
+                            <div class="test-results">
+                                <div class="test-stat">
+                                    <div class="test-stat-number total">8</div>
+                                    <div class="test-stat-label">Total</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number passed">8</div>
+                                    <div class="test-stat-label">Passed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number failed">0</div>
+                                    <div class="test-stat-label">Failed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number skipped">0</div>
+                                    <div class="test-stat-label">Skipped</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="os419_authn_integrationtests_integration" class="details">
+                            <h4>Test Suites:</h4>
+                            <div class="suite-list">
+
+                                <div class="suite-item">
+                                    <span class="suite-name">SimpleAuthIT</span>
+                                    <span class="suite-stats passed">
+                                        8/8 passed (10.3s)
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="job-card">
                         <div class="job-header expandable" onclick="toggleDetails('os419_pg12_integrationtests_integration')">
@@ -998,6 +1041,183 @@
                     </div>
 
                     <div class="job-card">
+                        <div class="job-header expandable" onclick="toggleDetails('os419_mysql_uitests_ui')">
+                            <div>
+                                <div class="job-title">os419_mysql_uitests</div>
+                                <div class="job-config">UI Tests on OpenShift 4.19 with MySQL</div>
+                            </div>
+                            <div class="status-section">
+                                <a href="os419_mysql_uitests/test-results/index.html" target="_blank" class="report-icon" title="View Playwright Report">📊</a>
+                                <span class="status-badge status-failed">FAILED</span>
+                            </div>
+                        </div>
+                        <div class="job-content">
+
+                            <div class="test-results">
+                                <div class="test-stat">
+                                    <div class="test-stat-number total">15</div>
+                                    <div class="test-stat-label">Total</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number passed">7</div>
+                                    <div class="test-stat-label">Passed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number failed">8</div>
+                                    <div class="test-stat-label">Failed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number flaky">0</div>
+                                    <div class="test-stat-label">Flaky</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number skipped">0</div>
+                                    <div class="test-stat-label">Skipped</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="os419_mysql_uitests_ui" class="details">
+                            <h4>Test Details:</h4>
+
+                            <div class="test-timing">
+                                <strong>Total Duration:</strong> 383.4s
+                            </div>
+
+                            <div class="suite-list">
+
+                                <div class="suite-header">
+                                    <strong>explore.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Create group</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.14s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Group specific rules</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.12s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Create artifact</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.12s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Edit artifact metadata</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.12s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Artifact specific rules</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.11s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Create new version</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.11s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Delete artifact</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.12s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Explore - Delete group</span>
+                                    <span class="suite-stats failed">
+                                        failed (45.11s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>globalRules.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - List Rules</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.61s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - Enable Validity Rule</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.64s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - Enable Compatibility Rule</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.64s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - Enable Integrity Rule</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.58s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>masthead.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Masthead - Logo verification</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.26s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>settings.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Settings - Filter</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.62s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>smoke.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">App - Has Title</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.21s) - chromium
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="job-card">
                         <div class="job-header expandable" onclick="toggleDetails('os414_strimzi043_uitests_ui')">
                             <div>
                                 <div class="job-title">os414_strimzi043_uitests</div>
@@ -1180,9 +1400,9 @@
         </div>
         
         <div class="footer">
-            <p>Generated on 2025-10-08 11:42:40 | 
+            <p>Generated on 2025-10-08 11:44:17 | 
             Workflow Run ID: 18342221651 | 
-            Total Jobs: 5</p>
+            Total Jobs: 7</p>
         </div>
     </div>
     
