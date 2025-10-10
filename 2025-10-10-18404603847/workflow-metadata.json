@@ -1,0 +1,71 @@
+{
+  "workflow": {
+    "name": "Provision a new OKD cluster",
+    "run_id": "18404603847",
+    "run_number": "12",
+    "run_attempt": "1",
+    "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/provision-cluster.yaml@refs/heads/main",
+    "sha": "4fc5b7e540969933a288617c9cd953553a54ef57",
+    "ref": "refs/heads/main",
+    "repository": "Apicurio/apicurio-testing",
+    "actor": "jsenko",
+    "triggering_actor": "jsenko",
+    "event_name": "workflow_dispatch"
+  },
+  "inputs": {
+  "cluster-name": "jsenko",
+  "cluster-version": "4.19",
+  "compute-nodes": "2",
+  "force": "true"
+},
+  "environment": {
+    "openshift_version": "4.19",
+    "cluster_name": "ci419",
+    "control_plane_nodes": 3,
+    "compute_nodes": 6,
+    "aws_region": "us-east-1",
+    "keycloak_version": "26.3.1",
+    "rapidast_tag": "development"
+  },
+  "execution": {
+    "started_at": "2025-10-10T11:04:24Z",
+    "completed_at": "2025-10-10T11:47:23Z",
+    "duration_seconds": 2579,
+    "duration_formatted": "00:42:59"
+  },
+  "status": {
+    "overall_result": "unknown"
+  },
+  "jobs": [
+  {
+    "name": "record-start-time",
+    "id": 52441509286,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-10T11:04:23Z",
+    "completed_at": "2025-10-10T11:04:25Z",
+    "runner_name": "GitHub Actions 1000036942",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Provision OpenShift 4.19",
+    "id": 52441518421,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-10T11:04:28Z",
+    "completed_at": "2025-10-10T11:47:11Z",
+    "runner_name": "GitHub Actions 1000036943",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Save Workflow Metadata",
+    "id": 52444490855,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-10-10T11:47:14Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000036965",
+    "runner_group_name": "GitHub Actions"
+  }
+]
+}
