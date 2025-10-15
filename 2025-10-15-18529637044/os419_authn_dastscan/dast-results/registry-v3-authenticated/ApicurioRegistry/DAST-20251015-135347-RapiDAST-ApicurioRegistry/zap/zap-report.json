@@ -1,0 +1,18 @@
+{
+    "@programName": "ZAP",
+    "@version": "2.16.1",
+    "@generated": "Wed, 15 Oct 2025 13:55:52",
+    "site":[ 
+        {
+            "@name": "https://registry-app-authn.apps.ci419.apicurio-testing.org",
+            "@host": "registry-app-authn.apps.ci419.apicurio-testing.org",
+            "@port": "443",
+            "@ssl": "true",
+            "alerts": [ 
+            ]
+        }
+    ],
+    "sequences":[
+    ]
+}
+
