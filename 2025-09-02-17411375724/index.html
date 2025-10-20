@@ -914,37 +914,9 @@
                             <div class="suite-list">
 
                                 <div class="suite-item">
-                                    <span class="suite-name">ArtifactsIT</span>
-                                    <span class="suite-stats passed">
-                                        13/13 passed (40.0s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">RulesResourceConfluentIT</span>
-                                    <span class="suite-stats passed">
-                                        1/1 passed (1.2s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">AllArtifactTypesIT</span>
-                                    <span class="suite-stats passed">
-                                        7/7 passed (33.5s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
                                     <span class="suite-name">RulesResourceIT</span>
                                     <span class="suite-stats passed">
                                         5/5 passed (10.7s)
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">SchemasConfluentIT</span>
-                                    <span class="suite-stats passed">
-                                        9/9 passed (15.7s)
                                     </span>
                                 </div>
 
@@ -956,9 +928,37 @@
                                 </div>
 
                                 <div class="suite-item">
+                                    <span class="suite-name">AllArtifactTypesIT</span>
+                                    <span class="suite-stats passed">
+                                        7/7 passed (33.5s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">ArtifactsIT</span>
+                                    <span class="suite-stats passed">
+                                        13/13 passed (40.0s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
                                     <span class="suite-name">MetadataIT</span>
                                     <span class="suite-stats passed">
                                         2/2 passed (3.7s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">RulesResourceConfluentIT</span>
+                                    <span class="suite-stats passed">
+                                        1/1 passed (1.2s)
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">SchemasConfluentIT</span>
+                                    <span class="suite-stats passed">
+                                        9/9 passed (15.7s)
                                     </span>
                                 </div>
 
@@ -1130,162 +1130,6 @@
                     </div>
 
                     <div class="job-card">
-                        <div class="job-header expandable" onclick="toggleDetails('os419_mysql_uitests_ui')">
-                            <div>
-                                <div class="job-title">os419_mysql_uitests</div>
-                                <div class="job-config">UI Tests on OpenShift 4.19 with MySQL</div>
-                            </div>
-                            <div class="status-section">
-                                <a href="os419_mysql_uitests/test-results/index.html" target="_blank" class="report-icon" title="View Playwright Report">📊</a>
-                                <span class="status-badge status-failed">FAILED</span>
-                            </div>
-                        </div>
-                        <div class="job-content">
-
-                            <div class="test-results">
-                                <div class="test-stat">
-                                    <div class="test-stat-number total">12</div>
-                                    <div class="test-stat-label">Total</div>
-                                </div>
-                                <div class="test-stat">
-                                    <div class="test-stat-number passed">11</div>
-                                    <div class="test-stat-label">Passed</div>
-                                </div>
-                                <div class="test-stat">
-                                    <div class="test-stat-number failed">1</div>
-                                    <div class="test-stat-label">Failed</div>
-                                </div>
-                                <div class="test-stat">
-                                    <div class="test-stat-number flaky">0</div>
-                                    <div class="test-stat-label">Flaky</div>
-                                </div>
-                                <div class="test-stat">
-                                    <div class="test-stat-number skipped">0</div>
-                                    <div class="test-stat-label">Skipped</div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div id="os419_mysql_uitests_ui" class="details">
-                            <h4>Test Details:</h4>
-
-                            <div class="test-timing">
-                                <strong>Total Duration:</strong> 28.8s
-                            </div>
-
-                            <div class="suite-list">
-
-                                <div class="suite-header">
-                                    <strong>e2e.spec.ts</strong>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">End to End - Create artifact</span>
-                                    <span class="suite-stats passed">
-                                        passed (1.72s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">End to End - Edit artifact metadata</span>
-                                    <span class="suite-stats passed">
-                                        passed (1.24s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">End to End - Artifact specific rules</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.56s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">End to End - Create new version</span>
-                                    <span class="suite-stats passed">
-                                        passed (1.02s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">End to End - Delete artifact</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.50s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-header">
-                                    <strong>globalRules.spec.ts</strong>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">Global Rules - List Rules</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.54s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">Global Rules - Enable Validity Rule</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.73s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">Global Rules - Enable Compatibility Rule</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.71s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">Global Rules - Enable Integrity Rule</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.75s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-header">
-                                    <strong>masthead.spec.ts</strong>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">Masthead - Logo verification</span>
-                                    <span class="suite-stats failed">
-                                        failed (16.27s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-header">
-                                    <strong>settings.spec.ts</strong>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">Settings - Filter</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.76s) - chromium
-                                    </span>
-                                </div>
-
-                                <div class="suite-header">
-                                    <strong>smoke.spec.ts</strong>
-                                </div>
-
-                                <div class="suite-item">
-                                    <span class="suite-name">App - Has Title</span>
-                                    <span class="suite-stats passed">
-                                        passed (0.27s) - chromium
-                                    </span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="job-card">
                         <div class="job-header expandable" onclick="toggleDetails('os419_strimzi043_uitests_ui')">
                             <div>
                                 <div class="job-title">os419_strimzi043_uitests</div>
@@ -1422,6 +1266,162 @@
                                     <span class="suite-name">Settings - Filter</span>
                                     <span class="suite-stats passed">
                                         passed (0.74s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>smoke.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">App - Has Title</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.21s) - chromium
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header expandable" onclick="toggleDetails('os419_pg17_uitests_ui')">
+                            <div>
+                                <div class="job-title">os419_pg17_uitests</div>
+                                <div class="job-config">UI Tests on OpenShift 4.19 with PostgreSQL 17</div>
+                            </div>
+                            <div class="status-section">
+                                <a href="os419_pg17_uitests/test-results/index.html" target="_blank" class="report-icon" title="View Playwright Report">📊</a>
+                                <span class="status-badge status-failed">FAILED</span>
+                            </div>
+                        </div>
+                        <div class="job-content">
+
+                            <div class="test-results">
+                                <div class="test-stat">
+                                    <div class="test-stat-number total">12</div>
+                                    <div class="test-stat-label">Total</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number passed">11</div>
+                                    <div class="test-stat-label">Passed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number failed">1</div>
+                                    <div class="test-stat-label">Failed</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number flaky">0</div>
+                                    <div class="test-stat-label">Flaky</div>
+                                </div>
+                                <div class="test-stat">
+                                    <div class="test-stat-number skipped">0</div>
+                                    <div class="test-stat-label">Skipped</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="os419_pg17_uitests_ui" class="details">
+                            <h4>Test Details:</h4>
+
+                            <div class="test-timing">
+                                <strong>Total Duration:</strong> 29.6s
+                            </div>
+
+                            <div class="suite-list">
+
+                                <div class="suite-header">
+                                    <strong>e2e.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">End to End - Create artifact</span>
+                                    <span class="suite-stats passed">
+                                        passed (1.71s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">End to End - Edit artifact metadata</span>
+                                    <span class="suite-stats passed">
+                                        passed (1.17s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">End to End - Artifact specific rules</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.49s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">End to End - Create new version</span>
+                                    <span class="suite-stats passed">
+                                        passed (1.19s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">End to End - Delete artifact</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.42s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>globalRules.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - List Rules</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.51s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - Enable Validity Rule</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.68s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - Enable Compatibility Rule</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.64s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Global Rules - Enable Integrity Rule</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.67s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>masthead.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Masthead - Logo verification</span>
+                                    <span class="suite-stats failed">
+                                        failed (16.28s) - chromium
+                                    </span>
+                                </div>
+
+                                <div class="suite-header">
+                                    <strong>settings.spec.ts</strong>
+                                </div>
+
+                                <div class="suite-item">
+                                    <span class="suite-name">Settings - Filter</span>
+                                    <span class="suite-stats passed">
+                                        passed (0.70s) - chromium
                                     </span>
                                 </div>
 
@@ -1598,13 +1598,13 @@
                     </div>
 
                     <div class="job-card">
-                        <div class="job-header expandable" onclick="toggleDetails('os419_pg17_uitests_ui')">
+                        <div class="job-header expandable" onclick="toggleDetails('os419_mysql_uitests_ui')">
                             <div>
-                                <div class="job-title">os419_pg17_uitests</div>
-                                <div class="job-config">UI Tests on OpenShift 4.19 with PostgreSQL 17</div>
+                                <div class="job-title">os419_mysql_uitests</div>
+                                <div class="job-config">UI Tests on OpenShift 4.19 with MySQL</div>
                             </div>
                             <div class="status-section">
-                                <a href="os419_pg17_uitests/test-results/index.html" target="_blank" class="report-icon" title="View Playwright Report">📊</a>
+                                <a href="os419_mysql_uitests/test-results/index.html" target="_blank" class="report-icon" title="View Playwright Report">📊</a>
                                 <span class="status-badge status-failed">FAILED</span>
                             </div>
                         </div>
@@ -1635,11 +1635,11 @@
 
                         </div>
 
-                        <div id="os419_pg17_uitests_ui" class="details">
+                        <div id="os419_mysql_uitests_ui" class="details">
                             <h4>Test Details:</h4>
 
                             <div class="test-timing">
-                                <strong>Total Duration:</strong> 29.6s
+                                <strong>Total Duration:</strong> 28.8s
                             </div>
 
                             <div class="suite-list">
@@ -1651,35 +1651,35 @@
                                 <div class="suite-item">
                                     <span class="suite-name">End to End - Create artifact</span>
                                     <span class="suite-stats passed">
-                                        passed (1.71s) - chromium
+                                        passed (1.72s) - chromium
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
                                     <span class="suite-name">End to End - Edit artifact metadata</span>
                                     <span class="suite-stats passed">
-                                        passed (1.17s) - chromium
+                                        passed (1.24s) - chromium
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
                                     <span class="suite-name">End to End - Artifact specific rules</span>
                                     <span class="suite-stats passed">
-                                        passed (0.49s) - chromium
+                                        passed (0.56s) - chromium
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
                                     <span class="suite-name">End to End - Create new version</span>
                                     <span class="suite-stats passed">
-                                        passed (1.19s) - chromium
+                                        passed (1.02s) - chromium
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
                                     <span class="suite-name">End to End - Delete artifact</span>
                                     <span class="suite-stats passed">
-                                        passed (0.42s) - chromium
+                                        passed (0.50s) - chromium
                                     </span>
                                 </div>
 
@@ -1690,28 +1690,28 @@
                                 <div class="suite-item">
                                     <span class="suite-name">Global Rules - List Rules</span>
                                     <span class="suite-stats passed">
-                                        passed (0.51s) - chromium
+                                        passed (0.54s) - chromium
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
                                     <span class="suite-name">Global Rules - Enable Validity Rule</span>
                                     <span class="suite-stats passed">
-                                        passed (0.68s) - chromium
+                                        passed (0.73s) - chromium
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
                                     <span class="suite-name">Global Rules - Enable Compatibility Rule</span>
                                     <span class="suite-stats passed">
-                                        passed (0.64s) - chromium
+                                        passed (0.71s) - chromium
                                     </span>
                                 </div>
 
                                 <div class="suite-item">
                                     <span class="suite-name">Global Rules - Enable Integrity Rule</span>
                                     <span class="suite-stats passed">
-                                        passed (0.67s) - chromium
+                                        passed (0.75s) - chromium
                                     </span>
                                 </div>
 
@@ -1722,7 +1722,7 @@
                                 <div class="suite-item">
                                     <span class="suite-name">Masthead - Logo verification</span>
                                     <span class="suite-stats failed">
-                                        failed (16.28s) - chromium
+                                        failed (16.27s) - chromium
                                     </span>
                                 </div>
 
@@ -1733,7 +1733,7 @@
                                 <div class="suite-item">
                                     <span class="suite-name">Settings - Filter</span>
                                     <span class="suite-stats passed">
-                                        passed (0.70s) - chromium
+                                        passed (0.76s) - chromium
                                     </span>
                                 </div>
 
@@ -1744,7 +1744,7 @@
                                 <div class="suite-item">
                                     <span class="suite-name">App - Has Title</span>
                                     <span class="suite-stats passed">
-                                        passed (0.21s) - chromium
+                                        passed (0.27s) - chromium
                                     </span>
                                 </div>
 
@@ -1784,6 +1784,15 @@
                             <h4>Scan Details:</h4>
 
                             <div class="suite-item">
+                                <span class="suite-name">registry-v3-authenticated</span>
+                                
+                                <div class="status-section">
+                                    <a href="os419_authn_dastscan/dast-results/registry-v3-authenticated/ApicurioRegistry/DAST-20250902-175513-RapiDAST-ApicurioRegistry/zap/zap-report.html" target="_blank" class="report-icon" title="View ZAP Security Report">🛡️</a>
+                                    <span class="suite-stats">0 issues</span>
+                                </div>
+                            </div>
+
+                            <div class="suite-item">
                                 <span class="suite-name">ccompat-v7-authenticated</span>
                                 
                                 <div class="status-section">
@@ -1801,15 +1810,6 @@
                                 </div>
                             </div>
 
-                            <div class="suite-item">
-                                <span class="suite-name">registry-v3-authenticated</span>
-                                
-                                <div class="status-section">
-                                    <a href="os419_authn_dastscan/dast-results/registry-v3-authenticated/ApicurioRegistry/DAST-20250902-175513-RapiDAST-ApicurioRegistry/zap/zap-report.html" target="_blank" class="report-icon" title="View ZAP Security Report">🛡️</a>
-                                    <span class="suite-stats">0 issues</span>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
@@ -1819,7 +1819,7 @@
         </div>
         
         <div class="footer">
-            <p>Generated on 2025-10-20 17:42:37 | 
+            <p>Generated on 2025-10-20 18:49:34 | 
             Workflow Run ID: 17411375724 | 
             Total Jobs: 9</p>
         </div>
