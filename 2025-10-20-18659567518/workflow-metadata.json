@@ -1,0 +1,68 @@
+{
+  "workflow": {
+    "name": "Destroy an existing OKD cluster",
+    "run_id": "18659567518",
+    "run_number": "6",
+    "run_attempt": "1",
+    "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/destroy-cluster.yaml@refs/heads/main",
+    "sha": "4fc5b7e540969933a288617c9cd953553a54ef57",
+    "ref": "refs/heads/main",
+    "repository": "Apicurio/apicurio-testing",
+    "actor": "jsenko",
+    "triggering_actor": "jsenko",
+    "event_name": "workflow_dispatch"
+  },
+  "inputs": {
+  "cluster-name": "jsenko"
+},
+  "environment": {
+    "openshift_version": "4.19",
+    "cluster_name": "ci419",
+    "control_plane_nodes": 3,
+    "compute_nodes": 6,
+    "aws_region": "us-east-1",
+    "keycloak_version": "26.3.1",
+    "rapidast_tag": "development"
+  },
+  "execution": {
+    "started_at": "2025-10-20T17:15:24Z",
+    "completed_at": "2025-10-20T17:15:53Z",
+    "duration_seconds": 29,
+    "duration_formatted": "00:00:29"
+  },
+  "status": {
+    "overall_result": "unknown"
+  },
+  "jobs": [
+  {
+    "name": "record-start-time",
+    "id": 53196687320,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-20T17:15:23Z",
+    "completed_at": "2025-10-20T17:15:26Z",
+    "runner_name": "GitHub Actions 1000038729",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Destroy cluster jsenko",
+    "id": 53196695890,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-10-20T17:15:28Z",
+    "completed_at": "2025-10-20T17:15:39Z",
+    "runner_name": "GitHub Actions 1000038730",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Save Workflow Metadata",
+    "id": 53196711704,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-10-20T17:15:43Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000038731",
+    "runner_group_name": "GitHub Actions"
+  }
+]
+}
