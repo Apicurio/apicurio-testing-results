@@ -49,7 +49,8 @@ def load_workflow_metadata(dir_path):
                 # Extract the requested information
                 actor = data.get('workflow', {}).get('actor', 'Unknown')
                 release_version = data.get('inputs', {}).get('release-version', 'Unknown')
-                
+                is_downstream = data.get('inputs', {}).get('isDownstream', 'Unknown')
+
                 execution = data.get('execution', {})
                 started_at = execution.get('started_at', '').strip()
                 duration_formatted = execution.get('duration_formatted', None)
@@ -69,6 +70,7 @@ def load_workflow_metadata(dir_path):
                 return {
                     'actor': actor if actor != 'Unknown' else None,
                     'release_version': release_version if release_version != 'Unknown' else None,
+                    'is_downstream': is_downstream if is_downstream != 'Unknown' else None,
                     'started_at': started_at,
                     'duration_formatted': duration_formatted
                 }
@@ -78,6 +80,7 @@ def load_workflow_metadata(dir_path):
     return {
         'actor': None,
         'release_version': None,
+        'is_downstream': None,
         'started_at': None,
         'duration_formatted': None
     }
@@ -114,6 +117,7 @@ def scan_workflow_directories():
                     'job_count': job_count,
                     'actor': metadata['actor'],
                     'release_version': metadata['release_version'],
+                    'is_downstream': metadata['is_downstream'],
                     'started_at': metadata['started_at'],
                     'duration_formatted': metadata['duration_formatted']
                 })
@@ -151,7 +155,12 @@ def update_index_html(workflows):
             metadata_js += f", releaseVersion: '{workflow['release_version']}'"
         else:
             metadata_js += ", releaseVersion: null"
-            
+
+        if workflow['is_downstream']:
+            metadata_js += f", isDownstream: '{workflow['is_downstream']}'"
+        else:
+            metadata_js += ", isDownstream: null"
+
         if workflow['started_at']:
             metadata_js += f", startedAt: '{workflow['started_at']}'"
         else:
