@@ -507,7 +507,7 @@ python generate-workflow-summary.py &lt;workflow-name&gt;
                         <div class="workflow-content">
                             <div class="workflow-actions">
                                 ${workflow.hasIndex ?
-                                    `<a href="${workflow.name}/index.html" class="btn btn-primary">View Summary</a>` :
+                                    `<a href="${workflow.name}/index.html" class="btn btn-primary">View Report</a>` :
                                     `<button class="btn btn-secondary" onclick="generateSummary('${workflow.name}')" title="Generate HTML summary">Generate Summary</button>`
                                 }
                             </div>
