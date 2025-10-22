@@ -48,7 +48,7 @@ def load_workflow_metadata(dir_path):
                 
                 # Extract the requested information
                 actor = data.get('workflow', {}).get('actor', 'Unknown')
-                release_version = data.get('inputs', {}).get('release_version', 'Unknown')
+                release_version = data.get('inputs', {}).get('release-version', 'Unknown')
                 
                 execution = data.get('execution', {})
                 started_at = execution.get('started_at', '').strip()
