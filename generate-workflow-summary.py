@@ -510,8 +510,15 @@ class WorkflowSummaryGenerator:
             metadata_html += f"""
             <div class="inputs-section">
                 <div class="inputs-header">Workflow Inputs</div>
-                <div class="inputs-grid">"""
-            
+                <table class="inputs-table">
+                    <thead>
+                        <tr>
+                            <th>Input Name</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>"""
+
             # Dynamically display all inputs found
             for input_key, input_value in inputs.items():
                 # Convert key to human-readable label
@@ -521,15 +528,16 @@ class WorkflowSummaryGenerator:
                     value_str = json.dumps(input_value, indent=2)
                 else:
                     value_str = str(input_value)
-                
+
                 metadata_html += f"""
-                    <div class="input-item">
-                        <div class="input-label">{html.escape(label)}</div>
-                        <div class="input-value">{html.escape(value_str)}</div>
-                    </div>"""
-            
+                        <tr>
+                            <td class="input-name">{html.escape(label)}</td>
+                            <td class="input-value">{html.escape(value_str)}</td>
+                        </tr>"""
+
             metadata_html += """
-                </div>
+                    </tbody>
+                </table>
             </div>"""
         
         # Add jobs timeline if jobs are available
@@ -853,34 +861,54 @@ class WorkflowSummaryGenerator:
             font-size: 1.1em;
         }}
         
-        .inputs-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }}
-        
-        .input-item {{
-            background: #f8f9fa;
-            padding: 12px;
-            border-radius: 4px;
-            border: 1px solid #e9ecef;
-        }}
-        
-        .input-label {{
-            font-size: 0.8em;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }}
-        
-        .input-value {{
-            font-weight: 500;
-            color: #333;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        .inputs-table {{
+            width: 100%;
+            border-collapse: collapse;
             font-size: 0.95em;
-            word-break: break-all;
+        }}
+
+        .inputs-table thead {{
+            background: #f8f9fa;
+        }}
+
+        .inputs-table th {{
+            text-align: left;
+            padding: 12px 15px;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #dee2e6;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }}
+
+        .inputs-table tbody tr {{
+            border-bottom: 1px solid #e9ecef;
+        }}
+
+        .inputs-table tbody tr:last-child {{
+            border-bottom: none;
+        }}
+
+        .inputs-table tbody tr:hover {{
+            background: #f8f9fa;
+        }}
+
+        .inputs-table td {{
+            padding: 12px 15px;
+            vertical-align: top;
+        }}
+
+        .inputs-table .input-name {{
+            font-weight: 500;
+            color: #495057;
+            width: 30%;
+        }}
+
+        .inputs-table .input-value {{
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            color: #333;
+            word-break: break-word;
         }}
         
         .summary-cards {{
