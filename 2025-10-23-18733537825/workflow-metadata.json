@@ -31,9 +31,9 @@
   },
   "execution": {
     "started_at": "",
-    "completed_at": "2025-10-23T01:13:54Z",
-    "duration_seconds": 4434,
-    "duration_formatted": "01:13:54"
+    "completed_at": "2025-10-23T01:34:51Z",
+    "duration_seconds": 5691,
+    "duration_formatted": "01:34:51"
   },
   "status": {
     "overall_result": "unknown"
@@ -202,10 +202,10 @@
   {
     "name": "Run QE Registry Tests / UI Tests (strimzi 0.47)",
     "id": 53438135414,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-10-23T01:10:13Z",
-    "completed_at": null,
+    "completed_at": "2025-10-23T01:14:17Z",
     "runner_name": "GitHub Actions 1000039459",
     "runner_group_name": "GitHub Actions"
   },
@@ -222,10 +222,10 @@
   {
     "name": "Run QE Registry Tests / Integration Tests (pg12)",
     "id": 53438137173,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-10-23T01:10:16Z",
-    "completed_at": null,
+    "completed_at": "2025-10-23T01:17:38Z",
     "runner_name": "GitHub Actions 1000039461",
     "runner_group_name": "GitHub Actions"
   },
@@ -242,10 +242,10 @@
   {
     "name": "Run QE Registry Tests / Integration Tests (authn)",
     "id": 53438149216,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-10-23T01:10:32Z",
-    "completed_at": null,
+    "completed_at": "2025-10-23T01:18:12Z",
     "runner_name": "GitHub Actions 1000039465",
     "runner_group_name": "GitHub Actions"
   },
@@ -272,41 +272,141 @@
   {
     "name": "Run QE Registry Tests / Integration Tests (pg17)",
     "id": 53438241400,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-10-23T01:12:38Z",
-    "completed_at": null,
+    "completed_at": "2025-10-23T01:23:58Z",
     "runner_name": "GitHub Actions 1000039476",
     "runner_group_name": "GitHub Actions"
   },
   {
     "name": "Run QE Registry Tests / Integration Tests (in mem)",
     "id": 53438264263,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-10-23T01:13:14Z",
-    "completed_at": null,
+    "completed_at": "2025-10-23T01:27:41Z",
     "runner_name": "GitHub Actions 1000039481",
     "runner_group_name": "GitHub Actions"
   },
   {
     "name": "Run QE Registry Tests / Destroy OpenShift 4.14",
     "id": 53438276050,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-10-23T01:13:29Z",
-    "completed_at": null,
+    "completed_at": "2025-10-23T01:20:00Z",
     "runner_name": "GitHub Actions 1000039482",
     "runner_group_name": "GitHub Actions"
   },
   {
     "name": "Run QE Registry Tests / Integration Tests (mysql)",
     "id": 53438283885,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2025-10-23T01:13:39Z",
+    "completed_at": "2025-10-23T01:28:21Z",
+    "runner_name": "GitHub Actions 1000039484",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (strimzi 0.47)",
+    "id": 53438318091,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:14:25Z",
+    "completed_at": "2025-10-23T01:25:59Z",
+    "runner_name": "GitHub Actions 1000039490",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (pg12)",
+    "id": 53438465977,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:17:45Z",
+    "completed_at": "2025-10-23T01:18:20Z",
+    "runner_name": "GitHub Actions 1000039496",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / DAST Scan (authn)",
+    "id": 53438490244,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:18:19Z",
+    "completed_at": "2025-10-23T01:24:13Z",
+    "runner_name": "GitHub Actions 1000039501",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (pg17)",
+    "id": 53438740321,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:24:06Z",
+    "completed_at": "2025-10-23T01:24:37Z",
+    "runner_name": "GitHub Actions 1000039514",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (authn)",
+    "id": 53438750912,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:24:21Z",
+    "completed_at": "2025-10-23T01:25:00Z",
+    "runner_name": "GitHub Actions 1000039516",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (strimzi 0.47)",
+    "id": 53438830801,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:26:06Z",
+    "completed_at": "2025-10-23T01:26:44Z",
+    "runner_name": "GitHub Actions 1000039519",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / DAST Scan (in mem)",
+    "id": 53438911869,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:27:49Z",
+    "completed_at": "2025-10-23T01:33:32Z",
+    "runner_name": "GitHub Actions 1000039521",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (mysql)",
+    "id": 53438939486,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:28:29Z",
+    "completed_at": "2025-10-23T01:29:11Z",
+    "runner_name": "GitHub Actions 1000039526",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (inmemory)",
+    "id": 53439180832,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:33:42Z",
+    "completed_at": "2025-10-23T01:34:20Z",
+    "runner_name": "GitHub Actions 1000039544",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy OpenShift 4.19",
+    "id": 53439218499,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-10-23T01:13:39Z",
+    "started_at": "2025-10-23T01:34:27Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000039484",
+    "runner_name": "GitHub Actions 1000039546",
     "runner_group_name": "GitHub Actions"
   }
 ]
