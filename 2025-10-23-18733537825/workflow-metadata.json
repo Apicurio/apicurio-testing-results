@@ -30,10 +30,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "",
-    "completed_at": "2025-10-23T01:34:51Z",
-    "duration_seconds": 5691,
-    "duration_formatted": "01:34:51"
+    "started_at": "2025-10-23T00:18:32Z",
+    "completed_at": "2025-10-23T01:40:20Z",
+    "duration_seconds": 4908,
+    "duration_formatted": "01:21:48"
   },
   "status": {
     "overall_result": "unknown"
@@ -402,11 +402,21 @@
   {
     "name": "Run QE Registry Tests / Destroy OpenShift 4.19",
     "id": 53439218499,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-10-23T01:34:27Z",
+    "completed_at": "2025-10-23T01:40:01Z",
+    "runner_name": "GitHub Actions 1000039546",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Save Workflow Metadata",
+    "id": 53439472183,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-10-23T01:34:27Z",
+    "started_at": "2025-10-23T01:40:10Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000039546",
+    "runner_name": "GitHub Actions 1000039554",
     "runner_group_name": "GitHub Actions"
   }
 ]
