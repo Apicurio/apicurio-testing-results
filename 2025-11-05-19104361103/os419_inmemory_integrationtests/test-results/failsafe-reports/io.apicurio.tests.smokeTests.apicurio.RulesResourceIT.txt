@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.smokeTests.apicurio.RulesResourceIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.191 s <<< FAILURE! -- in io.apicurio.tests.smokeTests.apicurio.RulesResourceIT
+io.apicurio.tests.smokeTests.apicurio.RulesResourceIT.createAndValidateGlobalRules -- Time elapsed: 0.232 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type (expected a client exception)
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:42)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:150)
+	at io.apicurio.registry.utils.tests.TestUtils.internalAssertClientError(TestUtils.java:438)
+	at io.apicurio.registry.utils.tests.TestUtils.assertClientError(TestUtils.java:407)
+	at io.apicurio.tests.smokeTests.apicurio.RulesResourceIT.createAndValidateGlobalRules(RulesResourceIT.java:112)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:428)
+	at io.kiota.http.vertx.VertXRequestAdapter.send(VertXRequestAdapter.java:165)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.apicurio.registry.client.RegistryClientRequestAdapterFactory$RetryInvocationHandler.invoke(RegistryClientRequestAdapterFactory.java:151)
+	at jdk.proxy2/jdk.proxy2.$Proxy65.send(Unknown Source)
+	at io.apicurio.registry.rest.client.groups.item.artifacts.ArtifactsRequestBuilder.post(ArtifactsRequestBuilder.java:136)
+	at io.apicurio.tests.ApicurioRegistryBaseIT.createArtifact(ApicurioRegistryBaseIT.java:195)
+	at io.apicurio.tests.smokeTests.apicurio.RulesResourceIT.lambda$createAndValidateGlobalRules$5(RulesResourceIT.java:113)
+	at io.apicurio.registry.utils.tests.TestUtils.internalAssertClientError(TestUtils.java:426)
+	... 5 more
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:424)
+	... 15 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
