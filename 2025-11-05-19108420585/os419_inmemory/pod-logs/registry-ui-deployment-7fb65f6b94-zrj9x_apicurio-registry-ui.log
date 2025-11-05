@@ -1,0 +1,28 @@
+---------------------------------------------
+Performing the Initial Config...
+---------------------------------------------
+Generating application config at: /opt/app-root/src/config.js
+Config successfully writen to file.
+---------------------------------------------
+Patching base hrefs...
+---------------------------------------------
+Updating base href in index.html file at: /opt/app-root/src/index.html
+Successfully updated the base href value.
+---------------------------------------------
+Config Complete. Nginx Server Started.....
+---------------------------------------------
+10.131.0.2 - - [05/Nov/2025:16:59:07 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:15 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:17 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:25 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:27 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:35 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:37 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:45 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:47 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:55 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:16:59:57 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:17:00:05 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:17:00:07 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:17:00:15 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
+10.131.0.2 - - [05/Nov/2025:17:00:17 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.32" "-"
