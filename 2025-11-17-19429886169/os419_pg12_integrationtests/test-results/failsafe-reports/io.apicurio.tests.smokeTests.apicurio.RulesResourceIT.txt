@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.smokeTests.apicurio.RulesResourceIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.31 s <<< FAILURE! -- in io.apicurio.tests.smokeTests.apicurio.RulesResourceIT
+io.apicurio.tests.smokeTests.apicurio.RulesResourceIT.createAndDeleteGlobalRules -- Time elapsed: 0.591 s <<< ERROR!
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:428)
+	at io.kiota.http.vertx.VertXRequestAdapter.sendEnumCollection(VertXRequestAdapter.java:286)
+	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.apicurio.registry.client.RegistryClientRequestAdapterFactory$RetryInvocationHandler.invoke(RegistryClientRequestAdapterFactory.java:151)
+	at jdk.proxy2/jdk.proxy2.$Proxy65.sendEnumCollection(Unknown Source)
+	at io.apicurio.registry.rest.client.admin.rules.RulesRequestBuilder.get(RulesRequestBuilder.java:90)
+	at io.apicurio.registry.rest.client.admin.rules.RulesRequestBuilder.get(RulesRequestBuilder.java:77)
+	at io.apicurio.tests.smokeTests.apicurio.RulesResourceIT.createAndDeleteGlobalRules(RulesResourceIT.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:424)
+	... 12 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
