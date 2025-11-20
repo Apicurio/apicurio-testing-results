@@ -1,0 +1,31 @@
+Changes detected in configuration. Updating the server image.
+Updating the configuration and installing your custom providers, if any. Please wait.
+2025-11-20 07:24:17,588 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 20356ms
+Server configuration updated and persisted. Run the following command to review the configuration:
+
+	kc.sh show-config
+
+Next time you run the server, just run:
+
+	kc.sh start --optimized 
+
+2025-11-20 07:24:20,808 INFO  [org.keycloak.quarkus.runtime.hostname.DefaultHostnameProvider] (main) Hostname settings: Base URL: <unset>, Hostname: keycloak-keycloak22.apps.ci419.apicurio-testing.org, Strict HTTPS: true, Path: <request>, Strict BackChannel: false, Admin URL: <unset>, Admin: <request>, Port: -1, Proxied: false
+2025-11-20 07:24:26,903 WARN  [org.infinispan.PERSISTENCE] (keycloak-cache-init) ISPN000554: jboss-marshalling is deprecated and planned for removal
+2025-11-20 07:24:27,305 INFO  [org.infinispan.CONTAINER] (keycloak-cache-init) ISPN000556: Starting user marshaller 'org.infinispan.jboss.marshalling.core.JBossUserMarshaller'
+2025-11-20 07:24:27,700 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000088: Unable to use any JGroups configuration mechanisms provided in properties {}. Using default JGroups configuration!
+2025-11-20 07:24:28,088 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000078: Starting JGroups channel `ISPN`
+2025-11-20 07:24:28,090 INFO  [org.jgroups.JChannel] (keycloak-cache-init) local_addr: ddd1dc2c-a563-43e8-94c3-9e171e972d47, name: keycloak-instance-0-7013
+2025-11-20 07:24:28,097 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the send buffer of socket MulticastSocket was set to 1MB, but the OS only allocated 212.99KB
+2025-11-20 07:24:28,098 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the receive buffer of socket MulticastSocket was set to 20MB, but the OS only allocated 212.99KB
+2025-11-20 07:24:28,098 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the send buffer of socket MulticastSocket was set to 1MB, but the OS only allocated 212.99KB
+2025-11-20 07:24:28,098 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the receive buffer of socket MulticastSocket was set to 25MB, but the OS only allocated 212.99KB
+2025-11-20 07:24:28,107 INFO  [org.jgroups.protocols.FD_SOCK2] (keycloak-cache-init) server listening on *.38547
+2025-11-20 07:24:28,720 INFO  [org.keycloak.broker.provider.AbstractIdentityProviderMapper] (main) Registering class org.keycloak.broker.provider.mappersync.ConfigSyncEventListener
+2025-11-20 07:24:30,184 INFO  [org.jgroups.protocols.pbcast.GMS] (keycloak-cache-init) keycloak-instance-0-7013: no members discovered after 2003 ms: creating cluster as coordinator
+2025-11-20 07:24:30,193 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000094: Received new cluster view for channel ISPN: [keycloak-instance-0-7013|0] (1) [keycloak-instance-0-7013]
+2025-11-20 07:24:30,207 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000079: Channel `ISPN` local address is `keycloak-instance-0-7013`, physical addresses are `[10.129.2.13:54083]`
+2025-11-20 07:24:30,216 WARN  [org.infinispan.CONFIG] (keycloak-cache-init) ISPN000569: Unable to persist Infinispan internal caches as no global state enabled
+2025-11-20 07:24:31,106 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-instance-0-7013, Site name: null
+2025-11-20 07:24:33,003 INFO  [io.quarkus] (main) Keycloak 22.0.5 on JVM (powered by Quarkus 3.2.7.Final) started in 15.255s. Listening on: http://0.0.0.0:8080
+2025-11-20 07:24:33,003 INFO  [io.quarkus] (main) Profile prod activated. 
+2025-11-20 07:24:33,003 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-h2, jdbc-mariadb, jdbc-mssql, jdbc-mysql, jdbc-oracle, jdbc-postgresql, keycloak, logging-gelf, micrometer, narayana-jta, reactive-routes, resteasy, resteasy-jackson, smallrye-context-propagation, smallrye-health, vertx]
