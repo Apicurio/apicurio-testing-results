@@ -1,0 +1,138 @@
+removed directory '/tmp/hsperfdata_1000710000'
+removed '/tmp/topic-operator/replication.keystore.p12'
+removed '/tmp/topic-operator/replication.truststore.p12'
+removed directory '/tmp/topic-operator'
+Preparing trust store certificates for internal communication
+Adding /etc/tls-sidecar/cluster-ca-certs/ca.crt to truststore /tmp/topic-operator/replication.truststore.p12 with alias ca
+Certificate was added to keystore
+Preparing trust store certificates for internal communication is completed
+Preparing key store certificates for internal communication
+Preparing key store certificates for internal communication is completed
++ exec /usr/bin/tini -w -e 143 -- java -Dlog4j2.configurationFile=file:/opt/topic-operator/custom-config/log4j2.properties -Djava.security.egd=file:/dev/./urandom -XX:+ExitOnOutOfMemoryError -XX:MinRAMPercentage=15 -XX:MaxRAMPercentage=20 -classpath :lib/io.strimzi.topic-operator-0.43.0.jar:lib/io.strimzi.api-0.43.0.jar:lib/io.fabric8.kubernetes-model-networking-6.13.3.jar:lib/io.fabric8.kubernetes-model-common-6.13.3.jar:lib/io.fabric8.kubernetes-model-apiextensions-6.13.3.jar:lib/org.slf4j.slf4j-api-1.7.36.jar:lib/io.fabric8.kubernetes-client-6.13.3.jar:lib/io.fabric8.zjsonpatch-0.3.0.jar:lib/io.fabric8.kubernetes-httpclient-jdk-6.13.3.jar:lib/io.fabric8.kubernetes-client-api-6.13.3.jar:lib/io.fabric8.kubernetes-model-gatewayapi-6.13.3.jar:lib/io.fabric8.kubernetes-model-resource-6.13.3.jar:lib/io.fabric8.kubernetes-model-rbac-6.13.3.jar:lib/io.fabric8.kubernetes-model-admissionregistration-6.13.3.jar:lib/io.fabric8.kubernetes-model-apps-6.13.3.jar:lib/io.fabric8.kubernetes-model-autoscaling-6.13.3.jar:lib/io.fabric8.kubernetes-model-batch-6.13.3.jar:lib/io.fabric8.kubernetes-model-certificates-6.13.3.jar:lib/io.fabric8.kubernetes-model-coordination-6.13.3.jar:lib/io.fabric8.kubernetes-model-discovery-6.13.3.jar:lib/io.fabric8.kubernetes-model-events-6.13.3.jar:lib/io.fabric8.kubernetes-model-extensions-6.13.3.jar:lib/io.fabric8.kubernetes-model-flowcontrol-6.13.3.jar:lib/io.fabric8.kubernetes-model-metrics-6.13.3.jar:lib/io.fabric8.kubernetes-model-policy-6.13.3.jar:lib/io.fabric8.kubernetes-model-scheduling-6.13.3.jar:lib/io.fabric8.kubernetes-model-storageclass-6.13.3.jar:lib/io.fabric8.kubernetes-model-node-6.13.3.jar:lib/org.snakeyaml.snakeyaml-engine-2.7.jar:lib/com.fasterxml.jackson.dataformat.jackson-dataformat-yaml-2.16.2.jar:lib/org.yaml.snakeyaml-2.2.jar:lib/com.fasterxml.jackson.datatype.jackson-datatype-jsr310-2.16.2.jar:lib/io.fabric8.kubernetes-model-core-6.13.3.jar:lib/org.apache.logging.log4j.log4j-api-2.17.2.jar:lib/org.apache.logging.log4j.log4j-core-2.17.2.jar:lib/org.apache.logging.log4j.log4j-slf4j-impl-2.17.2.jar:lib/org.apache.kafka.kafka-clients-3.8.0.jar:lib/com.github.luben.zstd-jni-1.5.6-3.jar:lib/org.lz4.lz4-java-1.8.0.jar:lib/com.fasterxml.jackson.core.jackson-core-2.16.2.jar:lib/com.fasterxml.jackson.core.jackson-databind-2.16.2.jar:lib/com.fasterxml.jackson.core.jackson-annotations-2.16.2.jar:lib/io.strimzi.operator-common-0.43.0.jar:lib/io.strimzi.crd-annotations-0.43.0.jar:lib/org.quartz-scheduler.quartz-2.3.2.jar:lib/org.eclipse.jetty.jetty-server-9.4.54.v20240208.jar:lib/org.eclipse.jetty.jetty-http-9.4.54.v20240208.jar:lib/org.eclipse.jetty.jetty-util-9.4.54.v20240208.jar:lib/org.eclipse.jetty.jetty-io-9.4.54.v20240208.jar:lib/javax.servlet.javax.servlet-api-3.1.0.jar:lib/io.micrometer.micrometer-core-1.12.3.jar:lib/io.micrometer.micrometer-commons-1.12.3.jar:lib/io.micrometer.micrometer-observation-1.12.3.jar:lib/org.hdrhistogram.HdrHistogram-2.1.12.jar:lib/org.latencyutils.LatencyUtils-2.0.3.jar:lib/io.micrometer.micrometer-registry-prometheus-1.12.3.jar:lib/io.prometheus.simpleclient_common-0.16.0.jar:lib/io.prometheus.simpleclient-0.16.0.jar:lib/io.prometheus.simpleclient_tracer_otel-0.16.0.jar:lib/io.prometheus.simpleclient_tracer_common-0.16.0.jar:lib/io.prometheus.simpleclient_tracer_otel_agent-0.16.0.jar io.strimzi.operator.topic.TopicOperatorMain
+2025-11-20 12:05:31,30646 INFO  [main] TopicOperatorConfig:172 - TopicOperator configuration is TopicOperatorConfig{
+	namespace='ksql043'
+	labelSelector=Labels{strimzi.io/cluster=my-cluster}
+	bootstrapServers='my-cluster-kafka-bootstrap:9091'
+	clientId='strimzi-topic-operator-eff2e418-7ab2-4824-a5ce-a0a6c015d8b5'
+	fullReconciliationIntervalMs=120000
+	tlsEnabled=true
+	truststoreLocation='/tmp/topic-operator/replication.truststore.p12'
+	truststorePassword='********'
+	keystoreLocation='/tmp/topic-operator/replication.keystore.p12'
+	keystorePassword='********'
+	sslEndpointIdentificationAlgorithm='HTTPS'
+	saslEnabled=false
+	saslMechanism=''
+	saslCustomConfigJson='********'
+	alterableTopicConfig='ALL'
+	skipClusterConfigReview='false'
+	saslUsername=''
+	saslPassword='********'
+	securityProtocol='SSL'
+	useFinalizer=true
+	maxQueueSize=1024
+	maxBatchSize=100
+	maxBatchLingerMs=100
+	enableAdditionalMetrics=false
+	featureGates='FeatureGates(ContinueReconciliationOnManualRollingUpdateFailure=false)'
+	cruiseControlEnabled=false
+	cruiseControlRackEnabled=false
+	cruiseControlHostname=127.0.0.1
+	cruiseControlPort=9090
+	cruiseControlSslEnabled=false
+	cruiseControlAuthEnabled=false
+	cruiseControlCrtFilePath=/etc/tls-sidecar/cluster-ca-certs/ca.crt
+	cruiseControlApiUserPath=/etc/eto-cc-api/topic-operator.apiAdminName
+	cruiseControlApiPassPath=/etc/eto-cc-api/topic-operator.apiAdminPassword}
+2025-11-20 12:05:32,12201 INFO  [main] AppInfoParser:124 - Kafka version: 3.8.0
+2025-11-20 12:05:32,12244 INFO  [main] AppInfoParser:125 - Kafka commitId: 771b9576b00ecf5b
+2025-11-20 12:05:32,12275 INFO  [main] AppInfoParser:126 - Kafka startTimeMs: 1763640332120
+2025-11-20 12:05:32,84122 WARN  [main] BatchingTopicController:126 - It is recommended that auto.create.topics.enable is set to 'false' to avoid races between the operator and Kafka applications auto-creating topics
+2025-11-20 12:05:32,92257 INFO  [main] TopicOperatorMain:79 - TopicOperator 0.43.0 is starting
+2025-11-20 12:05:32,92321 INFO  [main] TopicOperatorMain:85 - Installing shutdown hook
+2025-11-20 12:05:32,92348 INFO  [main] TopicOperatorMain:87 - Starting health and metrics
+2025-11-20 12:05:32,96398 INFO  [main] TopicOperatorMain:89 - Starting queue
+2025-11-20 12:05:32,98801 INFO  [main] TopicOperatorMain:104 - Starting informer
+2025-11-20 12:05:33,07928 WARN  [main] VersionUsageUtils:60 - The client is using resource type 'kafkatopics' with unstable version 'v1beta2'
+2025-11-20 12:05:33,32224 ERROR [ForkJoinPool.commonPool-worker-1] Reflector:168 - listSyncAndWatch failed for kafka.strimzi.io/v1beta2/namespaces/ksql043/kafkatopics, will stop
+java.util.concurrent.CompletionException: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: GET at: https://172.30.0.1:443/apis/kafka.strimzi.io/v1beta2/namespaces/ksql043/kafkatopics?resourceVersion=0. Message: Not Found.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:649) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147) ~[?:?]
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:142) ~[io.fabric8.kubernetes-client-api-6.13.3.jar:?]
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147) ~[?:?]
+	at io.fabric8.kubernetes.client.utils.AsyncUtils.lambda$retryWithExponentialBackoff$3(AsyncUtils.java:90) ~[io.fabric8.kubernetes-client-api-6.13.3.jar:?]
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:844) ~[?:?]
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: GET at: https://172.30.0.1:443/apis/kafka.strimzi.io/v1beta2/namespaces/ksql043/kafkatopics?resourceVersion=0. Message: Not Found.
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:660) ~[io.fabric8.kubernetes-client-6.13.3.jar:?]
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:640) ~[io.fabric8.kubernetes-client-6.13.3.jar:?]
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:589) ~[io.fabric8.kubernetes-client-6.13.3.jar:?]
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549) ~[io.fabric8.kubernetes-client-6.13.3.jar:?]
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646) ~[?:?]
+	... 19 more
+Exception in thread "main" io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: GET at: https://172.30.0.1:443/apis/kafka.strimzi.io/v1beta2/namespaces/ksql043/kafkatopics?resourceVersion=0. Message: Not Found.
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:660)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:640)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:589)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:142)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at io.fabric8.kubernetes.client.utils.AsyncUtils.lambda$retryWithExponentialBackoff$3(AsyncUtils.java:90)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:844)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+	Suppressed: java.lang.Throwable: waiting here
+		at io.fabric8.kubernetes.client.utils.Utils.waitUntilReady(Utils.java:176)
+		at io.fabric8.kubernetes.client.utils.Utils.waitUntilReadyOrFail(Utils.java:187)
+		at io.fabric8.kubernetes.client.informers.impl.DefaultSharedIndexInformer.run(DefaultSharedIndexInformer.java:175)
+		at io.strimzi.operator.topic.TopicOperatorMain.start(TopicOperatorMain.java:105)
+		at io.strimzi.operator.topic.TopicOperatorMain.main(TopicOperatorMain.java:158)
+2025-11-20 12:05:49,67450 INFO  [qtp121466124-25] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:05:59,63154 INFO  [qtp121466124-20] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:06:09,63231 INFO  [qtp121466124-21] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:06:19,63165 INFO  [qtp121466124-24] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:06:29,63213 INFO  [qtp121466124-23] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:06:39,63209 INFO  [qtp121466124-20] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:06:49,63191 INFO  [qtp121466124-24] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:06:59,63132 INFO  [qtp121466124-23] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:07:09,63116 INFO  [qtp121466124-20] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:07:19,63171 INFO  [qtp121466124-24] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:07:29,63177 INFO  [qtp121466124-23] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:07:39,63176 INFO  [qtp121466124-20] TopicOperatorMain:179 - isAlive returning false because informer is not running
+2025-11-20 12:07:39,64044 INFO  [TopicOperator-shutdown-hook] TopicOperatorMain:129 - Shutdown initiated
+2025-11-20 12:07:39,64129 INFO  [TopicOperator-shutdown-hook] LoopRunnable:186 - Stop requested
+2025-11-20 12:07:39,64162 INFO  [LoopRunnable-0] LoopRunnable:222 - [Batch #1264] Interrupted
+2025-11-20 12:07:39,64242 INFO  [kafka-admin-client-thread | strimzi-topic-operator-eff2e418-7ab2-4824-a5ce-a0a6c015d8b5] AppInfoParser:88 - App info kafka.admin.client for strimzi-topic-operator-eff2e418-7ab2-4824-a5ce-a0a6c015d8b5 unregistered
+2025-11-20 12:07:39,64989 INFO  [kafka-admin-client-thread | strimzi-topic-operator-eff2e418-7ab2-4824-a5ce-a0a6c015d8b5] Metrics:684 - Metrics scheduler closed
+2025-11-20 12:07:39,65015 INFO  [kafka-admin-client-thread | strimzi-topic-operator-eff2e418-7ab2-4824-a5ce-a0a6c015d8b5] Metrics:688 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-11-20 12:07:39,65040 INFO  [kafka-admin-client-thread | strimzi-topic-operator-eff2e418-7ab2-4824-a5ce-a0a6c015d8b5] Metrics:694 - Metrics reporters closed
+2025-11-20 12:07:39,65614 INFO  [TopicOperator-shutdown-hook] TopicOperatorMain:142 - Shutdown completed normally
