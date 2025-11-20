@@ -1,0 +1,38 @@
+2025-11-20 11:46:27,366 INFO  [org.keycloak.quarkus.runtime.hostname.DefaultHostnameProvider] (main) Hostname settings: Base URL: <unset>, Hostname: keycloak-keycloak22.apps.ci419.apicurio-testing.org, Strict HTTPS: true, Path: <request>, Strict BackChannel: false, Admin URL: <unset>, Admin: <request>, Port: -1, Proxied: true
+2025-11-20 11:46:29,465 WARN  [io.agroal.pool] (agroal-11) Datasource '<default>': URL format error; must be "jdbc:h2:{ {.|mem:}[name] | [file:]fileName | {tcp|ssl}:[//]server[:port][,server2[:port]]/name }[;key=value...]" but is "jdbc:postgresql://postgresql-keycloak:5432/keycloak" [90046-220]
+2025-11-20 11:46:29,466 WARN  [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] (JPA Startup Thread) HHH000342: Could not obtain connection to query metadata: org.h2.jdbc.JdbcSQLNonTransientConnectionException: URL format error; must be "jdbc:h2:{ {.|mem:}[name] | [file:]fileName | {tcp|ssl}:[//]server[:port][,server2[:port]]/name }[;key=value...]" but is "jdbc:postgresql://postgresql-keycloak:5432/keycloak" [90046-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.engine.ConnectionInfo.getFormatException(ConnectionInfo.java:687)
+	at org.h2.engine.ConnectionInfo.<init>(ConnectionInfo.java:86)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:113)
+	at org.h2.jdbcx.JdbcDataSource.getXAConnection(JdbcDataSource.java:322)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:232)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:536)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:517)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2025-11-20 11:46:29,649 WARN  [org.keycloak.models.map.storage.jpa.hibernate.contributor.JpaMapFunctionContributor] (JPA Startup Thread) Dialect org.hibernate.dialect.H2Dialect, version: 2.2.220 not recognized.
+2025-11-20 11:46:30,281 WARN  [org.infinispan.PERSISTENCE] (keycloak-cache-init) ISPN000554: jboss-marshalling is deprecated and planned for removal
+2025-11-20 11:46:30,511 INFO  [org.infinispan.CONTAINER] (keycloak-cache-init) ISPN000556: Starting user marshaller 'org.infinispan.jboss.marshalling.core.JBossUserMarshaller'
+2025-11-20 11:46:30,558 INFO  [org.keycloak.broker.provider.AbstractIdentityProviderMapper] (main) Registering class org.keycloak.broker.provider.mappersync.ConfigSyncEventListener
+2025-11-20 11:46:30,623 WARN  [org.infinispan.commons.util.StringPropertyReplacer] (keycloak-cache-init) ISPN000901: Property jgroups.dns.query could not be replaced as intended!
+2025-11-20 11:46:30,723 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000078: Starting JGroups channel `ISPN` with stack `kubernetes`
+2025-11-20 11:46:30,726 INFO  [org.jgroups.JChannel] (keycloak-cache-init) local_addr: 0a60cb22-78c3-488d-ad25-2e70af9ed205, name: keycloak-instance-0-35497
+2025-11-20 11:46:30,735 INFO  [org.jgroups.protocols.FD_SOCK2] (keycloak-cache-init) server listening on *.57800
+2025-11-20 11:46:32,740 INFO  [org.jgroups.protocols.pbcast.GMS] (keycloak-cache-init) keycloak-instance-0-35497: no members discovered after 2002 ms: creating cluster as coordinator
+2025-11-20 11:46:32,749 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000094: Received new cluster view for channel ISPN: [keycloak-instance-0-35497|0] (1) [keycloak-instance-0-35497]
+2025-11-20 11:46:32,833 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000079: Channel `ISPN` local address is `keycloak-instance-0-35497`, physical addresses are `[10.129.2.20:7800]`
+2025-11-20 11:46:32,847 WARN  [org.infinispan.CONFIG] (keycloak-cache-init) ISPN000569: Unable to persist Infinispan internal caches as no global state enabled
+2025-11-20 11:46:33,274 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-instance-0-35497, Site name: null
+2025-11-20 11:46:33,282 WARN  [io.agroal.pool] (agroal-11) Datasource '<default>': URL format error; must be "jdbc:h2:{ {.|mem:}[name] | [file:]fileName | {tcp|ssl}:[//]server[:port][,server2[:port]]/name }[;key=value...]" but is "jdbc:postgresql://postgresql-keycloak:5432/keycloak" [90046-220]
+2025-11-20 11:46:33,302 INFO  [org.infinispan.CLUSTER] (main) ISPN000080: Disconnecting JGroups channel `ISPN`
+2025-11-20 11:46:33,339 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: Failed to start server in (production) mode
+2025-11-20 11:46:33,340 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: Failed to obtain JDBC connection
+2025-11-20 11:46:33,340 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) ERROR: URL format error; must be "jdbc:h2:{ {.|mem:}[name] | [file:]fileName | {tcp|ssl}:[//]server[:port][,server2[:port]]/name }[;key=value...]" but is "jdbc:postgresql://postgresql-keycloak:5432/keycloak" [90046-220]
+2025-11-20 11:46:33,340 ERROR [org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler] (main) For more details run the same command passing the '--verbose' option. Also you can use '--help' to see the details about the usage of the particular command.
