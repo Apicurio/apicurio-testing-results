@@ -1,0 +1,18 @@
+2025-11-20 13:33:01,528 INFO  [io.qua.ope.run.OperatorProducer] (main) Quarkus Java Operator SDK extension 6.3.4 (commit: ce5b7ce on branch: 6.3.x) built on Thu Nov 09 13:41:47 GMT 2023
+2025-11-20 13:33:01,577 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'keycloakcontroller' for resource: 'class org.keycloak.operator.crds.v2alpha1.deployment.Keycloak' for namespace(s): [keycloak22]
+2025-11-20 13:33:01,583 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'keycloakrealmimportcontroller' for resource: 'class org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport' for namespace(s): [keycloak22]
+2025-11-20 13:33:01,583 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'watchedsecretscontroller' for resource: 'class io.fabric8.kubernetes.api.model.Secret' for namespace(s): [keycloak22]
+2025-11-20 13:33:01,584 INFO  [io.qua.ope.run.AppEventListener] (main) Starting operator.
+2025-11-20 13:33:01,584 INFO  [io.jav.ope.Operator] (main) Operator SDK 4.4.4 (commit: 609a55a) built on Tue Sep 19 10:58:23 GMT 2023 starting...
+2025-11-20 13:33:01,584 INFO  [io.jav.ope.Operator] (main) Client version: 6.7.2
+2025-11-20 13:33:01,587 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakcontroller) Starting 'keycloakcontroller' controller for reconciler: org.keycloak.operator.controllers.KeycloakController, resource: org.keycloak.operator.crds.v2alpha1.deployment.Keycloak
+2025-11-20 13:33:01,587 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakrealmimportcontroller) Starting 'keycloakrealmimportcontroller' controller for reconciler: org.keycloak.operator.controllers.KeycloakRealmImportController, resource: org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport
+2025-11-20 13:33:01,595 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: watchedsecretscontroller) Starting 'watchedsecretscontroller' controller for reconciler: org.keycloak.operator.controllers.WatchedSecretsController, resource: io.fabric8.kubernetes.api.model.Secret
+2025-11-20 13:33:01,620 WARN  [io.fab.kub.cli.dsl.int.VersionUsageUtils] (InformerWrapper [keycloakrealmimports.k8s.keycloak.org/v2alpha1] 28) The client is using resource type 'keycloakrealmimports' with unstable version 'v2alpha1'
+2025-11-20 13:33:01,620 WARN  [io.fab.kub.cli.dsl.int.VersionUsageUtils] (InformerWrapper [keycloaks.k8s.keycloak.org/v2alpha1] 29) The client is using resource type 'keycloaks' with unstable version 'v2alpha1'
+2025-11-20 13:33:02,419 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: watchedsecretscontroller) 'watchedsecretscontroller' controller started
+2025-11-20 13:33:02,556 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakcontroller) 'keycloakcontroller' controller started
+2025-11-20 13:33:02,600 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakrealmimportcontroller) 'keycloakrealmimportcontroller' controller started
+2025-11-20 13:33:02,643 INFO  [io.quarkus] (main) keycloak-operator 23.0.2 on JVM (powered by Quarkus 3.2.9.Final) started in 3.027s. Listening on: http://0.0.0.0:8080
+2025-11-20 13:33:02,643 INFO  [io.quarkus] (main) Profile prod activated. 
+2025-11-20 13:33:02,643 INFO  [io.quarkus] (main) Installed features: [cdi, kubernetes, kubernetes-client, openshift-client, operator-sdk, rest-client, rest-client-jackson, resteasy-jackson, smallrye-context-propagation, smallrye-health, vertx]
