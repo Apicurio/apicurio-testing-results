@@ -1,0 +1,1595 @@
+2025-11-20 11:41:03,916 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.operator-sdk.bundle.package-name" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-11-20 11:41:06,830 INFO  [io.qua.ope.run.OperatorProducer] (main) Quarkus Java Operator SDK extension 7.2.0 (commit: edba9b2) built on Tue Jun 10 13:53:07 GMT 2025
+2025-11-20 11:41:06,939 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'keycloakrealmimportcontroller' for resource: 'class org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport' for namespace(s): [keycloak26]
+2025-11-20 11:41:07,051 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'keycloakcontroller' for resource: 'class org.keycloak.operator.crds.v2alpha1.deployment.Keycloak' for namespace(s): [keycloak26]
+2025-11-20 11:41:07,101 INFO  [io.qua.ope.run.AppEventListener] (main) Starting operator.
+2025-11-20 11:41:07,102 INFO  [io.jav.ope.Operator] (main) Operator SDK 5.1.1 (commit: e3e9458) built on Mon May 26 07:26:01 GMT 2025 starting...
+2025-11-20 11:41:07,102 INFO  [io.jav.ope.Operator] (main) Client version: 7.3.1
+2025-11-20 11:41:07,105 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakrealmimportcontroller) Starting 'keycloakrealmimportcontroller' controller for reconciler: org.keycloak.operator.controllers.KeycloakRealmImportController, resource: org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport
+2025-11-20 11:41:07,115 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakcontroller) Starting 'keycloakcontroller' controller for reconciler: org.keycloak.operator.controllers.KeycloakController, resource: org.keycloak.operator.crds.v2alpha1.deployment.Keycloak
+2025-11-20 11:41:07,434 WARN  [io.fab.kub.cli.dsl.int.VersionUsageUtils] (InformerWrapper [keycloakrealmimports.k8s.keycloak.org/v2alpha1] 27) The client is using resource type 'keycloakrealmimports' with unstable version 'v2alpha1'
+2025-11-20 11:41:07,502 WARN  [io.fab.kub.cli.dsl.int.VersionUsageUtils] (InformerWrapper [keycloaks.k8s.keycloak.org/v2alpha1] 26) The client is using resource type 'keycloaks' with unstable version 'v2alpha1'
+2025-11-20 11:41:12,622 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakrealmimportcontroller) 'keycloakrealmimportcontroller' controller started
+2025-11-20 11:41:12,621 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakcontroller) 'keycloakcontroller' controller started
+2025-11-20 11:41:12,904 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-51) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:41:13,004 INFO  [io.quarkus] (main) keycloak-operator 26.4.5 on JVM (powered by Quarkus 3.27.0) started in 11.272s. Listening on: http://0.0.0.0:8080
+2025-11-20 11:41:13,005 INFO  [io.quarkus] (main) Profile prod activated. 
+2025-11-20 11:41:13,005 INFO  [io.quarkus] (main) Installed features: [cdi, kubernetes, kubernetes-client, openshift-client, operator-sdk, smallrye-context-propagation, smallrye-health, vertx]
+2025-11-20 11:41:13,202 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-51) --- Realm reconciliation finished successfully
+2025-11-20 11:41:23,513 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-69) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:41:23,529 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-69) Job about to start
+2025-11-20 11:41:23,529 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-69) --- Realm reconciliation finished successfully
+2025-11-20 11:41:33,608 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-91) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:41:33,624 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-91) Job about to start
+2025-11-20 11:41:33,624 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-91) --- Realm reconciliation finished successfully
+2025-11-20 11:41:43,634 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-99) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:41:43,705 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-99) Job about to start
+2025-11-20 11:41:43,705 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-99) --- Realm reconciliation finished successfully
+2025-11-20 11:41:53,723 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-100) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:41:53,777 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-100) Job about to start
+2025-11-20 11:41:53,777 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-100) --- Realm reconciliation finished successfully
+2025-11-20 11:42:03,780 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-101) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:42:03,811 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-101) Job about to start
+2025-11-20 11:42:03,812 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-101) --- Realm reconciliation finished successfully
+2025-11-20 11:42:13,828 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-102) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:42:13,865 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-102) Job about to start
+2025-11-20 11:42:13,866 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-102) --- Realm reconciliation finished successfully
+2025-11-20 11:42:15,304 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-92) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.lambda$execute$7(ContextImpl.java:329)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:42:15,307 WARN  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-92) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - but another reconciliation will be attempted because a superseding event has been received or another retry attempt is pending.: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.lambda$execute$7(ContextImpl.java:329)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:42:23,871 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-110) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:42:23,899 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-110) Job about to start
+2025-11-20 11:42:23,899 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-110) --- Realm reconciliation finished successfully
+2025-11-20 11:42:33,907 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:42:33,946 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) Job about to start
+2025-11-20 11:42:33,946 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) --- Realm reconciliation finished successfully
+2025-11-20 11:42:43,961 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-112) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:42:43,986 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-112) Job about to start
+2025-11-20 11:42:43,986 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-112) --- Realm reconciliation finished successfully
+2025-11-20 11:42:53,998 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-113) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:42:54,042 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-113) Job about to start
+2025-11-20 11:42:54,042 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-113) --- Realm reconciliation finished successfully
+2025-11-20 11:42:54,162 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-103) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.lambda$execute$7(ContextImpl.java:329)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:42:54,163 WARN  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-103) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - but another reconciliation will be attempted because a superseding event has been received or another retry attempt is pending.: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.lambda$execute$7(ContextImpl.java:329)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:43:04,047 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:43:04,084 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) Job about to start
+2025-11-20 11:43:04,084 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) --- Realm reconciliation finished successfully
+2025-11-20 11:43:14,105 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-124) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:43:14,153 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-124) Job about to start
+2025-11-20 11:43:14,153 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-124) --- Realm reconciliation finished successfully
+2025-11-20 11:43:24,156 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-125) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:43:24,171 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-125) Job about to start
+2025-11-20 11:43:24,171 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-125) --- Realm reconciliation finished successfully
+2025-11-20 11:43:34,173 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-126) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:43:34,192 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-126) Job about to start
+2025-11-20 11:43:34,193 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-126) --- Realm reconciliation finished successfully
+2025-11-20 11:43:34,783 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-114) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:43:34,784 WARN  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-114) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - but another reconciliation will be attempted because a superseding event has been received or another retry attempt is pending.: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.lambda$execute$7(ContextImpl.java:329)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:43:34,848 INFO  [org.key.ope.con.KeycloakController] (ReconcilerExecutor-keycloakcontroller-127) Found unhealthy container on pod keycloak26/keycloak-instance-0: ---
+containerID: "cri-o://0fd4989e0291ce95ad3324859a2425a1b8b3521b259aea328b0cc38cfa235b62"
+image: "quay.io/keycloak/keycloak:26.3.1"
+imageID: "quay.io/keycloak/keycloak@sha256:c931439ebaf1d90bf2749accfc71d2959dd44875a8ccedfa7f127605e0b86a57"
+lastState:
+  terminated:
+    containerID: "cri-o://0fd4989e0291ce95ad3324859a2425a1b8b3521b259aea328b0cc38cfa235b62"
+    exitCode: 2
+    finishedAt: "2025-11-20T11:43:30Z"
+    reason: "Error"
+    startedAt: "2025-11-20T11:43:29Z"
+name: "keycloak"
+ready: false
+restartCount: 2
+started: false
+state:
+  waiting:
+    message: "back-off 20s restarting failed container=keycloak pod=keycloak-instance-0_keycloak26(c4563930-44b6-4b60-b63a-b8a0378f7d36)"
+    reason: "CrashLoopBackOff"
+volumeMounts:
+- mountPath: "/var/run/secrets/kubernetes.io/serviceaccount"
+  name: "kube-api-access-jqdpb"
+  readOnly: true
+  recursiveReadOnly: "Disabled"
+
+2025-11-20 11:43:44,195 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-130) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:43:44,213 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-130) Job about to start
+2025-11-20 11:43:44,214 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-130) --- Realm reconciliation finished successfully
+2025-11-20 11:43:54,216 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-131) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:43:54,239 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-131) Job about to start
+2025-11-20 11:43:54,239 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-131) --- Realm reconciliation finished successfully
+2025-11-20 11:44:04,242 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-132) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:44:04,257 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-132) Job about to start
+2025-11-20 11:44:04,257 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-132) --- Realm reconciliation finished successfully
+2025-11-20 11:44:13,402 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-127) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:44:13,403 WARN  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-127) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - but another reconciliation will be attempted because a superseding event has been received or another retry attempt is pending.: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:44:14,261 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-133) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:44:14,272 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-133) Job about to start
+2025-11-20 11:44:14,273 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-133) --- Realm reconciliation finished successfully
+2025-11-20 11:44:15,518 INFO  [org.key.ope.con.KeycloakController] (ReconcilerExecutor-keycloakcontroller-134) Found unhealthy container on pod keycloak26/keycloak-instance-0: ---
+containerID: "cri-o://4a3df5010524af35e4749aeae47e7546d248a55f7a1eeaba0ba3eac05cec6a5b"
+image: "quay.io/keycloak/keycloak:26.3.1"
+imageID: "quay.io/keycloak/keycloak@sha256:c931439ebaf1d90bf2749accfc71d2959dd44875a8ccedfa7f127605e0b86a57"
+lastState:
+  terminated:
+    containerID: "cri-o://4a3df5010524af35e4749aeae47e7546d248a55f7a1eeaba0ba3eac05cec6a5b"
+    exitCode: 2
+    finishedAt: "2025-11-20T11:44:01Z"
+    reason: "Error"
+    startedAt: "2025-11-20T11:43:59Z"
+name: "keycloak"
+ready: false
+restartCount: 3
+started: false
+state:
+  waiting:
+    message: "back-off 40s restarting failed container=keycloak pod=keycloak-instance-0_keycloak26(c4563930-44b6-4b60-b63a-b8a0378f7d36)"
+    reason: "CrashLoopBackOff"
+volumeMounts:
+- mountPath: "/var/run/secrets/kubernetes.io/serviceaccount"
+  name: "kube-api-access-jqdpb"
+  readOnly: true
+  recursiveReadOnly: "Disabled"
+
+2025-11-20 11:44:24,277 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-135) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:44:24,292 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-135) Job about to start
+2025-11-20 11:44:24,292 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-135) --- Realm reconciliation finished successfully
+2025-11-20 11:44:34,295 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-136) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:44:34,309 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-136) Job about to start
+2025-11-20 11:44:34,309 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-136) --- Realm reconciliation finished successfully
+2025-11-20 11:44:44,312 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-137) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:44:44,336 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-137) Job about to start
+2025-11-20 11:44:44,336 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-137) --- Realm reconciliation finished successfully
+2025-11-20 11:44:54,005 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-134) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:44:54,006 WARN  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-134) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - but another reconciliation will be attempted because a superseding event has been received or another retry attempt is pending.: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:44:54,338 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-138) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:44:54,350 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-138) Job about to start
+2025-11-20 11:44:54,350 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-138) --- Realm reconciliation finished successfully
+2025-11-20 11:44:57,117 INFO  [org.key.ope.con.KeycloakController] (ReconcilerExecutor-keycloakcontroller-139) Found unhealthy container on pod keycloak26/keycloak-instance-0: ---
+containerID: "cri-o://25c7d2c736bf5dbc18de0fc9516fc1ac3c7f73f0d44a76bc92fc899e7727c589"
+image: "quay.io/keycloak/keycloak:26.3.1"
+imageID: "quay.io/keycloak/keycloak@sha256:c931439ebaf1d90bf2749accfc71d2959dd44875a8ccedfa7f127605e0b86a57"
+lastState:
+  terminated:
+    containerID: "cri-o://25c7d2c736bf5dbc18de0fc9516fc1ac3c7f73f0d44a76bc92fc899e7727c589"
+    exitCode: 2
+    finishedAt: "2025-11-20T11:44:45Z"
+    reason: "Error"
+    startedAt: "2025-11-20T11:44:44Z"
+name: "keycloak"
+ready: false
+restartCount: 4
+started: false
+state:
+  waiting:
+    message: "back-off 1m20s restarting failed container=keycloak pod=keycloak-instance-0_keycloak26(c4563930-44b6-4b60-b63a-b8a0378f7d36)"
+    reason: "CrashLoopBackOff"
+volumeMounts:
+- mountPath: "/var/run/secrets/kubernetes.io/serviceaccount"
+  name: "kube-api-access-jqdpb"
+  readOnly: true
+  recursiveReadOnly: "Disabled"
+
+2025-11-20 11:45:04,353 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-140) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:45:04,377 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-140) Job about to start
+2025-11-20 11:45:04,378 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-140) --- Realm reconciliation finished successfully
+2025-11-20 11:45:14,380 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-141) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:45:14,399 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-141) Job about to start
+2025-11-20 11:45:14,399 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-141) --- Realm reconciliation finished successfully
+2025-11-20 11:45:24,402 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-142) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:45:24,417 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-142) Job about to start
+2025-11-20 11:45:24,417 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-142) --- Realm reconciliation finished successfully
+2025-11-20 11:45:34,420 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-143) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:45:34,436 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-143) Job about to start
+2025-11-20 11:45:34,436 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-143) --- Realm reconciliation finished successfully
+2025-11-20 11:45:35,578 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-139) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:45:35,578 WARN  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-139) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - but another reconciliation will be attempted because a superseding event has been received or another retry attempt is pending.: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:45:40,132 INFO  [org.key.ope.con.KeycloakController] (ReconcilerExecutor-keycloakcontroller-144) Found unhealthy container on pod keycloak26/keycloak-instance-0: ---
+containerID: "cri-o://25c7d2c736bf5dbc18de0fc9516fc1ac3c7f73f0d44a76bc92fc899e7727c589"
+image: "quay.io/keycloak/keycloak:26.3.1"
+imageID: "quay.io/keycloak/keycloak@sha256:c931439ebaf1d90bf2749accfc71d2959dd44875a8ccedfa7f127605e0b86a57"
+lastState:
+  terminated:
+    containerID: "cri-o://25c7d2c736bf5dbc18de0fc9516fc1ac3c7f73f0d44a76bc92fc899e7727c589"
+    exitCode: 2
+    finishedAt: "2025-11-20T11:44:45Z"
+    reason: "Error"
+    startedAt: "2025-11-20T11:44:44Z"
+name: "keycloak"
+ready: false
+restartCount: 4
+started: false
+state:
+  waiting:
+    message: "back-off 1m20s restarting failed container=keycloak pod=keycloak-instance-0_keycloak26(c4563930-44b6-4b60-b63a-b8a0378f7d36)"
+    reason: "CrashLoopBackOff"
+volumeMounts:
+- mountPath: "/var/run/secrets/kubernetes.io/serviceaccount"
+  name: "kube-api-access-jqdpb"
+  readOnly: true
+  recursiveReadOnly: "Disabled"
+
+2025-11-20 11:45:44,438 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-145) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:45:44,452 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-145) Job about to start
+2025-11-20 11:45:44,452 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-145) --- Realm reconciliation finished successfully
+2025-11-20 11:45:54,454 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-146) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:45:54,473 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-146) Job about to start
+2025-11-20 11:45:54,473 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-146) --- Realm reconciliation finished successfully
+2025-11-20 11:46:04,478 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-147) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:46:04,499 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-147) Job about to start
+2025-11-20 11:46:04,499 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-147) --- Realm reconciliation finished successfully
+2025-11-20 11:46:14,501 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-149) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:46:14,523 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-149) Job about to start
+2025-11-20 11:46:14,523 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-149) --- Realm reconciliation finished successfully
+2025-11-20 11:46:18,645 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-144) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:46:18,646 WARN  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-144) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - but another reconciliation will be attempted because a superseding event has been received or another retry attempt is pending.: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): errors:
+  .spec.ingress.labels: field not declared in schema
+  .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:46:24,526 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-150) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:46:24,536 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-150) Job about to start
+2025-11-20 11:46:24,536 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-150) --- Realm reconciliation finished successfully
+2025-11-20 11:46:25,444 INFO  [org.key.ope.con.KeycloakController] (ReconcilerExecutor-keycloakcontroller-151) Found unhealthy container on pod keycloak26/keycloak-instance-0: ---
+containerID: "cri-o://903ed24a1ba773dd4fc3c0daceea01aa578c50a283b8ec307571acc2a977c137"
+image: "quay.io/keycloak/keycloak:26.3.1"
+imageID: "quay.io/keycloak/keycloak@sha256:c931439ebaf1d90bf2749accfc71d2959dd44875a8ccedfa7f127605e0b86a57"
+lastState:
+  terminated:
+    containerID: "cri-o://903ed24a1ba773dd4fc3c0daceea01aa578c50a283b8ec307571acc2a977c137"
+    exitCode: 2
+    finishedAt: "2025-11-20T11:46:17Z"
+    reason: "Error"
+    startedAt: "2025-11-20T11:46:16Z"
+name: "keycloak"
+ready: false
+restartCount: 5
+started: false
+state:
+  waiting:
+    message: "back-off 2m40s restarting failed container=keycloak pod=keycloak-instance-0_keycloak26(c4563930-44b6-4b60-b63a-b8a0378f7d36)"
+    reason: "CrashLoopBackOff"
+volumeMounts:
+- mountPath: "/var/run/secrets/kubernetes.io/serviceaccount"
+  name: "kube-api-access-jqdpb"
+  readOnly: true
+  recursiveReadOnly: "Disabled"
+
+2025-11-20 11:46:34,538 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-152) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:46:34,556 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-152) Job about to start
+2025-11-20 11:46:34,556 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-152) --- Realm reconciliation finished successfully
+2025-11-20 11:46:44,558 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-153) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:46:44,594 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-153) Job about to start
+2025-11-20 11:46:44,594 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-153) --- Realm reconciliation finished successfully
+2025-11-20 11:46:54,597 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-154) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:46:54,620 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-154) Job about to start
+2025-11-20 11:46:54,620 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-154) --- Realm reconciliation finished successfully
+2025-11-20 11:47:04,003 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakcontroller-151) updateErrorStatus failed for resource: f549aee9-f71e-45a9-ab57-4619fd357216 with version: 34417 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:215)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:132)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.env: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:47:04,003 ERROR [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-151) Uncaught error during event processing ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417} - no superseding event is present and this is the retry last attempt: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:462)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.reconcileExecution(ReconciliationDispatcher.java:178)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:130)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:97)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:68)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:475)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak26/keycloaks/keycloak-instance/status?fieldManager=keycloakcontroller&force=true. Message: failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema. Received status: Status(apiVersion=v1, code=500, details=null, kind=Status, message=failed to create typed patch object (keycloak26/keycloak-instance; k8s.keycloak.org/v2alpha1, Kind=Keycloak): .spec.truststores: field not declared in schema, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=null, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2025-11-20 11:47:04,004 ERROR [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakcontroller-151) Exhausted retries for scope ExecutionScope{ resource id: ResourceID{name='keycloak-instance', namespace='keycloak26'}, version: 34417}.
+2025-11-20 11:47:04,622 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-155) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:47:04,632 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-155) Job about to start
+2025-11-20 11:47:04,633 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-155) --- Realm reconciliation finished successfully
+2025-11-20 11:47:14,635 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-156) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:47:14,645 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-156) Job about to start
+2025-11-20 11:47:14,645 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-156) --- Realm reconciliation finished successfully
+2025-11-20 11:47:24,647 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-51) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:47:24,656 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-51) Job about to start
+2025-11-20 11:47:24,657 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-51) --- Realm reconciliation finished successfully
+2025-11-20 11:47:34,659 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-50) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:47:34,670 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-50) Job about to start
+2025-11-20 11:47:34,670 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-50) --- Realm reconciliation finished successfully
+2025-11-20 11:47:44,672 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-62) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:47:44,682 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-62) Job about to start
+2025-11-20 11:47:44,683 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-62) --- Realm reconciliation finished successfully
+2025-11-20 11:47:54,684 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-69) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:47:54,695 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-69) Job about to start
+2025-11-20 11:47:54,695 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-69) --- Realm reconciliation finished successfully
+2025-11-20 11:48:04,697 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-70) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:48:04,707 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-70) Job about to start
+2025-11-20 11:48:04,707 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-70) --- Realm reconciliation finished successfully
+2025-11-20 11:48:14,709 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-77) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:48:14,720 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-77) Job about to start
+2025-11-20 11:48:14,720 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-77) --- Realm reconciliation finished successfully
+2025-11-20 11:48:24,722 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-84) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:48:24,737 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-84) Job about to start
+2025-11-20 11:48:24,737 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-84) --- Realm reconciliation finished successfully
+2025-11-20 11:48:34,739 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-91) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:48:34,750 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-91) Job about to start
+2025-11-20 11:48:34,751 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-91) --- Realm reconciliation finished successfully
+2025-11-20 11:48:44,752 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-99) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:48:44,763 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-99) Job about to start
+2025-11-20 11:48:44,764 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-99) --- Realm reconciliation finished successfully
+2025-11-20 11:48:54,765 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-100) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:48:54,777 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-100) Job about to start
+2025-11-20 11:48:54,777 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-100) --- Realm reconciliation finished successfully
+2025-11-20 11:49:04,779 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-101) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:49:04,788 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-101) Job about to start
+2025-11-20 11:49:04,789 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-101) --- Realm reconciliation finished successfully
+2025-11-20 11:49:14,790 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-102) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:49:14,801 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-102) Job about to start
+2025-11-20 11:49:14,801 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-102) --- Realm reconciliation finished successfully
+2025-11-20 11:49:24,803 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-92) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:49:24,815 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-92) Job about to start
+2025-11-20 11:49:24,815 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-92) --- Realm reconciliation finished successfully
+2025-11-20 11:49:34,817 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-110) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:49:34,827 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-110) Job about to start
+2025-11-20 11:49:34,827 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-110) --- Realm reconciliation finished successfully
+2025-11-20 11:49:44,829 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:49:44,839 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) Job about to start
+2025-11-20 11:49:44,839 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) --- Realm reconciliation finished successfully
+2025-11-20 11:49:54,841 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-112) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:49:54,851 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-112) Job about to start
+2025-11-20 11:49:54,851 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-112) --- Realm reconciliation finished successfully
+2025-11-20 11:50:04,853 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-113) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:50:04,863 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-113) Job about to start
+2025-11-20 11:50:04,863 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-113) --- Realm reconciliation finished successfully
+2025-11-20 11:50:14,865 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-103) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:50:14,875 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-103) Job about to start
+2025-11-20 11:50:14,875 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-103) --- Realm reconciliation finished successfully
+2025-11-20 11:50:24,877 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak26
+2025-11-20 11:50:24,892 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) Job about to start
+2025-11-20 11:50:24,892 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) --- Realm reconciliation finished successfully

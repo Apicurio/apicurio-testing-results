@@ -1,0 +1,1 @@
+The '--optimized' flag was used for first ever server start. Please don't use this flag for the first startup or use 'kc.sh build' to build the server first.
