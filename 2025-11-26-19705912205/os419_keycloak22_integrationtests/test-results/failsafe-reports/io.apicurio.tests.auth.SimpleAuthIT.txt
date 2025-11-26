@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.auth.SimpleAuthIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 16.39 s <<< FAILURE! -- in io.apicurio.tests.auth.SimpleAuthIT
+io.apicurio.tests.auth.SimpleAuthIT -- Time elapsed: 16.39 s <<< ERROR!
+io.apicurio.registry.rest.client.models.ProblemDetails
+	at io.apicurio.registry.rest.client.models.ProblemDetails.createFromDiscriminatorValue(ProblemDetails.java:58)
+	at io.kiota.serialization.json.JsonParseNode.getObjectValue(JsonParseNode.java:248)
+	at io.kiota.http.vertx.VertXRequestAdapter.lambda$throwIfFailedResponse$0(VertXRequestAdapter.java:398)
+	at com.microsoft.kiota.ApiExceptionBuilder.<init>(ApiExceptionBuilder.java:26)
+	at io.kiota.http.vertx.VertXRequestAdapter.throwIfFailedResponse(VertXRequestAdapter.java:397)
+	at io.kiota.http.vertx.VertXRequestAdapter.sendPrimitive(VertXRequestAdapter.java:194)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.apicurio.registry.client.RegistryClientRequestAdapterFactory$RetryInvocationHandler.invoke(RegistryClientRequestAdapterFactory.java:188)
+	at jdk.proxy2/jdk.proxy2.$Proxy67.sendPrimitive(Unknown Source)
+	at io.apicurio.registry.rest.client.admin.rules.RulesRequestBuilder.delete(RulesRequestBuilder.java:68)
+	at io.apicurio.registry.rest.client.admin.rules.RulesRequestBuilder.delete(RulesRequestBuilder.java:57)
+	at io.apicurio.tests.ApicurioRegistryBaseIT.prepareRestAssured(ApicurioRegistryBaseIT.java:107)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
