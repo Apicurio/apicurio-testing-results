@@ -1,0 +1,109 @@
+{
+  "workflow": {
+    "name": "[Test] Operator Release",
+    "run_id": "20082809196",
+    "run_number": "25",
+    "run_attempt": "1",
+    "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/test-registry-operator.yaml@refs/heads/main",
+    "sha": "84d29f4277083adfab7a9ed9c7814ba3f8c25e17",
+    "ref": "refs/heads/main",
+    "repository": "Apicurio/apicurio-testing",
+    "actor": "jsenko",
+    "triggering_actor": "jsenko",
+    "event_name": "workflow_dispatch"
+  },
+  "inputs": {
+  "appImage": "brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-rhel9:3.1.0-1",
+  "artifact-cluster-name": "art",
+  "catalog-image": "image-registry-infra.apps.art.apicurio-testing.org/rh-osbs/iib:1057519",
+  "cluster-name": "ci419",
+  "cluster-version": "4.19",
+  "destroy-test-cluster": "true",
+  "operatorImage": "brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-rhel9-operator:3.1.0-1",
+  "package-version": "3.1.0-r1",
+  "release-version": "3.1.0",
+  "skip-provision-cluster": "true",
+  "tests-tag": "merge-operator-tests",
+  "uiImage": "brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-ui-rhel9:3.1.0-2"
+},
+  "environment": {
+    "openshift_version": "4.19",
+    "cluster_name": "ci419",
+    "control_plane_nodes": 3,
+    "compute_nodes": 6,
+    "aws_region": "us-east-1",
+    "keycloak_version": "26.3.1",
+    "rapidast_tag": "development"
+  },
+  "execution": {
+    "started_at": "2025-12-10T00:17:25Z",
+    "completed_at": "2025-12-10T00:28:42Z",
+    "duration_seconds": 677,
+    "duration_formatted": "00:11:17"
+  },
+  "status": {
+    "overall_result": "unknown"
+  },
+  "jobs": [
+  {
+    "name": "Validate inputs",
+    "id": 57613675875,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-12-10T00:17:19Z",
+    "completed_at": "2025-12-10T00:17:21Z",
+    "runner_name": "GitHub Actions 1000050789",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "record-start-time",
+    "id": 57613680410,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-12-10T00:17:24Z",
+    "completed_at": "2025-12-10T00:17:27Z",
+    "runner_name": "GitHub Actions 1000050790",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Operator tests",
+    "id": 57613686810,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-12-10T00:17:30Z",
+    "completed_at": "2025-12-10T00:28:29Z",
+    "runner_name": "GitHub Actions 1000050791",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Provision cluster",
+    "id": 57613686983,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-12-10T00:17:28Z",
+    "completed_at": "2025-12-10T00:17:27Z",
+    "runner_name": null,
+    "runner_group_name": null
+  },
+  {
+    "name": "Save Workflow Metadata",
+    "id": 57614392990,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2025-12-10T00:28:31Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000050792",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Destroy cluster",
+    "id": 57614393082,
+    "status": "completed",
+    "conclusion": "skipped",
+    "started_at": "2025-12-10T00:28:29Z",
+    "completed_at": "2025-12-10T00:28:29Z",
+    "runner_name": null,
+    "runner_group_name": null
+  }
+]
+}
