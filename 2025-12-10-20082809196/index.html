@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Test] Operator Release - Results - 2025-12-09-20075795732</title>
+    <title>[Test] Operator Release - Results - 2025-12-10-20082809196</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -486,7 +486,7 @@
     <div class="container">
         <div class="header">
             <h1>[Test] Operator Release - Results</h1>
-            <div class="subtitle">Run #23 by jsenko | 2025-12-09</div>
+            <div class="subtitle">Run #25 by jsenko | 2025-12-10</div>
         </div>
         <div class="metadata-section">
             <div class="metadata-grid">
@@ -496,11 +496,11 @@
                 </div>
                 <div class="metadata-item">
                     <div class="metadata-label">Started At</div>
-                    <div class="metadata-value">2025-12-09 19:23:13 UTC</div>
+                    <div class="metadata-value">2025-12-10 00:17:25 UTC</div>
                 </div>
                 <div class="metadata-item">
                     <div class="metadata-label">Duration</div>
-                    <div class="metadata-value">02:13:45</div>
+                    <div class="metadata-value">00:11:17</div>
                 </div>
             </div>
             <div class="inputs-section">
@@ -514,8 +514,16 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td class="input-name">Appimage</td>
+                            <td class="input-value">brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-rhel9:3.1.0-1</td>
+                        </tr>
+                        <tr>
+                            <td class="input-name">Artifact-Cluster-Name</td>
+                            <td class="input-value">art</td>
+                        </tr>
+                        <tr>
                             <td class="input-name">Catalog-Image</td>
-                            <td class="input-value">quay.io/apicurio/apicurio-registry-3-operator-catalog:latest</td>
+                            <td class="input-value">image-registry-infra.apps.art.apicurio-testing.org/rh-osbs/iib:1057519</td>
                         </tr>
                         <tr>
                             <td class="input-name">Cluster-Name</td>
@@ -530,12 +538,16 @@
                             <td class="input-value">true</td>
                         </tr>
                         <tr>
+                            <td class="input-name">Operatorimage</td>
+                            <td class="input-value">brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-rhel9-operator:3.1.0-1</td>
+                        </tr>
+                        <tr>
                             <td class="input-name">Package-Version</td>
-                            <td class="input-value">3.1.4</td>
+                            <td class="input-value">3.1.0-r1</td>
                         </tr>
                         <tr>
                             <td class="input-name">Release-Version</td>
-                            <td class="input-value">3.1.4</td>
+                            <td class="input-value">3.1.0</td>
                         </tr>
                         <tr>
                             <td class="input-name">Skip-Provision-Cluster</td>
@@ -544,6 +556,10 @@
                         <tr>
                             <td class="input-name">Tests-Tag</td>
                             <td class="input-value">merge-operator-tests</td>
+                        </tr>
+                        <tr>
+                            <td class="input-name">Uiimage</td>
+                            <td class="input-value">brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-ui-rhel9:3.1.0-2</td>
                         </tr>
                     </tbody>
                 </table>
@@ -575,7 +591,7 @@
                     <div class="job-timeline-item">
                         <div class="job-timeline-name">Validate inputs</div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 0.8em; color: #666;">3s</span>
+                            <span style="font-size: 0.8em; color: #666;">2s</span>
                             <span class="job-timeline-status job-status-success">success</span>
                         </div>
                     </div>
@@ -596,14 +612,14 @@
                     <div class="job-timeline-item">
                         <div class="job-timeline-name">Operator tests</div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 0.8em; color: #666;">133m 16s</span>
+                            <span style="font-size: 0.8em; color: #666;">10m 59s</span>
                             <span class="job-timeline-status job-status-success">success</span>
                         </div>
                     </div>
                     <div class="job-timeline-item">
                         <div class="job-timeline-name">Destroy cluster</div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 0.8em; color: #666;">-1s</span>
+                            <span style="font-size: 0.8em; color: #666;">0s</span>
                             <span class="job-timeline-status job-status-skipped">skipped</span>
                         </div>
                     </div>
@@ -646,7 +662,7 @@
         
         <div class="footer">
             <p>Generated on 2025-12-10 00:29:06 | 
-            Workflow Run ID: 20075795732 | 
+            Workflow Run ID: 20082809196 | 
             Total Jobs: 0</p>
         </div>
     </div>
