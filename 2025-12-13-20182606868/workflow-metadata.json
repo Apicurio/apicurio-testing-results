@@ -32,10 +32,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "2025-12-12T23:17:57Z",
-    "completed_at": "2025-12-13T01:43:03Z",
-    "duration_seconds": 8706,
-    "duration_formatted": "02:25:06"
+    "started_at": "2025-12-12T23:17:58Z",
+    "completed_at": "2025-12-13T01:44:19Z",
+    "duration_seconds": 8781,
+    "duration_formatted": "02:26:21"
   },
   "status": {
     "overall_result": "unknown"
@@ -154,21 +154,31 @@
   {
     "name": "Test on OCP 4.19 / Destroy cluster / Destroy OCP cluster ci419ra9",
     "id": 57952565109,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2025-12-13T01:38:19Z",
-    "completed_at": null,
+    "completed_at": "2025-12-13T01:44:05Z",
     "runner_name": "GitHub Actions 1000052269",
     "runner_group_name": "GitHub Actions"
   },
   {
     "name": "Test on OCP 4.16 / Save Workflow Metadata",
     "id": 57952725203,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-12-13T01:42:51Z",
+    "completed_at": "2025-12-13T01:43:06Z",
+    "runner_name": "GitHub Actions 1000052270",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Test on OCP 4.19 / Save Workflow Metadata",
+    "id": 57952769250,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-12-13T01:42:51Z",
+    "started_at": "2025-12-13T01:44:07Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000052270",
+    "runner_name": "GitHub Actions 1000052274",
     "runner_group_name": "GitHub Actions"
   }
 ]
