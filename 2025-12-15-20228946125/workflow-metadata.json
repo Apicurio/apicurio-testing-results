@@ -32,10 +32,10 @@
     "rapidast_tag": "development"
   },
   "execution": {
-    "started_at": "2025-12-15T10:30:16Z",
-    "completed_at": "2025-12-15T12:09:38Z",
-    "duration_seconds": 5962,
-    "duration_formatted": "01:39:22"
+    "started_at": "2025-12-15T10:30:02Z",
+    "completed_at": "2025-12-15T12:09:57Z",
+    "duration_seconds": 5995,
+    "duration_formatted": "01:39:55"
   },
   "status": {
     "overall_result": "unknown"
@@ -174,11 +174,21 @@
   {
     "name": "Test on OCP 4.19 / Save Workflow Metadata",
     "id": 58075862141,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2025-12-15T12:09:26Z",
+    "completed_at": "2025-12-15T12:09:40Z",
+    "runner_name": "GitHub Actions 1000052785",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Save Workflow Metadata",
+    "id": 58075889075,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2025-12-15T12:09:26Z",
+    "started_at": "2025-12-15T12:09:43Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000052785",
+    "runner_name": "GitHub Actions 1000052786",
     "runner_group_name": "GitHub Actions"
   }
 ]
