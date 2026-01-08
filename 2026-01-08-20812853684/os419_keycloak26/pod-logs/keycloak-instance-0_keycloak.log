@@ -1,0 +1,20 @@
+Changes detected in configuration. Updating the server image.
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-resource-attributes: Available only when Tracing is enabled.
+	- tracing-service-name: Available only when Tracing is enabled.
+Updating the configuration and installing your custom providers, if any. Please wait.
+2026-01-08 11:04:00,064 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-08 11:04:03,664 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-08 11:04:23,290 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 21000ms
+Server configuration updated and persisted. Run the following command to review the configuration:
+
+	kc.sh show-config
+
+Next time you run the server, just run:
+
+	kc.sh --verbose start --optimized
+
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-resource-attributes: Available only when Tracing is enabled.
+	- tracing-service-name: Available only when Tracing is enabled.
+WARNING: Hostname v1 options [hostname-strict-backchannel] are still in use, please review your configuration
