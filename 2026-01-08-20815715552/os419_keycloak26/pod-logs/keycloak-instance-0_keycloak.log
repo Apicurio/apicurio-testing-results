@@ -1,0 +1,41 @@
+Changes detected in configuration. Updating the server image.
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-resource-attributes: Available only when Tracing is enabled.
+	- tracing-service-name: Available only when Tracing is enabled.
+Updating the configuration and installing your custom providers, if any. Please wait.
+2026-01-08 12:32:44,758 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-08 12:32:48,240 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-08 12:33:07,723 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 20851ms
+Server configuration updated and persisted. Run the following command to review the configuration:
+
+	kc.sh show-config
+
+Next time you run the server, just run:
+
+	kc.sh --verbose start --optimized
+
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-resource-attributes: Available only when Tracing is enabled.
+	- tracing-service-name: Available only when Tracing is enabled.
+WARNING: Hostname v1 options [hostname-strict-backchannel] are still in use, please review your configuration
+2026-01-08 12:33:09,622 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-08 12:33:10,525 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-08 12:33:11,634 INFO  [org.keycloak.url.HostnameV2ProviderFactory] (main) If hostname is specified, hostname-strict is effectively ignored
+2026-01-08 12:33:20,852 INFO  [org.keycloak.quarkus.runtime.storage.database.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2026-01-08 12:33:42,226 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups JDBC_PING discovery enabled.
+2026-01-08 12:33:43,730 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups Encryption enabled (mTLS).
+2026-01-08 12:33:44,132 INFO  [org.keycloak.jgroups.certificates.CertificateReloadManager] (main) Starting JGroups certificate reload manager
+2026-01-08 12:33:44,444 INFO  [org.infinispan.CONTAINER] (main) ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2026-01-08 12:33:45,319 INFO  [org.infinispan.CLUSTER] (main) ISPN000078: Starting JGroups channel `ISPN` with stack `jdbc-ping`
+2026-01-08 12:33:45,321 INFO  [org.jgroups.JChannel] (main) local_addr: f8093d26-1a0a-46f8-8b6b-a42c0781b802, name: keycloak-instance-0-9041
+2026-01-08 12:33:45,331 INFO  [org.jgroups.protocols.FD_SOCK2] (main) server listening on *:57800
+2026-01-08 12:33:45,336 INFO  [org.jgroups.protocols.pbcast.GMS] (main) keycloak-instance-0-9041: no members discovered after 3 ms: creating cluster as coordinator
+2026-01-08 12:33:45,424 INFO  [org.infinispan.CLUSTER] (main) ISPN000094: Received new cluster view for channel ISPN: [keycloak-instance-0-9041|0] (1) [keycloak-instance-0-9041]
+2026-01-08 12:33:45,425 INFO  [org.keycloak.jgroups.certificates.CertificateReloadManager] (main) Reloading JGroups Certificate
+2026-01-08 12:33:45,532 INFO  [org.infinispan.CLUSTER] (main) ISPN000079: Channel `ISPN` local address is `keycloak-instance-0-9041`, physical addresses are `[10.129.2.18:7800]`
+2026-01-08 12:33:46,353 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-instance-0-9041, Site name: null
+2026-01-08 12:33:46,657 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2026-01-08 12:33:50,133 INFO  [org.keycloak.services] (main) KC-SERVICES0077: Created temporary admin user with username temp-admin
+2026-01-08 12:33:50,466 INFO  [io.quarkus] (main) Keycloak 26.3.1 on JVM (powered by Quarkus 3.20.1) started in 42.524s. Listening on: http://0.0.0.0:8080. Management interface listening on http://0.0.0.0:9000.
+2026-01-08 12:33:50,518 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-01-08 12:33:50,518 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-postgresql, keycloak, narayana-jta, opentelemetry, reactive-routes, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
