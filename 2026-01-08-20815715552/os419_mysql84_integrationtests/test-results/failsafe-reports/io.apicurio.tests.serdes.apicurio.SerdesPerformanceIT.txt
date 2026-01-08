@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.serdes.apicurio.SerdesPerformanceIT
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.146 s -- in io.apicurio.tests.serdes.apicurio.SerdesPerformanceIT
