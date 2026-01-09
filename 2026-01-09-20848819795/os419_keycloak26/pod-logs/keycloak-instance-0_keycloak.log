@@ -1,0 +1,43 @@
+Changes detected in configuration. Updating the server image.
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-resource-attributes: Available only when Tracing is enabled.
+	- tracing-service-name: Available only when Tracing is enabled.
+Updating the configuration and installing your custom providers, if any. Please wait.
+2026-01-09 11:10:52,500 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-09 11:10:57,546 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-09 11:11:21,152 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 25762ms
+Server configuration updated and persisted. Run the following command to review the configuration:
+
+	kc.sh show-config
+
+Next time you run the server, just run:
+
+	kc.sh --verbose start --optimized
+
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-resource-attributes: Available only when Tracing is enabled.
+	- tracing-service-name: Available only when Tracing is enabled.
+WARNING: Hostname v1 options [hostname-strict-backchannel] are still in use, please review your configuration
+2026-01-09 11:11:23,446 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-09 11:11:24,440 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-01-09 11:11:27,264 INFO  [org.keycloak.url.HostnameV2ProviderFactory] (main) If hostname is specified, hostname-strict is effectively ignored
+2026-01-09 11:11:38,475 INFO  [org.keycloak.quarkus.runtime.storage.database.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2026-01-09 11:11:59,284 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups JDBC_PING discovery enabled.
+2026-01-09 11:12:01,661 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups Encryption enabled (mTLS).
+2026-01-09 11:12:02,159 INFO  [org.keycloak.jgroups.certificates.CertificateReloadManager] (main) Starting JGroups certificate reload manager
+2026-01-09 11:12:02,661 INFO  [org.infinispan.CONTAINER] (main) ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2026-01-09 11:12:03,601 INFO  [org.infinispan.CLUSTER] (main) ISPN000078: Starting JGroups channel `ISPN` with stack `jdbc-ping`
+2026-01-09 11:12:03,604 INFO  [org.jgroups.JChannel] (main) local_addr: 09409149-0f57-4372-8dcc-fe0b52fb6d76, name: keycloak-instance-0-316
+2026-01-09 11:12:03,670 INFO  [org.jgroups.protocols.FD_SOCK2] (main) server listening on *:57800
+2026-01-09 11:12:03,694 INFO  [org.jgroups.protocols.pbcast.GMS] (main) keycloak-instance-0-316: no members discovered after 10 ms: creating cluster as coordinator
+2026-01-09 11:12:03,781 INFO  [org.infinispan.CLUSTER] (main) ISPN000094: Received new cluster view for channel ISPN: [keycloak-instance-0-316|0] (1) [keycloak-instance-0-316]
+2026-01-09 11:12:03,783 INFO  [org.keycloak.jgroups.certificates.CertificateReloadManager] (main) Reloading JGroups Certificate
+2026-01-09 11:12:03,885 INFO  [org.infinispan.CLUSTER] (main) ISPN000079: Channel `ISPN` local address is `keycloak-instance-0-316`, physical addresses are `[10.129.2.20:7800]`
+2026-01-09 11:12:04,919 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-instance-0-316, Site name: null
+2026-01-09 11:12:05,254 ERROR [org.keycloak.jgroups.protocol.KEYCLOAK_JDBC_PING2] (jgroups-6,keycloak-instance-0-316) keycloak-instance-0-316: failed writing to DB: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "constraint_jgroups_ping"
+  Detail: Key (address)=(uuid://09409149-0f57-4372-8dcc-fe0b52fb6d76) already exists.
+2026-01-09 11:12:05,291 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2026-01-09 11:12:12,484 INFO  [org.keycloak.services] (main) KC-SERVICES0077: Created temporary admin user with username temp-admin
+2026-01-09 11:12:13,051 INFO  [io.quarkus] (main) Keycloak 26.3.1 on JVM (powered by Quarkus 3.20.1) started in 51.657s. Listening on: http://0.0.0.0:8080. Management interface listening on http://0.0.0.0:9000.
+2026-01-09 11:12:13,052 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-01-09 11:12:13,052 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-postgresql, keycloak, narayana-jta, opentelemetry, reactive-routes, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
