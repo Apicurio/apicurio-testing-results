@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.23 s <<< FAILURE! -- in io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT
+io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT.testEvolveAvroApicurio -- Time elapsed: 3.702 s <<< ERROR!
+java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at io.apicurio.tests.serdes.apicurio.pulsar.PulsarSerdesTester.consumeMessages(PulsarSerdesTester.java:107)
+	at io.apicurio.tests.serdes.apicurio.pulsar.AvroPulsarSerdeIT.testEvolveAvroApicurio(AvroPulsarSerdeIT.java:117)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.RuntimeException: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.apicurio.registry.resolver.cache.ERCache.retry(ERCache.java:246)
+	at io.apicurio.registry.resolver.cache.ERCache.getValue(ERCache.java:177)
+	at io.apicurio.registry.resolver.cache.ERCache.getByContentId(ERCache.java:156)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveSchemaByContentId(DefaultSchemaResolver.java:233)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveSchemaByArtifactReference(DefaultSchemaResolver.java:207)
+	at io.apicurio.registry.serde.AbstractDeserializer.resolve(AbstractDeserializer.java:127)
+	at io.apicurio.registry.serde.AbstractDeserializer.deserializeData(AbstractDeserializer.java:95)
+	at io.apicurio.registry.serde.avro.AvroPulsarSerde.deserialize(AvroPulsarSerde.java:41)
+	at io.apicurio.registry.serde.avro.AvroPulsarSerdeSchema.decode(AvroPulsarSerdeSchema.java:22)
+	at org.apache.pulsar.client.api.Schema.decode(Schema.java:134)
+	at org.apache.pulsar.client.impl.MessageImpl.decodeBySchema(MessageImpl.java:510)
+	at org.apache.pulsar.client.impl.MessageImpl.decode(MessageImpl.java:493)
+	at org.apache.pulsar.client.impl.MessageImpl.getValue(MessageImpl.java:478)
+	at io.apicurio.tests.serdes.apicurio.pulsar.PulsarSerdesTester.lambda$consumeMessages$2(PulsarSerdesTester.java:90)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:428)
+	at io.kiota.http.vertx.VertXRequestAdapter.sendCollection(VertXRequestAdapter.java:128)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.apicurio.registry.client.common.RegistryClientRequestAdapterFactory$RetryInvocationHandler.invoke(RegistryClientRequestAdapterFactory.java:422)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.sendCollection(Unknown Source)
+	at io.apicurio.registry.rest.client.ids.contentids.item.references.ReferencesRequestBuilder.get(ReferencesRequestBuilder.java:61)
+	at io.apicurio.registry.rest.client.ids.contentids.item.references.ReferencesRequestBuilder.get(ReferencesRequestBuilder.java:46)
+	at io.apicurio.registry.resolver.client.RegistryClientFacadeImpl.getReferencesByContentId(RegistryClientFacadeImpl.java:51)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.lambda$resolveSchemaByContentId$1(DefaultSchemaResolver.java:241)
+	at io.apicurio.registry.resolver.cache.ERCache.lambda$getValue$0(ERCache.java:178)
+	at io.apicurio.registry.resolver.cache.ERCache.retry(ERCache.java:231)
+	... 20 more
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:424)
+	... 30 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
