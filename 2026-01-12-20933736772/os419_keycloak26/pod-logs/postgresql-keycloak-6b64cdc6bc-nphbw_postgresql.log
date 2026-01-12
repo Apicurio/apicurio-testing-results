@@ -1,0 +1,67 @@
+chmod: changing permissions of '/var/run/postgresql': Operation not permitted
+The files belonging to this database system will be owned by user "1000790000".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data/pgdata ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+
+waiting for server to start....2026-01-12 21:08:19.814 UTC [30] LOG:  starting PostgreSQL 15.15 (Debian 15.15-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-01-12 21:08:19.814 UTC [30] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-01-12 21:08:19.826 UTC [33] LOG:  database system was shut down at 2026-01-12 21:08:19 UTC
+2026-01-12 21:08:19.857 UTC [30] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+2026-01-12 21:08:20.071 UTC [30] LOG:  received fast shutdown request
+waiting for server to shut down....2026-01-12 21:08:20.074 UTC [30] LOG:  aborting any active transactions
+2026-01-12 21:08:20.076 UTC [30] LOG:  background worker "logical replication launcher" (PID 36) exited with exit code 1
+2026-01-12 21:08:20.076 UTC [31] LOG:  shutting down
+2026-01-12 21:08:20.079 UTC [31] LOG:  checkpoint starting: shutdown immediate
+2026-01-12 21:08:20.127 UTC [31] LOG:  checkpoint complete: wrote 922 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.032 s, sync=0.007 s, total=0.051 s; sync files=301, longest=0.003 s, average=0.001 s; distance=4239 kB, estimate=4239 kB
+2026-01-12 21:08:20.132 UTC [30] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2026-01-12 21:08:20.199 UTC [1] LOG:  starting PostgreSQL 15.15 (Debian 15.15-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-01-12 21:08:20.199 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-01-12 21:08:20.199 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-01-12 21:08:20.202 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-01-12 21:08:20.210 UTC [46] LOG:  database system was shut down at 2026-01-12 21:08:20 UTC
+2026-01-12 21:08:20.216 UTC [1] LOG:  database system is ready to accept connections
+2026-01-12 21:09:04.353 UTC [72] ERROR:  relation "migration_model" does not exist at character 25
+2026-01-12 21:09:04.353 UTC [72] STATEMENT:  SELECT ID, VERSION FROM MIGRATION_MODEL ORDER BY UPDATE_TIME DESC
+2026-01-12 21:09:06.445 UTC [72] ERROR:  relation "public.databasechangelog" does not exist at character 22
+2026-01-12 21:09:06.445 UTC [72] STATEMENT:  SELECT COUNT(*) FROM public.databasechangelog
+2026-01-12 21:09:07.214 UTC [76] ERROR:  relation "public.databasechangeloglock" does not exist at character 22
+2026-01-12 21:09:07.214 UTC [76] STATEMENT:  SELECT COUNT(*) FROM public.databasechangeloglock
+2026-01-12 21:09:07.253 UTC [72] ERROR:  relation "public.databasechangelog" does not exist at character 22
+2026-01-12 21:09:07.253 UTC [72] STATEMENT:  SELECT COUNT(*) FROM public.databasechangelog
+2026-01-12 21:13:20.303 UTC [44] LOG:  checkpoint starting: time
+2026-01-12 21:14:22.101 UTC [44] LOG:  checkpoint complete: wrote 619 buffers (3.8%); 1 WAL file(s) added, 0 removed, 0 recycled; write=61.747 s, sync=0.005 s, total=61.799 s; sync files=593, longest=0.003 s, average=0.001 s; distance=4538 kB, estimate=4538 kB
