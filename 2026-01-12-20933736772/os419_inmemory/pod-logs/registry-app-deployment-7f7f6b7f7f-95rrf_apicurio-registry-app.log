@@ -1,0 +1,27 @@
+INFO quarkus fast-jar package type detected
+INFO exec -a "java" java -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -cp "." -jar /deployments/quarkus-app/quarkus-run.jar 
+INFO running in /deployments
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-01+00-12 21:08:04 WARN [null] (main) Unrecognized configuration key "quarkus.security.users.embedded.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2026-01+00-12 21:08:04 WARN [null] (main) The "quarkus.log.console.json" config property is deprecated and should not be used anymore.
+2026-01+00-12 21:08:04 WARN [null] (main) The "quarkus.http.cors" config property is deprecated and should not be used anymore.
+2026-01+00-12 21:08:04 WARN [null] (main) The "quarkus.log.console.color" config property is deprecated and should not be used anymore.
+2026-01+00-12 21:08:04 WARN [null] (main) The "quarkus.log.console.enable" config property is deprecated and should not be used anymore.
+2026-01+00-12 21:08:06 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) SqlRegistryStorage constructed successfully.
+2026-01+00-12 21:08:06 INFO [io.apicurio.registry.storage.impl.sql.RegistryDatasourceProducer] (main) Using h2 SQL storage.
+2026-01+00-12 21:08:06 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Acquiring database initialization lock...
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Database initialization lock acquired.
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Checking to see if the DB is initialized.
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Database not initialized.
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Initializing the Apicurio Registry database.
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) 	Database type: h2
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Checking to see if the DB is up-to-date.
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Build's DB version is 101
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Releasing database initialization lock...
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.impl.sql.AbstractSqlRegistryStorage] (main) Database initialization lock released.
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.storage.RegistryStorageProducer] (main) Using the following RegistryStorage implementation: io.apicurio.registry.storage.impl.sql.SqlRegistryStorage_ClientProxy
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.services.DynamicLogConfigurationService] (executor-thread-2) Applied dynamic log level configuration: io.apicurio = INFO
+2026-01+00-12 21:08:07 INFO [io.apicurio.registry.services.DynamicLogConfigurationService] (main) Applied initial log level configuration at startup: io.apicurio = INFO
