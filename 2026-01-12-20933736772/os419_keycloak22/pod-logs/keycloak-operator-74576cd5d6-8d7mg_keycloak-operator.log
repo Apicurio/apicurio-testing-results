@@ -1,0 +1,160 @@
+2026-01-12 21:08:00,522 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.operator-sdk.bundle.package-name" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2026-01-12 21:08:03,583 INFO  [io.qua.ope.run.OperatorProducer] (main) Quarkus Java Operator SDK extension 7.2.2 (commit: eebff34) built on Fri Oct 17 15:48:59 GMT 2025
+2026-01-12 21:08:03,663 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'keycloakrealmimportcontroller' for resource: 'class org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport' for namespace(s): [keycloak22]
+2026-01-12 21:08:03,797 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'keycloakcontroller' for resource: 'class org.keycloak.operator.crds.v2alpha1.deployment.Keycloak' for namespace(s): [keycloak22]
+2026-01-12 21:08:03,797 INFO  [io.qua.ope.run.AppEventListener] (main) Starting operator.
+2026-01-12 21:08:03,798 INFO  [io.jav.ope.Operator] (main) Operator SDK 5.1.4 (commit: 87ec587) built on Mon Oct 13 15:37:47 GMT 2025 starting...
+2026-01-12 21:08:03,798 INFO  [io.jav.ope.Operator] (main) Client version: 7.3.1
+2026-01-12 21:08:03,818 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakcontroller) Starting 'keycloakcontroller' controller for reconciler: org.keycloak.operator.controllers.KeycloakController, resource: org.keycloak.operator.crds.v2alpha1.deployment.Keycloak
+2026-01-12 21:08:03,818 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakrealmimportcontroller) Starting 'keycloakrealmimportcontroller' controller for reconciler: org.keycloak.operator.controllers.KeycloakRealmImportController, resource: org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport
+2026-01-12 21:08:04,362 WARN  [io.fab.kub.cli.dsl.int.VersionUsageUtils] (InformerWrapper [keycloakrealmimports.k8s.keycloak.org/v2alpha1] 26) The client is using resource type 'keycloakrealmimports' with unstable version 'v2alpha1'
+2026-01-12 21:08:04,363 WARN  [io.fab.kub.cli.dsl.int.VersionUsageUtils] (InformerWrapper [keycloaks.k8s.keycloak.org/v2alpha1] 27) The client is using resource type 'keycloaks' with unstable version 'v2alpha1'
+2026-01-12 21:08:09,026 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakrealmimportcontroller) 'keycloakrealmimportcontroller' controller started
+2026-01-12 21:08:09,306 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-48) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:08:09,635 INFO  [io.jav.ope.pro.Controller] (Controller Starter for: keycloakcontroller) 'keycloakcontroller' controller started
+2026-01-12 21:08:09,831 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-48) --- Realm reconciliation finished successfully
+2026-01-12 21:08:09,836 INFO  [io.quarkus] (main) keycloak-operator 26.5.0 on JVM (powered by Quarkus 3.27.1) started in 12.063s. Listening on: http://0.0.0.0:8080
+2026-01-12 21:08:09,836 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-01-12 21:08:09,837 INFO  [io.quarkus] (main) Installed features: [cdi, kubernetes, kubernetes-client, openshift-client, operator-sdk, smallrye-context-propagation, smallrye-health, vertx]
+2026-01-12 21:08:20,109 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-79) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:08:20,133 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-79) Job about to start
+2026-01-12 21:08:20,133 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-79) --- Realm reconciliation finished successfully
+2026-01-12 21:08:30,209 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-87) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:08:30,230 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-87) Job about to start
+2026-01-12 21:08:30,230 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-87) --- Realm reconciliation finished successfully
+2026-01-12 21:08:40,233 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-95) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:08:40,249 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-95) Job about to start
+2026-01-12 21:08:40,249 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-95) --- Realm reconciliation finished successfully
+2026-01-12 21:08:50,252 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-103) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:08:50,266 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-103) Job about to start
+2026-01-12 21:08:50,267 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-103) --- Realm reconciliation finished successfully
+2026-01-12 21:09:00,270 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:00,287 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) Job about to start
+2026-01-12 21:09:00,288 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-111) --- Realm reconciliation finished successfully
+2026-01-12 21:09:10,291 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-116) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:10,407 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-116) Job about to start
+2026-01-12 21:09:10,408 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-116) --- Realm reconciliation finished successfully
+2026-01-12 21:09:10,439 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-117) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:10,605 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-117) Job already executed - not recreating
+2026-01-12 21:09:10,605 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-117) Job running
+2026-01-12 21:09:10,605 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-117) --- Realm reconciliation finished successfully
+2026-01-12 21:09:10,642 ERROR [io.jav.ope.pro.eve.ReconciliationDispatcher] (ReconcilerExecutor-keycloakrealmimportcontroller-117) updateErrorStatus failed for resource: 77f49958-cda1-4a1a-b297-3d29dc02dea8 with version: 33599 for error Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak22/keycloakrealmimports/registry-sso-realm/status?fieldManager=keycloakrealmimportcontroller&force=true. Message: Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=k8s.keycloak.org, kind=keycloakrealmimports, name=registry-sso-realm, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=Conflict, status=Failure, additionalProperties={}).: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak22/keycloakrealmimports/registry-sso-realm/status?fieldManager=keycloakrealmimportcontroller&force=true. Message: Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=k8s.keycloak.org, kind=keycloakrealmimports, name=registry-sso-realm, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=Conflict, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.KubernetesClientException.copyAsCause(KubernetesClientException.java:205)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.waitForResult(OperationSupport.java:507)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handleResponse(OperationSupport.java:524)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:419)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.handlePatch(OperationSupport.java:397)
+	at io.fabric8.kubernetes.client.dsl.internal.BaseOperation.handlePatch(BaseOperation.java:764)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.lambda$patch$2(HasMetadataOperation.java:231)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:236)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:251)
+	at io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation.patch(HasMetadataOperation.java:44)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher$CustomResourceFacade.patchStatus(ReconciliationDispatcher.java:467)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleErrorStatusHandler(ReconciliationDispatcher.java:216)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleReconcile(ReconciliationDispatcher.java:133)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleDispatch(ReconciliationDispatcher.java:98)
+	at io.javaoperatorsdk.operator.processing.event.ReconciliationDispatcher.handleExecution(ReconciliationDispatcher.java:69)
+	at io.javaoperatorsdk.operator.processing.event.EventProcessor$ReconcilerExecutor.run(EventProcessor.java:483)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.fabric8.kubernetes.client.KubernetesClientException: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak22/keycloakrealmimports/registry-sso-realm/status?fieldManager=keycloakrealmimportcontroller&force=true. Message: Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=k8s.keycloak.org, kind=keycloakrealmimports, name=registry-sso-realm, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=Conflict, status=Failure, additionalProperties={}).
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:642)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.requestFailure(OperationSupport.java:622)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.assertResponseCode(OperationSupport.java:582)
+	at io.fabric8.kubernetes.client.dsl.internal.OperationSupport.lambda$handleResponse$0(OperationSupport.java:549)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.StandardHttpClient.lambda$completeOrCancel$10(StandardHttpClient.java:141)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.http.ByteArrayBodyHandler.onBodyDone(ByteArrayBodyHandler.java:51)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2179)
+	at io.fabric8.kubernetes.client.vertx.VertxHttpRequest.lambda$consumeBytes$1(VertxHttpRequest.java:84)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.HttpClientResponseImpl.handleEnd(HttpClientResponseImpl.java:250)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.lambda$new$0(Http1xClientConnection.java:442)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:279)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:157)
+	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleEnd(Http1xClientConnection.java:752)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:307)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleResponseEnd(Http1xClientConnection.java:983)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleHttpMessage(Http1xClientConnection.java:855)
+	at io.vertx.core.http.impl.Http1xClientConnection.handleMessage(Http1xClientConnection.java:817)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+
+2026-01-12 21:09:10,644 INFO  [io.jav.ope.pro.eve.EventProcessor] (ReconcilerExecutor-keycloakrealmimportcontroller-117) Resource Kubernetes Resource Creator/Update Conflict during reconciliation. Message: Failure executing: PATCH at: https://172.30.0.1:443/apis/k8s.keycloak.org/v2alpha1/namespaces/keycloak22/keycloakrealmimports/registry-sso-realm/status?fieldManager=keycloakrealmimportcontroller&force=true. Message: Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again. Received status: Status(apiVersion=v1, code=409, details=StatusDetails(causes=[], group=k8s.keycloak.org, kind=keycloakrealmimports, name=registry-sso-realm, retryAfterSeconds=null, uid=null, additionalProperties={}), kind=Status, message=Operation cannot be fulfilled on keycloakrealmimports.k8s.keycloak.org "registry-sso-realm": the object has been modified; please apply your changes to the latest version and try again, metadata=ListMeta(_continue=null, remainingItemCount=null, resourceVersion=null, selfLink=null, additionalProperties={}), reason=Conflict, status=Failure, additionalProperties={}). Resource name: null
+2026-01-12 21:09:12,650 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-118) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:12,668 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-118) Job already executed - not recreating
+2026-01-12 21:09:12,669 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-118) Job running
+2026-01-12 21:09:12,669 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-118) --- Realm reconciliation finished successfully
+2026-01-12 21:09:13,227 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-119) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:13,251 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-119) Job already executed - not recreating
+2026-01-12 21:09:13,251 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-119) Job running
+2026-01-12 21:09:13,251 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-119) --- Realm reconciliation finished successfully
+2026-01-12 21:09:23,260 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-120) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:23,281 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-120) Job already executed - not recreating
+2026-01-12 21:09:23,281 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-120) Job running
+2026-01-12 21:09:23,281 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-120) --- Realm reconciliation finished successfully
+2026-01-12 21:09:33,283 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:33,300 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) Job already executed - not recreating
+2026-01-12 21:09:33,300 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) Job running
+2026-01-12 21:09:33,300 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-121) --- Realm reconciliation finished successfully
+2026-01-12 21:09:43,305 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-122) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:43,346 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-122) Job already executed - not recreating
+2026-01-12 21:09:43,347 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-122) Job running
+2026-01-12 21:09:43,347 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-122) --- Realm reconciliation finished successfully
+2026-01-12 21:09:44,350 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-123) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:44,386 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-123) Job already executed - not recreating
+2026-01-12 21:09:44,386 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-123) Job running
+2026-01-12 21:09:44,386 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-123) --- Realm reconciliation finished successfully
+2026-01-12 21:09:45,357 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-124) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:45,393 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-124) Job already executed - not recreating
+2026-01-12 21:09:45,393 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-124) Job running
+2026-01-12 21:09:45,393 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-124) --- Realm reconciliation finished successfully
+2026-01-12 21:09:45,404 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-125) --- Reconciling Keycloak Realm: registry-sso-realm in namespace: keycloak22
+2026-01-12 21:09:45,429 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-125) Job already executed - not recreating
+2026-01-12 21:09:45,429 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-125) Job finished
+2026-01-12 21:09:45,429 INFO  [org.key.ope.con.KeycloakRealmImportController] (ReconcilerExecutor-keycloakrealmimportcontroller-125) --- Realm reconciliation finished successfully
