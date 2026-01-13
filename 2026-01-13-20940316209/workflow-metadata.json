@@ -1,0 +1,486 @@
+{
+  "workflow": {
+    "name": "[Wrapper] [Test] Registry Release",
+    "run_id": "20940316209",
+    "run_number": "6",
+    "run_attempt": "1",
+    "workflow_ref": "Apicurio/apicurio-testing/.github/workflows/wrapper-registry-release.yaml@refs/heads/main",
+    "sha": "84234904a44d00bbe1cafca2d86779a006d479c9",
+    "ref": "refs/heads/main",
+    "repository": "Apicurio/apicurio-testing",
+    "actor": "EricWittmann",
+    "triggering_actor": "EricWittmann",
+    "event_name": "workflow_dispatch"
+  },
+  "inputs": {"releaseVersion":"3.1.6","operatorImage":"brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-rhel9-operator:3.1.6-3","appImage":"brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-rhel9:3.1.6-3","uiImage":"brew.registry.redhat.io/rh-osbs/apicurio-apicurio-registry-ui-rhel9:3.1.6-2","testsTag":"3.1.6","isDownstream":"true","skipClusterInstall":"false","dryRun":"false"},
+  "environment": {
+    "openshift_version": "4.19",
+    "cluster_name": "ci419",
+    "control_plane_nodes": 3,
+    "compute_nodes": 6,
+    "aws_region": "us-east-1",
+    "keycloak_version": "26.3.1",
+    "rapidast_tag": "development"
+  },
+  "execution": {
+    "started_at": "2026-01-13T00:45:01Z",
+    "completed_at": "2026-01-13T02:01:06Z",
+    "duration_seconds": 4565,
+    "duration_formatted": "01:16:05"
+  },
+  "status": {
+    "overall_result": "unknown"
+  },
+  "jobs": [
+  {
+    "name": "Run QE Registry Tests / OpenShift 4.16",
+    "id": 60172299394,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T00:44:59Z",
+    "completed_at": "2026-01-13T01:27:20Z",
+    "runner_name": "GitHub Actions 1000059788",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / OpenShift 4.19",
+    "id": 60172299395,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T00:44:59Z",
+    "completed_at": "2026-01-13T01:30:34Z",
+    "runner_name": "GitHub Actions 1000059787",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / initialize-globals",
+    "id": 60172299424,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T00:45:00Z",
+    "completed_at": "2026-01-13T00:45:04Z",
+    "runner_name": "GitHub Actions 1000059789",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (strimzi 0.43)",
+    "id": 60174877938,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:27:22Z",
+    "completed_at": "2026-01-13T01:31:39Z",
+    "runner_name": "GitHub Actions 1000059793",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (in-memory) [4.16]",
+    "id": 60174877968,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:27:22Z",
+    "completed_at": "2026-01-13T01:30:19Z",
+    "runner_name": "GitHub Actions 1000059794",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / UI Tests (in mem) [4.16]",
+    "id": 60175058737,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:22Z",
+    "completed_at": "2026-01-13T01:32:17Z",
+    "runner_name": "GitHub Actions 1000059795",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (mysql 8.4)",
+    "id": 60175074429,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:33:26Z",
+    "runner_name": "GitHub Actions 1000059799",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (pg 17)",
+    "id": 60175074434,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:33:27Z",
+    "runner_name": "GitHub Actions 1000059801",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (in-memory)",
+    "id": 60175074436,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:33:42Z",
+    "runner_name": "GitHub Actions 1000059798",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (strimzi 0.47)",
+    "id": 60175074442,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:34:29Z",
+    "runner_name": "GitHub Actions 1000059802",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (pg12)",
+    "id": 60175074448,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:33:19Z",
+    "runner_name": "GitHub Actions 1000059803",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (keycloak 26)",
+    "id": 60175074449,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:35:54Z",
+    "runner_name": "GitHub Actions 1000059804",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (keycloak 22)",
+    "id": 60175074455,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:35:29Z",
+    "runner_name": "GitHub Actions 1000059800",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Apicurio Registry (mysql 8.0)",
+    "id": 60175074456,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:30:36Z",
+    "completed_at": "2026-01-13T01:33:25Z",
+    "runner_name": "GitHub Actions 1000059805",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / UI Tests (strimzi 0.43)",
+    "id": 60175143607,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:31:42Z",
+    "completed_at": "2026-01-13T01:34:24Z",
+    "runner_name": "GitHub Actions 1000059809",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (in mem) [4.16]",
+    "id": 60175183966,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:32:20Z",
+    "completed_at": "2026-01-13T01:47:27Z",
+    "runner_name": "GitHub Actions 1000059812",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (pg12)",
+    "id": 60175254233,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:33:22Z",
+    "completed_at": "2026-01-13T01:43:28Z",
+    "runner_name": "GitHub Actions 1000059814",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / UI Tests (mysql 8.0)",
+    "id": 60175260063,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:33:28Z",
+    "completed_at": "2026-01-13T01:35:47Z",
+    "runner_name": "GitHub Actions 1000059815",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / UI Tests (mysql 8.4)",
+    "id": 60175260487,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:33:28Z",
+    "completed_at": "2026-01-13T01:35:26Z",
+    "runner_name": "GitHub Actions 1000059816",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / UI Tests (pg17)",
+    "id": 60175262178,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:33:30Z",
+    "completed_at": "2026-01-13T01:35:54Z",
+    "runner_name": "GitHub Actions 1000059817",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / UI Tests (in mem)",
+    "id": 60175277608,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:33:44Z",
+    "completed_at": "2026-01-13T01:35:42Z",
+    "runner_name": "GitHub Actions 1000059821",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (strimzi 0.43)",
+    "id": 60175320988,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:34:26Z",
+    "completed_at": "2026-01-13T01:49:15Z",
+    "runner_name": "GitHub Actions 1000059825",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / UI Tests (strimzi 0.47)",
+    "id": 60175325567,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:34:31Z",
+    "completed_at": "2026-01-13T01:36:32Z",
+    "runner_name": "GitHub Actions 1000059827",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (mysql 8.4)",
+    "id": 60175384804,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:35:28Z",
+    "completed_at": "2026-01-13T01:47:28Z",
+    "runner_name": "GitHub Actions 1000059829",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (keycloak 22)",
+    "id": 60175388413,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:35:31Z",
+    "completed_at": "2026-01-13T01:41:42Z",
+    "runner_name": "GitHub Actions 1000059831",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (in mem)",
+    "id": 60175402574,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:35:44Z",
+    "completed_at": "2026-01-13T01:47:31Z",
+    "runner_name": "GitHub Actions 1000059833",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (mysql 8.0)",
+    "id": 60175407561,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:35:49Z",
+    "completed_at": "2026-01-13T01:43:36Z",
+    "runner_name": "GitHub Actions 1000059838",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (keycloak 26)",
+    "id": 60175414780,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:35:56Z",
+    "completed_at": "2026-01-13T01:42:39Z",
+    "runner_name": "GitHub Actions 1000059839",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (pg17)",
+    "id": 60175414884,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:35:56Z",
+    "completed_at": "2026-01-13T01:49:10Z",
+    "runner_name": "GitHub Actions 1000059840",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Integration Tests (strimzi 0.47)",
+    "id": 60175453936,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:36:34Z",
+    "completed_at": "2026-01-13T01:49:44Z",
+    "runner_name": "GitHub Actions 1000059844",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (keycloak 22)",
+    "id": 60175774877,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:41:44Z",
+    "completed_at": "2026-01-13T01:42:34Z",
+    "runner_name": "GitHub Actions 1000059852",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / DAST Scan (keycloak 26)",
+    "id": 60175832187,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:42:41Z",
+    "completed_at": "2026-01-13T01:48:44Z",
+    "runner_name": "GitHub Actions 1000059854",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (pg12)",
+    "id": 60175880874,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:43:31Z",
+    "completed_at": "2026-01-13T01:44:19Z",
+    "runner_name": "GitHub Actions 1000059859",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (mysql 8.0)",
+    "id": 60175888092,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:43:39Z",
+    "completed_at": "2026-01-13T01:44:26Z",
+    "runner_name": "GitHub Actions 1000059861",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (inmemory) [4.16]",
+    "id": 60176126130,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:47:30Z",
+    "completed_at": "2026-01-13T01:48:12Z",
+    "runner_name": "GitHub Actions 1000059874",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (mysql 8.4)",
+    "id": 60176127043,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:47:31Z",
+    "completed_at": "2026-01-13T01:48:14Z",
+    "runner_name": "GitHub Actions 1000059875",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / DAST Scan (in mem)",
+    "id": 60176129892,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:47:33Z",
+    "completed_at": "2026-01-13T01:53:49Z",
+    "runner_name": "GitHub Actions 1000059878",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (keycloak 26)",
+    "id": 60176200466,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:48:47Z",
+    "completed_at": "2026-01-13T01:49:35Z",
+    "runner_name": "GitHub Actions 1000059882",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (pg17)",
+    "id": 60176224045,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:49:12Z",
+    "completed_at": "2026-01-13T01:49:59Z",
+    "runner_name": "GitHub Actions 1000059885",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (strimzi 0.43)",
+    "id": 60176228351,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:49:18Z",
+    "completed_at": "2026-01-13T01:50:07Z",
+    "runner_name": "GitHub Actions 1000059889",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (strimzi 0.47)",
+    "id": 60176254791,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:49:45Z",
+    "completed_at": "2026-01-13T01:50:28Z",
+    "runner_name": "GitHub Actions 1000059891",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy OpenShift 4.16",
+    "id": 60176278887,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:50:10Z",
+    "completed_at": "2026-01-13T01:57:36Z",
+    "runner_name": "GitHub Actions 1000059894",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy Registry (inmemory)",
+    "id": 60176493547,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:53:52Z",
+    "completed_at": "2026-01-13T01:54:38Z",
+    "runner_name": "GitHub Actions 1000059905",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Destroy OpenShift 4.19",
+    "id": 60176539183,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-01-13T01:54:41Z",
+    "completed_at": "2026-01-13T02:00:50Z",
+    "runner_name": "GitHub Actions 1000059909",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run QE Registry Tests / Save Workflow Metadata",
+    "id": 60176898518,
+    "status": "in_progress",
+    "conclusion": null,
+    "started_at": "2026-01-13T02:00:52Z",
+    "completed_at": null,
+    "runner_name": "GitHub Actions 1000059912",
+    "runner_group_name": "GitHub Actions"
+  }
+]
+}
