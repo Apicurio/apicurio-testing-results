@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.serdes.apicurio.SerdesPerformanceIT
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.185 s <<< FAILURE! -- in io.apicurio.tests.serdes.apicurio.SerdesPerformanceIT
+io.apicurio.tests.serdes.apicurio.SerdesPerformanceIT.testJsonSchemaRoundTripPerformance -- Time elapsed: 1.531 s <<< ERROR!
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.apicurio.registry.resolver.cache.ERCache.retry(ERCache.java:246)
+	at io.apicurio.registry.resolver.cache.ERCache.getValue(ERCache.java:177)
+	at io.apicurio.registry.resolver.cache.ERCache.getByArtifactCoordinates(ERCache.java:162)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveSchemaByArtifactReferenceCached(DefaultSchemaResolver.java:357)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveSchemaByCoordinates(DefaultSchemaResolver.java:229)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.getSchemaFromRegistry(DefaultSchemaResolver.java:177)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.lambda$resolveSchema$0(DefaultSchemaResolver.java:93)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveSchema(DefaultSchemaResolver.java:93)
+	at io.apicurio.registry.serde.AbstractSerializer.serializeData(AbstractSerializer.java:132)
+	at io.apicurio.registry.serde.kafka.KafkaSerializer.serialize(KafkaSerializer.java:92)
+	at io.apicurio.tests.serdes.apicurio.SerdesPerformanceIT.testJsonSchemaRoundTripWithMessage(SerdesPerformanceIT.java:433)
+	at io.apicurio.tests.serdes.apicurio.SerdesPerformanceIT.testJsonSchemaRoundTripPerformance(SerdesPerformanceIT.java:324)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:428)
+	at io.kiota.http.vertx.VertXRequestAdapter.sendCollection(VertXRequestAdapter.java:128)
+	at jdk.internal.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.apicurio.registry.client.common.RegistryClientRequestAdapterFactory$RetryInvocationHandler.invoke(RegistryClientRequestAdapterFactory.java:234)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.sendCollection(Unknown Source)
+	at io.apicurio.registry.rest.client.ids.globalids.item.references.ReferencesRequestBuilder.get(ReferencesRequestBuilder.java:63)
+	at io.apicurio.registry.rest.client.ids.globalids.item.references.ReferencesRequestBuilder.get(ReferencesRequestBuilder.java:48)
+	at io.apicurio.registry.resolver.client.RegistryClientFacadeImpl.getReferencesByGlobalId(RegistryClientFacadeImpl.java:69)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.resolveByCoordinates(DefaultSchemaResolver.java:376)
+	at io.apicurio.registry.resolver.DefaultSchemaResolver.lambda$resolveSchemaByArtifactReferenceCached$6(DefaultSchemaResolver.java:359)
+	at io.apicurio.registry.resolver.cache.ERCache.lambda$getValue$0(ERCache.java:178)
+	at io.apicurio.registry.resolver.cache.ERCache.retry(ERCache.java:231)
+	... 15 more
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:424)
+	... 28 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
