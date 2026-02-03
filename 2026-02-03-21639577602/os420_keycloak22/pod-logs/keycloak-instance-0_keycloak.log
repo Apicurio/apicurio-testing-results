@@ -1,0 +1,35 @@
+Changes detected in configuration. Updating the server image.
+Updating the configuration and installing your custom providers, if any. Please wait.
+2026-02-03 17:51:52,565 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 25175ms
+Server configuration updated and persisted. Run the following command to review the configuration:
+
+	kc.sh show-config
+
+Next time you run the server, just run:
+
+	kc.sh start --optimized 
+
+2026-02-03 17:51:56,352 INFO  [org.keycloak.quarkus.runtime.hostname.DefaultHostnameProvider] (main) Hostname settings: Base URL: <unset>, Hostname: keycloak-keycloak22.apps.ci420.apicurio-testing.org, Strict HTTPS: false, Path: <request>, Strict BackChannel: false, Admin URL: <unset>, Admin: <request>, Port: -1, Proxied: true
+2026-02-03 17:52:04,443 WARN  [org.infinispan.PERSISTENCE] (keycloak-cache-init) ISPN000554: jboss-marshalling is deprecated and planned for removal
+2026-02-03 17:52:04,950 INFO  [org.infinispan.CONTAINER] (keycloak-cache-init) ISPN000556: Starting user marshaller 'org.infinispan.jboss.marshalling.core.JBossUserMarshaller'
+2026-02-03 17:52:05,373 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000088: Unable to use any JGroups configuration mechanisms provided in properties {}. Using default JGroups configuration!
+2026-02-03 17:52:05,849 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000078: Starting JGroups channel `ISPN`
+2026-02-03 17:52:05,853 INFO  [org.jgroups.JChannel] (keycloak-cache-init) local_addr: dd1a8507-7bab-4ee7-8de5-0070a1f3a8cb, name: keycloak-instance-0-11407
+2026-02-03 17:52:05,862 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the send buffer of socket MulticastSocket was set to 1MB, but the OS only allocated 212.99KB
+2026-02-03 17:52:05,862 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the receive buffer of socket MulticastSocket was set to 20MB, but the OS only allocated 212.99KB
+2026-02-03 17:52:05,863 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the send buffer of socket MulticastSocket was set to 1MB, but the OS only allocated 212.99KB
+2026-02-03 17:52:05,864 WARN  [org.jgroups.protocols.UDP] (keycloak-cache-init) JGRP000015: the receive buffer of socket MulticastSocket was set to 25MB, but the OS only allocated 212.99KB
+2026-02-03 17:52:05,866 WARN  [io.quarkus.vertx.http.runtime.VertxHttpRecorder] (main) The X-Forwarded-* and Forwarded headers will be considered when determining the proxy address. This configuration can cause a security issue as clients can forge requests and send a forwarded header that is not overwritten by the proxy. Please consider use one of these headers just to forward the proxy address in requests.
+2026-02-03 17:52:05,870 INFO  [org.keycloak.broker.provider.AbstractIdentityProviderMapper] (main) Registering class org.keycloak.broker.provider.mappersync.ConfigSyncEventListener
+2026-02-03 17:52:05,930 INFO  [org.jgroups.protocols.FD_SOCK2] (keycloak-cache-init) server listening on *.24848
+2026-02-03 17:52:07,939 INFO  [org.jgroups.protocols.pbcast.GMS] (keycloak-cache-init) keycloak-instance-0-11407: no members discovered after 2003 ms: creating cluster as coordinator
+2026-02-03 17:52:07,953 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000094: Received new cluster view for channel ISPN: [keycloak-instance-0-11407|0] (1) [keycloak-instance-0-11407]
+2026-02-03 17:52:08,044 INFO  [org.infinispan.CLUSTER] (keycloak-cache-init) ISPN000079: Channel `ISPN` local address is `keycloak-instance-0-11407`, physical addresses are `[10.129.2.15:40384]`
+2026-02-03 17:52:08,083 WARN  [org.infinispan.CONFIG] (keycloak-cache-init) ISPN000569: Unable to persist Infinispan internal caches as no global state enabled
+2026-02-03 17:52:10,989 INFO  [org.keycloak.quarkus.runtime.storage.legacy.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2026-02-03 17:52:17,378 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-instance-0-11407, Site name: null
+2026-02-03 17:52:17,782 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2026-02-03 17:52:24,268 INFO  [io.quarkus] (main) Keycloak 22.0.3 on JVM (powered by Quarkus 3.2.5.Final) started in 31.503s. Listening on: http://0.0.0.0:8080
+2026-02-03 17:52:24,268 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-02-03 17:52:24,268 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-h2, jdbc-mariadb, jdbc-mssql, jdbc-mysql, jdbc-oracle, jdbc-postgresql, keycloak, logging-gelf, micrometer, narayana-jta, reactive-routes, resteasy, resteasy-jackson, smallrye-context-propagation, smallrye-health, vertx]
+2026-02-03 17:52:24,851 INFO  [org.keycloak.services] (main) KC-SERVICES0009: Added user 'admin' to realm 'master'
