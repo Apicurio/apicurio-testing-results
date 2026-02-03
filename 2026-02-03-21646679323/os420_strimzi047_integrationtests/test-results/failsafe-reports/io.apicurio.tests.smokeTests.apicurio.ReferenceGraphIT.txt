@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.smokeTests.apicurio.ReferenceGraphIT
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 17.74 s <<< FAILURE! -- in io.apicurio.tests.smokeTests.apicurio.ReferenceGraphIT
+io.apicurio.tests.smokeTests.apicurio.ReferenceGraphIT.testReferenceGraphWithCycles -- Time elapsed: 1.199 s <<< ERROR!
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:428)
+	at io.kiota.http.vertx.VertXRequestAdapter.send(VertXRequestAdapter.java:165)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.apicurio.registry.client.common.RegistryClientRequestAdapterFactory$RetryInvocationHandler.invoke(RegistryClientRequestAdapterFactory.java:234)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.send(Unknown Source)
+	at io.apicurio.registry.rest.client.groups.item.artifacts.ArtifactsRequestBuilder.post(ArtifactsRequestBuilder.java:154)
+	at io.apicurio.tests.ApicurioRegistryBaseIT.createArtifact(ApicurioRegistryBaseIT.java:195)
+	at io.apicurio.tests.smokeTests.apicurio.ReferenceGraphIT.testReferenceGraphWithCycles(ReferenceGraphIT.java:300)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:424)
+	... 12 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
+io.apicurio.tests.smokeTests.apicurio.ReferenceGraphIT.testOutboundReferenceGraph -- Time elapsed: 1.166 s <<< ERROR!
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:428)
+	at io.kiota.http.vertx.VertXRequestAdapter.send(VertXRequestAdapter.java:165)
+	at jdk.internal.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.apicurio.registry.client.common.RegistryClientRequestAdapterFactory$RetryInvocationHandler.invoke(RegistryClientRequestAdapterFactory.java:234)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.send(Unknown Source)
+	at io.apicurio.registry.rest.client.groups.item.artifacts.ArtifactsRequestBuilder.post(ArtifactsRequestBuilder.java:154)
+	at io.apicurio.tests.ApicurioRegistryBaseIT.createArtifact(ApicurioRegistryBaseIT.java:195)
+	at io.apicurio.tests.smokeTests.apicurio.ReferenceGraphIT.testOutboundReferenceGraph(ReferenceGraphIT.java:122)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.ExecutionException: io.vertx.core.http.HttpClosedException: Connection was closed
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at io.kiota.http.vertx.VertXRequestAdapter.getHttpResponseMessage(VertXRequestAdapter.java:424)
+	... 12 more
+Caused by: io.vertx.core.http.HttpClosedException: Connection was closed
+
