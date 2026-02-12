@@ -1,0 +1,553 @@
+chmod: changing permissions of '/var/run/postgresql': Operation not permitted
+The files belonging to this database system will be owned by user "1000780000".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data/pgdata ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+
+waiting for server to start....2026-02-12 18:30:17.579 UTC [30] LOG:  starting PostgreSQL 17.7 (Debian 17.7-3.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-02-12 18:30:17.580 UTC [30] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-02-12 18:30:17.653 UTC [33] LOG:  database system was shut down at 2026-02-12 18:30:17 UTC
+2026-02-12 18:30:17.690 UTC [30] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+2026-02-12 18:30:18.159 UTC [30] LOG:  received fast shutdown request
+waiting for server to shut down....2026-02-12 18:30:18.181 UTC [30] LOG:  aborting any active transactions
+2026-02-12 18:30:18.184 UTC [30] LOG:  background worker "logical replication launcher" (PID 36) exited with exit code 1
+2026-02-12 18:30:18.185 UTC [31] LOG:  shutting down
+2026-02-12 18:30:18.213 UTC [31] LOG:  checkpoint starting: shutdown immediate
+2026-02-12 18:30:18.672 UTC [31] LOG:  checkpoint complete: wrote 925 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.371 s, sync=0.011 s, total=0.487 s; sync files=301, longest=0.010 s, average=0.001 s; distance=4256 kB, estimate=4256 kB; lsn=0/1915960, redo lsn=0/1915960
+2026-02-12 18:30:18.680 UTC [30] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2026-02-12 18:30:18.876 UTC [1] LOG:  starting PostgreSQL 17.7 (Debian 17.7-3.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-02-12 18:30:18.876 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-02-12 18:30:18.876 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-02-12 18:30:18.889 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-02-12 18:30:18.920 UTC [46] LOG:  database system was shut down at 2026-02-12 18:30:18 UTC
+2026-02-12 18:30:18.948 UTC [1] LOG:  database system is ready to accept connections
+2026-02-12 18:30:22.603 UTC [52] FATAL:  role "-d" does not exist
+2026-02-12 18:30:27.506 UTC [55] FATAL:  role "-d" does not exist
+2026-02-12 18:30:32.532 UTC [58] FATAL:  role "-d" does not exist
+2026-02-12 18:30:37.523 UTC [61] FATAL:  role "-d" does not exist
+2026-02-12 18:30:42.539 UTC [64] FATAL:  role "-d" does not exist
+2026-02-12 18:30:47.534 UTC [67] FATAL:  role "-d" does not exist
+2026-02-12 18:30:52.510 UTC [71] FATAL:  role "-d" does not exist
+2026-02-12 18:30:53.102 UTC [74] FATAL:  role "-d" does not exist
+2026-02-12 18:30:57.507 UTC [77] FATAL:  role "-d" does not exist
+2026-02-12 18:31:02.503 UTC [80] FATAL:  role "-d" does not exist
+2026-02-12 18:31:03.104 UTC [83] FATAL:  role "-d" does not exist
+2026-02-12 18:31:07.521 UTC [86] FATAL:  role "-d" does not exist
+2026-02-12 18:31:12.511 UTC [89] FATAL:  role "-d" does not exist
+2026-02-12 18:31:13.103 UTC [92] FATAL:  role "-d" does not exist
+2026-02-12 18:31:17.518 UTC [95] FATAL:  role "-d" does not exist
+2026-02-12 18:31:22.548 UTC [99] FATAL:  role "-d" does not exist
+2026-02-12 18:31:23.109 UTC [102] FATAL:  role "-d" does not exist
+2026-02-12 18:31:27.524 UTC [105] FATAL:  role "-d" does not exist
+2026-02-12 18:31:32.508 UTC [108] FATAL:  role "-d" does not exist
+2026-02-12 18:31:33.102 UTC [111] FATAL:  role "-d" does not exist
+2026-02-12 18:31:37.505 UTC [114] FATAL:  role "-d" does not exist
+2026-02-12 18:31:42.517 UTC [117] FATAL:  role "-d" does not exist
+2026-02-12 18:31:43.102 UTC [120] FATAL:  role "-d" does not exist
+2026-02-12 18:31:47.522 UTC [123] FATAL:  role "-d" does not exist
+2026-02-12 18:31:52.517 UTC [127] FATAL:  role "-d" does not exist
+2026-02-12 18:31:53.100 UTC [130] FATAL:  role "-d" does not exist
+2026-02-12 18:31:57.506 UTC [133] FATAL:  role "-d" does not exist
+2026-02-12 18:32:02.516 UTC [136] FATAL:  role "-d" does not exist
+2026-02-12 18:32:03.101 UTC [139] FATAL:  role "-d" does not exist
+2026-02-12 18:32:07.598 UTC [142] FATAL:  role "-d" does not exist
+2026-02-12 18:32:12.512 UTC [145] FATAL:  role "-d" does not exist
+2026-02-12 18:32:13.106 UTC [148] FATAL:  role "-d" does not exist
+2026-02-12 18:32:17.614 UTC [154] FATAL:  role "-d" does not exist
+2026-02-12 18:32:22.564 UTC [176] FATAL:  role "-d" does not exist
+2026-02-12 18:32:23.131 UTC [179] FATAL:  role "-d" does not exist
+2026-02-12 18:32:27.536 UTC [182] FATAL:  role "-d" does not exist
+2026-02-12 18:32:32.540 UTC [185] FATAL:  role "-d" does not exist
+2026-02-12 18:32:33.102 UTC [188] FATAL:  role "-d" does not exist
+2026-02-12 18:32:37.536 UTC [191] FATAL:  role "-d" does not exist
+2026-02-12 18:32:42.513 UTC [195] FATAL:  role "-d" does not exist
+2026-02-12 18:32:43.100 UTC [198] FATAL:  role "-d" does not exist
+2026-02-12 18:32:47.509 UTC [201] FATAL:  role "-d" does not exist
+2026-02-12 18:32:52.520 UTC [204] FATAL:  role "-d" does not exist
+2026-02-12 18:32:53.103 UTC [207] FATAL:  role "-d" does not exist
+2026-02-12 18:32:57.509 UTC [210] FATAL:  role "-d" does not exist
+2026-02-12 18:33:02.523 UTC [214] FATAL:  role "-d" does not exist
+2026-02-12 18:33:03.101 UTC [217] FATAL:  role "-d" does not exist
+2026-02-12 18:33:07.514 UTC [220] FATAL:  role "-d" does not exist
+2026-02-12 18:33:12.511 UTC [223] FATAL:  role "-d" does not exist
+2026-02-12 18:33:13.103 UTC [226] FATAL:  role "-d" does not exist
+2026-02-12 18:33:17.516 UTC [229] FATAL:  role "-d" does not exist
+2026-02-12 18:33:22.518 UTC [233] FATAL:  role "-d" does not exist
+2026-02-12 18:33:23.102 UTC [236] FATAL:  role "-d" does not exist
+2026-02-12 18:33:27.546 UTC [239] FATAL:  role "-d" does not exist
+2026-02-12 18:33:32.505 UTC [242] FATAL:  role "-d" does not exist
+2026-02-12 18:33:33.118 UTC [245] FATAL:  role "-d" does not exist
+2026-02-12 18:33:37.512 UTC [248] FATAL:  role "-d" does not exist
+2026-02-12 18:33:42.517 UTC [252] FATAL:  role "-d" does not exist
+2026-02-12 18:33:43.147 UTC [255] FATAL:  role "-d" does not exist
+2026-02-12 18:33:47.522 UTC [258] FATAL:  role "-d" does not exist
+2026-02-12 18:33:52.521 UTC [261] FATAL:  role "-d" does not exist
+2026-02-12 18:33:53.103 UTC [264] FATAL:  role "-d" does not exist
+2026-02-12 18:33:57.518 UTC [267] FATAL:  role "-d" does not exist
+2026-02-12 18:34:02.515 UTC [271] FATAL:  role "-d" does not exist
+2026-02-12 18:34:03.102 UTC [274] FATAL:  role "-d" does not exist
+2026-02-12 18:34:07.530 UTC [277] FATAL:  role "-d" does not exist
+2026-02-12 18:34:12.516 UTC [280] FATAL:  role "-d" does not exist
+2026-02-12 18:34:13.103 UTC [283] FATAL:  role "-d" does not exist
+2026-02-12 18:34:17.507 UTC [286] FATAL:  role "-d" does not exist
+2026-02-12 18:34:22.518 UTC [290] FATAL:  role "-d" does not exist
+2026-02-12 18:34:23.102 UTC [293] FATAL:  role "-d" does not exist
+2026-02-12 18:34:27.513 UTC [296] FATAL:  role "-d" does not exist
+2026-02-12 18:34:32.527 UTC [299] FATAL:  role "-d" does not exist
+2026-02-12 18:34:33.104 UTC [302] FATAL:  role "-d" does not exist
+2026-02-12 18:34:37.518 UTC [305] FATAL:  role "-d" does not exist
+2026-02-12 18:34:42.508 UTC [309] FATAL:  role "-d" does not exist
+2026-02-12 18:34:43.104 UTC [312] FATAL:  role "-d" does not exist
+2026-02-12 18:34:47.508 UTC [315] FATAL:  role "-d" does not exist
+2026-02-12 18:34:52.510 UTC [318] FATAL:  role "-d" does not exist
+2026-02-12 18:34:53.104 UTC [321] FATAL:  role "-d" does not exist
+2026-02-12 18:34:57.510 UTC [324] FATAL:  role "-d" does not exist
+2026-02-12 18:35:02.518 UTC [328] FATAL:  role "-d" does not exist
+2026-02-12 18:35:03.106 UTC [331] FATAL:  role "-d" does not exist
+2026-02-12 18:35:07.516 UTC [334] FATAL:  role "-d" does not exist
+2026-02-12 18:35:12.500 UTC [337] FATAL:  role "-d" does not exist
+2026-02-12 18:35:13.105 UTC [340] FATAL:  role "-d" does not exist
+2026-02-12 18:35:17.516 UTC [343] FATAL:  role "-d" does not exist
+2026-02-12 18:35:19.018 UTC [44] LOG:  checkpoint starting: time
+2026-02-12 18:35:22.516 UTC [347] FATAL:  role "-d" does not exist
+2026-02-12 18:35:23.104 UTC [350] FATAL:  role "-d" does not exist
+2026-02-12 18:35:27.516 UTC [353] FATAL:  role "-d" does not exist
+2026-02-12 18:35:32.516 UTC [356] FATAL:  role "-d" does not exist
+2026-02-12 18:35:33.103 UTC [359] FATAL:  role "-d" does not exist
+2026-02-12 18:35:37.522 UTC [362] FATAL:  role "-d" does not exist
+2026-02-12 18:35:42.507 UTC [366] FATAL:  role "-d" does not exist
+2026-02-12 18:35:43.103 UTC [369] FATAL:  role "-d" does not exist
+2026-02-12 18:35:45.893 UTC [44] LOG:  checkpoint complete: wrote 271 buffers (1.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=26.866 s, sync=0.005 s, total=26.876 s; sync files=164, longest=0.003 s, average=0.001 s; distance=1088 kB, estimate=1088 kB; lsn=0/1A25C98, redo lsn=0/1A25C08
+2026-02-12 18:35:47.512 UTC [372] FATAL:  role "-d" does not exist
+2026-02-12 18:35:52.510 UTC [375] FATAL:  role "-d" does not exist
+2026-02-12 18:35:53.102 UTC [378] FATAL:  role "-d" does not exist
+2026-02-12 18:35:57.514 UTC [381] FATAL:  role "-d" does not exist
+2026-02-12 18:36:02.516 UTC [385] FATAL:  role "-d" does not exist
+2026-02-12 18:36:03.102 UTC [388] FATAL:  role "-d" does not exist
+2026-02-12 18:36:07.513 UTC [391] FATAL:  role "-d" does not exist
+2026-02-12 18:36:12.512 UTC [394] FATAL:  role "-d" does not exist
+2026-02-12 18:36:13.104 UTC [397] FATAL:  role "-d" does not exist
+2026-02-12 18:36:17.508 UTC [400] FATAL:  role "-d" does not exist
+2026-02-12 18:36:22.516 UTC [404] FATAL:  role "-d" does not exist
+2026-02-12 18:36:23.103 UTC [407] FATAL:  role "-d" does not exist
+2026-02-12 18:36:27.508 UTC [410] FATAL:  role "-d" does not exist
+2026-02-12 18:36:32.522 UTC [413] FATAL:  role "-d" does not exist
+2026-02-12 18:36:33.102 UTC [416] FATAL:  role "-d" does not exist
+2026-02-12 18:36:37.517 UTC [419] FATAL:  role "-d" does not exist
+2026-02-12 18:36:42.513 UTC [423] FATAL:  role "-d" does not exist
+2026-02-12 18:36:43.104 UTC [426] FATAL:  role "-d" does not exist
+2026-02-12 18:36:47.513 UTC [429] FATAL:  role "-d" does not exist
+2026-02-12 18:36:52.516 UTC [432] FATAL:  role "-d" does not exist
+2026-02-12 18:36:53.102 UTC [435] FATAL:  role "-d" does not exist
+2026-02-12 18:36:57.512 UTC [438] FATAL:  role "-d" does not exist
+2026-02-12 18:37:02.516 UTC [442] FATAL:  role "-d" does not exist
+2026-02-12 18:37:03.103 UTC [445] FATAL:  role "-d" does not exist
+2026-02-12 18:37:07.504 UTC [448] FATAL:  role "-d" does not exist
+2026-02-12 18:37:12.502 UTC [451] FATAL:  role "-d" does not exist
+2026-02-12 18:37:13.104 UTC [454] FATAL:  role "-d" does not exist
+2026-02-12 18:37:17.509 UTC [457] FATAL:  role "-d" does not exist
+2026-02-12 18:37:22.516 UTC [461] FATAL:  role "-d" does not exist
+2026-02-12 18:37:23.111 UTC [464] FATAL:  role "-d" does not exist
+2026-02-12 18:37:27.505 UTC [467] FATAL:  role "-d" does not exist
+2026-02-12 18:37:32.517 UTC [470] FATAL:  role "-d" does not exist
+2026-02-12 18:37:33.101 UTC [473] FATAL:  role "-d" does not exist
+2026-02-12 18:37:37.516 UTC [476] FATAL:  role "-d" does not exist
+2026-02-12 18:37:42.513 UTC [480] FATAL:  role "-d" does not exist
+2026-02-12 18:37:43.102 UTC [483] FATAL:  role "-d" does not exist
+2026-02-12 18:37:47.514 UTC [486] FATAL:  role "-d" does not exist
+2026-02-12 18:37:52.509 UTC [489] FATAL:  role "-d" does not exist
+2026-02-12 18:37:53.102 UTC [492] FATAL:  role "-d" does not exist
+2026-02-12 18:37:57.514 UTC [495] FATAL:  role "-d" does not exist
+2026-02-12 18:38:02.516 UTC [499] FATAL:  role "-d" does not exist
+2026-02-12 18:38:03.102 UTC [502] FATAL:  role "-d" does not exist
+2026-02-12 18:38:07.513 UTC [505] FATAL:  role "-d" does not exist
+2026-02-12 18:38:12.518 UTC [508] FATAL:  role "-d" does not exist
+2026-02-12 18:38:13.106 UTC [511] FATAL:  role "-d" does not exist
+2026-02-12 18:38:17.509 UTC [514] FATAL:  role "-d" does not exist
+2026-02-12 18:38:22.520 UTC [518] FATAL:  role "-d" does not exist
+2026-02-12 18:38:23.102 UTC [521] FATAL:  role "-d" does not exist
+2026-02-12 18:38:27.515 UTC [524] FATAL:  role "-d" does not exist
+2026-02-12 18:38:32.519 UTC [527] FATAL:  role "-d" does not exist
+2026-02-12 18:38:33.103 UTC [530] FATAL:  role "-d" does not exist
+2026-02-12 18:38:37.514 UTC [533] FATAL:  role "-d" does not exist
+2026-02-12 18:38:42.496 UTC [537] FATAL:  role "-d" does not exist
+2026-02-12 18:38:43.104 UTC [540] FATAL:  role "-d" does not exist
+2026-02-12 18:38:47.524 UTC [543] FATAL:  role "-d" does not exist
+2026-02-12 18:38:52.504 UTC [546] FATAL:  role "-d" does not exist
+2026-02-12 18:38:53.101 UTC [549] FATAL:  role "-d" does not exist
+2026-02-12 18:38:57.508 UTC [552] FATAL:  role "-d" does not exist
+2026-02-12 18:39:02.514 UTC [556] FATAL:  role "-d" does not exist
+2026-02-12 18:39:03.104 UTC [559] FATAL:  role "-d" does not exist
+2026-02-12 18:39:07.519 UTC [562] FATAL:  role "-d" does not exist
+2026-02-12 18:39:12.507 UTC [565] FATAL:  role "-d" does not exist
+2026-02-12 18:39:13.102 UTC [568] FATAL:  role "-d" does not exist
+2026-02-12 18:39:17.517 UTC [571] FATAL:  role "-d" does not exist
+2026-02-12 18:39:22.513 UTC [575] FATAL:  role "-d" does not exist
+2026-02-12 18:39:23.102 UTC [578] FATAL:  role "-d" does not exist
+2026-02-12 18:39:27.509 UTC [581] FATAL:  role "-d" does not exist
+2026-02-12 18:39:32.508 UTC [584] FATAL:  role "-d" does not exist
+2026-02-12 18:39:33.103 UTC [587] FATAL:  role "-d" does not exist
+2026-02-12 18:39:37.512 UTC [590] FATAL:  role "-d" does not exist
+2026-02-12 18:39:42.507 UTC [594] FATAL:  role "-d" does not exist
+2026-02-12 18:39:43.102 UTC [597] FATAL:  role "-d" does not exist
+2026-02-12 18:39:47.501 UTC [600] FATAL:  role "-d" does not exist
+2026-02-12 18:39:52.520 UTC [603] FATAL:  role "-d" does not exist
+2026-02-12 18:39:53.103 UTC [606] FATAL:  role "-d" does not exist
+2026-02-12 18:39:57.513 UTC [609] FATAL:  role "-d" does not exist
+2026-02-12 18:40:02.509 UTC [613] FATAL:  role "-d" does not exist
+2026-02-12 18:40:03.102 UTC [616] FATAL:  role "-d" does not exist
+2026-02-12 18:40:07.502 UTC [619] FATAL:  role "-d" does not exist
+2026-02-12 18:40:12.514 UTC [622] FATAL:  role "-d" does not exist
+2026-02-12 18:40:13.103 UTC [625] FATAL:  role "-d" does not exist
+2026-02-12 18:40:17.508 UTC [628] FATAL:  role "-d" does not exist
+2026-02-12 18:40:22.513 UTC [632] FATAL:  role "-d" does not exist
+2026-02-12 18:40:23.103 UTC [635] FATAL:  role "-d" does not exist
+2026-02-12 18:40:27.502 UTC [638] FATAL:  role "-d" does not exist
+2026-02-12 18:40:32.516 UTC [641] FATAL:  role "-d" does not exist
+2026-02-12 18:40:33.102 UTC [644] FATAL:  role "-d" does not exist
+2026-02-12 18:40:37.509 UTC [647] FATAL:  role "-d" does not exist
+2026-02-12 18:40:42.500 UTC [651] FATAL:  role "-d" does not exist
+2026-02-12 18:40:43.102 UTC [654] FATAL:  role "-d" does not exist
+2026-02-12 18:40:47.515 UTC [657] FATAL:  role "-d" does not exist
+2026-02-12 18:40:52.512 UTC [660] FATAL:  role "-d" does not exist
+2026-02-12 18:40:53.102 UTC [663] FATAL:  role "-d" does not exist
+2026-02-12 18:40:57.509 UTC [666] FATAL:  role "-d" does not exist
+2026-02-12 18:41:02.510 UTC [670] FATAL:  role "-d" does not exist
+2026-02-12 18:41:03.102 UTC [673] FATAL:  role "-d" does not exist
+2026-02-12 18:41:07.513 UTC [676] FATAL:  role "-d" does not exist
+2026-02-12 18:41:12.506 UTC [679] FATAL:  role "-d" does not exist
+2026-02-12 18:41:13.103 UTC [682] FATAL:  role "-d" does not exist
+2026-02-12 18:41:17.518 UTC [685] FATAL:  role "-d" does not exist
+2026-02-12 18:41:22.514 UTC [689] FATAL:  role "-d" does not exist
+2026-02-12 18:41:23.105 UTC [692] FATAL:  role "-d" does not exist
+2026-02-12 18:41:27.515 UTC [695] FATAL:  role "-d" does not exist
+2026-02-12 18:41:32.513 UTC [698] FATAL:  role "-d" does not exist
+2026-02-12 18:41:33.104 UTC [701] FATAL:  role "-d" does not exist
+2026-02-12 18:41:37.522 UTC [704] FATAL:  role "-d" does not exist
+2026-02-12 18:41:42.509 UTC [708] FATAL:  role "-d" does not exist
+2026-02-12 18:41:43.102 UTC [711] FATAL:  role "-d" does not exist
+2026-02-12 18:41:47.517 UTC [714] FATAL:  role "-d" does not exist
+2026-02-12 18:41:52.516 UTC [717] FATAL:  role "-d" does not exist
+2026-02-12 18:41:53.103 UTC [720] FATAL:  role "-d" does not exist
+2026-02-12 18:41:57.515 UTC [723] FATAL:  role "-d" does not exist
+2026-02-12 18:42:02.517 UTC [727] FATAL:  role "-d" does not exist
+2026-02-12 18:42:03.103 UTC [730] FATAL:  role "-d" does not exist
+2026-02-12 18:42:07.516 UTC [733] FATAL:  role "-d" does not exist
+2026-02-12 18:42:12.514 UTC [736] FATAL:  role "-d" does not exist
+2026-02-12 18:42:13.106 UTC [739] FATAL:  role "-d" does not exist
+2026-02-12 18:42:17.519 UTC [742] FATAL:  role "-d" does not exist
+2026-02-12 18:42:22.518 UTC [746] FATAL:  role "-d" does not exist
+2026-02-12 18:42:23.101 UTC [749] FATAL:  role "-d" does not exist
+2026-02-12 18:42:27.522 UTC [752] FATAL:  role "-d" does not exist
+2026-02-12 18:42:32.557 UTC [755] FATAL:  role "-d" does not exist
+2026-02-12 18:42:33.106 UTC [758] FATAL:  role "-d" does not exist
+2026-02-12 18:42:37.515 UTC [761] FATAL:  role "-d" does not exist
+2026-02-12 18:42:38.747 UTC [150] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2026-02-12 18:42:38.747 UTC [150] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, CUSTOMERS.Value) already exists.
+2026-02-12 18:42:38.747 UTC [150] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2026-02-12 18:42:38.760 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:38.760 UTC [150] DETAIL:  Key (contenthash)=(a19fb4aaf3cb355045e8cafad865a0b6d36f11ea7a0c220a846d53b87309b5d0) already exists.
+2026-02-12 18:42:38.760 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:38.850 UTC [150] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2026-02-12 18:42:38.850 UTC [150] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, CUSTOMERS-value) already exists.
+2026-02-12 18:42:38.850 UTC [150] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2026-02-12 18:42:38.857 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:38.857 UTC [150] DETAIL:  Key (contenthash)=(035de5c544d12c27ef06e5ac1536aba19f077ee26bc56422c093bc7d4b01f245) already exists.
+2026-02-12 18:42:38.857 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:39.024 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:39.024 UTC [150] DETAIL:  Key (contenthash)=(5e2d928ba5f68b20f1f326ed65ce536a0568a9661c235c994b7ea565fd815631) already exists.
+2026-02-12 18:42:39.024 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:39.025 UTC [150] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2026-02-12 18:42:39.025 UTC [150] DETAIL:  Key (groupid, artifactid)=(__$GROUPID$__, extjson-value) already exists.
+2026-02-12 18:42:39.025 UTC [150] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2026-02-12 18:42:41.184 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:41.184 UTC [150] DETAIL:  Key (contenthash)=(f671988bfbb8db1d0cb044f18a5182441f5270b7171bf7b832621579b6d14bc1) already exists.
+2026-02-12 18:42:41.184 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:42.524 UTC [765] FATAL:  role "-d" does not exist
+2026-02-12 18:42:43.101 UTC [768] FATAL:  role "-d" does not exist
+2026-02-12 18:42:43.357 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:43.357 UTC [150] DETAIL:  Key (contenthash)=(fac8a4f53c583af18ac0b413b72088d1e1a2ad2b243c2654e6bfc37942c091e4) already exists.
+2026-02-12 18:42:43.357 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:43.451 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:43.451 UTC [150] DETAIL:  Key (contenthash)=(e276e72860e693c5f3c23838edd59c2516841f8adcfbffab6320431589e97574) already exists.
+2026-02-12 18:42:43.451 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:45.778 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:45.778 UTC [153] DETAIL:  Key (contenthash)=(f671988bfbb8db1d0cb044f18a5182441f5270b7171bf7b832621579b6d14bc1) already exists.
+2026-02-12 18:42:45.778 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:45.866 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:45.866 UTC [153] DETAIL:  Key (contenthash)=(f671988bfbb8db1d0cb044f18a5182441f5270b7171bf7b832621579b6d14bc1) already exists.
+2026-02-12 18:42:45.866 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:46.562 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:46.562 UTC [153] DETAIL:  Key (contenthash)=(abdda2279b1c7c84ce851bf477f95d6f17705760b517cbc8d42f4998087f4c6b) already exists.
+2026-02-12 18:42:46.562 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:47.519 UTC [771] FATAL:  role "-d" does not exist
+2026-02-12 18:42:48.007 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:48.007 UTC [153] DETAIL:  Key (contenthash)=(0ab8e5dc6bb4f783d5ea35e735015c2022c4d495da34459a7da1f6ada266453b) already exists.
+2026-02-12 18:42:48.007 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:51.968 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:51.968 UTC [153] DETAIL:  Key (contenthash)=(06f6b1543415fe7aa170c304bf87d179f59075cf5532394b50ce7876664488e7) already exists.
+2026-02-12 18:42:51.968 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:52.513 UTC [774] FATAL:  role "-d" does not exist
+2026-02-12 18:42:53.102 UTC [777] FATAL:  role "-d" does not exist
+2026-02-12 18:42:56.311 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:56.311 UTC [149] DETAIL:  Key (contenthash)=(440f4c14fe1a1f30faccfe0004c87a59454024bb9e7ee6594df882b6725b58ee) already exists.
+2026-02-12 18:42:56.311 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:42:57.502 UTC [780] FATAL:  role "-d" does not exist
+2026-02-12 18:42:57.777 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:42:57.777 UTC [149] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2026-02-12 18:42:57.777 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:00.636 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:00.636 UTC [149] DETAIL:  Key (contenthash)=(b83a3a9b80b568092f2af515593d8a7519aff6d9a24418a66a093faaf9449e12) already exists.
+2026-02-12 18:43:00.636 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:02.097 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:02.097 UTC [150] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2026-02-12 18:43:02.097 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:02.514 UTC [784] FATAL:  role "-d" does not exist
+2026-02-12 18:43:03.102 UTC [787] FATAL:  role "-d" does not exist
+2026-02-12 18:43:04.949 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:04.949 UTC [153] DETAIL:  Key (contenthash)=(40876797711030d4e072509a4b25981d05c077c363815ff009b74d63b8eaf1c7) already exists.
+2026-02-12 18:43:04.949 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:06.403 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:06.403 UTC [153] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2026-02-12 18:43:06.403 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:07.519 UTC [790] FATAL:  role "-d" does not exist
+2026-02-12 18:43:09.639 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:09.639 UTC [153] DETAIL:  Key (contenthash)=(f84af9df438a5f850f81ef0f46ac0eb6b09d020bfb0dacbc2c7e5eb91dc694dc) already exists.
+2026-02-12 18:43:09.639 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:11.092 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:11.092 UTC [153] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2026-02-12 18:43:11.092 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:12.499 UTC [793] FATAL:  role "-d" does not exist
+2026-02-12 18:43:13.102 UTC [796] FATAL:  role "-d" does not exist
+2026-02-12 18:43:13.987 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:13.987 UTC [153] DETAIL:  Key (contenthash)=(0f2750b53ad57bb25a282fb21cfcbbfdfbd79e0560a33bad70681fc0b8b59955) already exists.
+2026-02-12 18:43:13.987 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:15.441 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:15.441 UTC [153] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2026-02-12 18:43:15.441 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:17.519 UTC [799] FATAL:  role "-d" does not exist
+2026-02-12 18:43:18.301 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:18.301 UTC [153] DETAIL:  Key (contenthash)=(05c8921f8f41632e0253c0d5885068e08b732f89c8a19ff7f19564dab6ddfdc7) already exists.
+2026-02-12 18:43:18.301 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:19.749 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:19.749 UTC [153] DETAIL:  Key (contenthash)=(a08229b1c527f22607e5d76b9ad71b42b81011c6ae7b438920652b28052899a4) already exists.
+2026-02-12 18:43:19.749 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:22.513 UTC [803] FATAL:  role "-d" does not exist
+2026-02-12 18:43:22.692 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:22.692 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:22.692 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:22.775 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:22.775 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:22.775 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:23.101 UTC [806] FATAL:  role "-d" does not exist
+2026-02-12 18:43:24.100 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:24.100 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:24.100 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:25.575 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:25.575 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:25.575 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:25.658 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:25.658 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:25.658 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:26.148 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:26.148 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:26.148 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:27.515 UTC [809] FATAL:  role "-d" does not exist
+2026-02-12 18:43:30.572 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:30.572 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:30.572 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:32.516 UTC [812] FATAL:  role "-d" does not exist
+2026-02-12 18:43:33.106 UTC [815] FATAL:  role "-d" does not exist
+2026-02-12 18:43:33.137 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:33.137 UTC [150] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:33.137 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:34.299 UTC [153] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2026-02-12 18:43:34.299 UTC [153] DETAIL:  Key (groupid, artifactid)=(061d9e80-21e5-4d9a-bc0e-c4dc11c2a70f, 5e4daff9-8217-4e62-b878-d66289f1d5d6) already exists.
+2026-02-12 18:43:34.299 UTC [153] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2026-02-12 18:43:34.550 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:34.550 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:34.550 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:35.712 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:35.712 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:35.712 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:35.713 UTC [153] ERROR:  duplicate key value violates unique constraint "artifacts_pkey"
+2026-02-12 18:43:35.713 UTC [153] DETAIL:  Key (groupid, artifactid)=(1a9cefe0-1e9d-4cdc-bb23-06e7611450d8, 2d354219-8586-486a-87a1-c1e4e2597a30) already exists.
+2026-02-12 18:43:35.713 UTC [153] STATEMENT:  INSERT INTO artifacts (groupId, artifactId, type, owner, createdOn, modifiedBy, modifiedOn, name, description, labels) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+2026-02-12 18:43:35.716 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:35.716 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:35.716 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:35.717 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_versions_1"
+2026-02-12 18:43:35.717 UTC [153] DETAIL:  Key (groupid, artifactid, version)=(1a9cefe0-1e9d-4cdc-bb23-06e7611450d8, 2d354219-8586-486a-87a1-c1e4e2597a30, 1.1) already exists.
+2026-02-12 18:43:35.717 UTC [153] STATEMENT:  INSERT INTO versions (globalId, groupId, artifactId, version, versionOrder, state, name, description, owner, createdOn, modifiedBy, modifiedOn, labels, contentId) VALUES ($1, $2, $3, $4, (SELECT maxVer FROM (SELECT MAX(versionOrder) + 1 AS maxVer FROM versions WHERE groupId = $5 AND artifactId = $6) temp), $7, $8, $9, $10, $11, $12, $13, $14, $15)
+2026-02-12 18:43:37.517 UTC [818] FATAL:  role "-d" does not exist
+2026-02-12 18:43:42.502 UTC [822] FATAL:  role "-d" does not exist
+2026-02-12 18:43:43.102 UTC [825] FATAL:  role "-d" does not exist
+2026-02-12 18:43:47.513 UTC [828] FATAL:  role "-d" does not exist
+2026-02-12 18:43:48.758 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:48.758 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:48.758 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:52.528 UTC [831] FATAL:  role "-d" does not exist
+2026-02-12 18:43:52.655 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:52.655 UTC [155] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:52.655 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:53.101 UTC [834] FATAL:  role "-d" does not exist
+2026-02-12 18:43:55.317 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:55.317 UTC [155] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:55.317 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:57.227 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:57.227 UTC [155] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:57.227 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:43:57.510 UTC [837] FATAL:  role "-d" does not exist
+2026-02-12 18:43:58.887 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:43:58.887 UTC [155] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:43:58.887 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:00.426 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:00.426 UTC [155] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:00.426 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:01.818 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:01.818 UTC [155] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:01.818 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:02.518 UTC [841] FATAL:  role "-d" does not exist
+2026-02-12 18:44:02.980 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:02.980 UTC [149] DETAIL:  Key (contenthash)=(2a62ceec6a7c2087d45ca4f4c0a9a79f62ff447608d41d761286232bad2469b2) already exists.
+2026-02-12 18:44:02.980 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:03.103 UTC [844] FATAL:  role "-d" does not exist
+2026-02-12 18:44:04.146 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:04.146 UTC [149] DETAIL:  Key (contenthash)=(3d6f7a8fe36a1991d228e6143a1a9918ad488bb8e863b1148de5c6da0f37249f) already exists.
+2026-02-12 18:44:04.146 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:05.949 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:05.949 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:05.949 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:07.101 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:07.101 UTC [149] DETAIL:  Key (contenthash)=(c20aa75c5bcf56536da47d26d1c1142c8121a56dc20d774a40decce2fdfccc7c) already exists.
+2026-02-12 18:44:07.101 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:07.517 UTC [847] FATAL:  role "-d" does not exist
+2026-02-12 18:44:08.558 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:08.558 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:08.558 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:12.514 UTC [850] FATAL:  role "-d" does not exist
+2026-02-12 18:44:13.101 UTC [853] FATAL:  role "-d" does not exist
+2026-02-12 18:44:17.515 UTC [856] FATAL:  role "-d" does not exist
+2026-02-12 18:44:20.944 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:20.944 UTC [149] DETAIL:  Key (contenthash)=(ed3f4f583ff13cffa00ddd4b06d2253c99aee4e1b9be10c6fedbedafe867248b) already exists.
+2026-02-12 18:44:20.944 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:22.354 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:22.354 UTC [155] DETAIL:  Key (contenthash)=(46abf2a42eda47b07ababb3d541784e3df4a3c546a4548aaf4b5240449026037) already exists.
+2026-02-12 18:44:22.354 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:22.513 UTC [860] FATAL:  role "-d" does not exist
+2026-02-12 18:44:23.105 UTC [863] FATAL:  role "-d" does not exist
+2026-02-12 18:44:24.827 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:24.827 UTC [150] DETAIL:  Key (contenthash)=(4e282d3961ce9d3615b95ebbf9d865384e4506525c3d1ac62908b38ce1a692f8) already exists.
+2026-02-12 18:44:24.827 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:27.510 UTC [866] FATAL:  role "-d" does not exist
+2026-02-12 18:44:28.549 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:28.549 UTC [150] DETAIL:  Key (contenthash)=(ed3f4f583ff13cffa00ddd4b06d2253c99aee4e1b9be10c6fedbedafe867248b) already exists.
+2026-02-12 18:44:28.549 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:31.187 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:31.187 UTC [150] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:31.187 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:32.345 UTC [155] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:32.345 UTC [155] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:32.345 UTC [155] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:32.529 UTC [869] FATAL:  role "-d" does not exist
+2026-02-12 18:44:33.103 UTC [872] FATAL:  role "-d" does not exist
+2026-02-12 18:44:33.583 UTC [155] ERROR:  duplicate key value violates unique constraint "artifact_rules_pkey"
+2026-02-12 18:44:33.583 UTC [155] DETAIL:  Key (groupid, artifactid, type)=(8fbf5c24-0aec-4e1b-8d7c-109184d35c5e, 30b3273c-0f5d-427b-b219-39074aaabcb2, VALIDITY) already exists.
+2026-02-12 18:44:33.583 UTC [155] STATEMENT:  INSERT INTO artifact_rules (groupId, artifactId, type, configuration) VALUES ($1, $2, $3, $4)
+2026-02-12 18:44:33.743 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:33.743 UTC [150] DETAIL:  Key (contenthash)=(d4f551c77d336d27c7b0fb8d57fb70ab26d5d7a7061bda99386bc824929e6449) already exists.
+2026-02-12 18:44:33.743 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:34.904 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:34.904 UTC [150] DETAIL:  Key (contenthash)=(d4f551c77d336d27c7b0fb8d57fb70ab26d5d7a7061bda99386bc824929e6449) already exists.
+2026-02-12 18:44:34.904 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:37.440 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:37.440 UTC [150] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:37.440 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:37.518 UTC [875] FATAL:  role "-d" does not exist
+2026-02-12 18:44:39.444 UTC [150] ERROR:  duplicate key value violates unique constraint "global_rules_pkey"
+2026-02-12 18:44:39.444 UTC [150] DETAIL:  Key (type)=(VALIDITY) already exists.
+2026-02-12 18:44:39.444 UTC [150] STATEMENT:  INSERT INTO global_rules (type, configuration) VALUES ($1, $2)
+2026-02-12 18:44:42.239 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:42.239 UTC [149] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:42.239 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:42.506 UTC [879] FATAL:  role "-d" does not exist
+2026-02-12 18:44:43.103 UTC [882] FATAL:  role "-d" does not exist
+2026-02-12 18:44:44.333 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:44.333 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:44.333 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:45.360 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:45.360 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:45.360 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:47.515 UTC [885] FATAL:  role "-d" does not exist
+2026-02-12 18:44:50.976 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:50.976 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:50.976 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:52.512 UTC [888] FATAL:  role "-d" does not exist
+2026-02-12 18:44:52.883 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:52.883 UTC [153] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:44:52.883 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:53.102 UTC [891] FATAL:  role "-d" does not exist
+2026-02-12 18:44:53.109 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:53.109 UTC [153] DETAIL:  Key (contenthash)=(2a62ceec6a7c2087d45ca4f4c0a9a79f62ff447608d41d761286232bad2469b2) already exists.
+2026-02-12 18:44:53.109 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:53.332 UTC [153] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:44:53.332 UTC [153] DETAIL:  Key (contenthash)=(3d6f7a8fe36a1991d228e6143a1a9918ad488bb8e863b1148de5c6da0f37249f) already exists.
+2026-02-12 18:44:53.332 UTC [153] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:44:57.512 UTC [894] FATAL:  role "-d" does not exist
+2026-02-12 18:45:02.511 UTC [898] FATAL:  role "-d" does not exist
+2026-02-12 18:45:03.106 UTC [901] FATAL:  role "-d" does not exist
+2026-02-12 18:45:07.517 UTC [904] FATAL:  role "-d" does not exist
+2026-02-12 18:45:11.185 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:45:11.185 UTC [150] DETAIL:  Key (contenthash)=(11bdb099c820644c9f9f344918f9da62f6244f8a4ad7ee911f30f3a4b88e2636) already exists.
+2026-02-12 18:45:11.185 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:45:11.406 UTC [150] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-12 18:45:11.406 UTC [150] DETAIL:  Key (contenthash)=(c20aa75c5bcf56536da47d26d1c1142c8121a56dc20d774a40decce2fdfccc7c) already exists.
+2026-02-12 18:45:11.406 UTC [150] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-12 18:45:12.515 UTC [907] FATAL:  role "-d" does not exist
+2026-02-12 18:45:13.105 UTC [910] FATAL:  role "-d" does not exist
+2026-02-12 18:45:17.517 UTC [913] FATAL:  role "-d" does not exist
+2026-02-12 18:45:20.093 UTC [44] LOG:  checkpoint starting: time
+2026-02-12 18:45:22.504 UTC [917] FATAL:  role "-d" does not exist
+2026-02-12 18:45:23.102 UTC [920] FATAL:  role "-d" does not exist
+2026-02-12 18:45:27.494 UTC [923] FATAL:  role "-d" does not exist
+2026-02-12 18:45:32.508 UTC [926] FATAL:  role "-d" does not exist
+2026-02-12 18:45:33.105 UTC [929] FATAL:  role "-d" does not exist
+2026-02-12 18:45:34.733 UTC [44] LOG:  checkpoint complete: wrote 147 buffers (0.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=14.634 s, sync=0.002 s, total=14.641 s; sync files=64, longest=0.001 s, average=0.001 s; distance=1294 kB, estimate=1294 kB; lsn=0/1B69668, redo lsn=0/1B695D8
+2026-02-12 18:45:37.512 UTC [932] FATAL:  role "-d" does not exist
+2026-02-12 18:45:42.497 UTC [936] FATAL:  role "-d" does not exist
+2026-02-12 18:45:43.104 UTC [939] FATAL:  role "-d" does not exist
+2026-02-12 18:45:47.496 UTC [942] FATAL:  role "-d" does not exist
