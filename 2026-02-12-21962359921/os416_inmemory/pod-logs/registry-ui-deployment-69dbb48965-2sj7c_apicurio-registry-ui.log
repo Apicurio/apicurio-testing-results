@@ -1,0 +1,27 @@
+---------------------------------------------
+Performing the Initial Config...
+---------------------------------------------
+Generating application config at: /opt/app-root/src/config.js
+Config successfully writen to file.
+---------------------------------------------
+Patching base hrefs...
+---------------------------------------------
+Updating base href in index.html file at: /opt/app-root/src/index.html
+Error writing the index.html file: [Error: EACCES: permission denied, open '/opt/app-root/src/index.html'] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'open',
+  path: '/opt/app-root/src/index.html'
+}
+---------------------------------------------
+Config Complete. Nginx Server Started.....
+---------------------------------------------
+10.131.0.2 - - [12/Feb/2026:20:45:15 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:20 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:20 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:30 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:30 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:40 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:40 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:50 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
+10.131.0.2 - - [12/Feb/2026:20:45:50 +0000] "GET /config.js HTTP/1.1" 200 207 "-" "kube-probe/1.29" "-"
