@@ -1,0 +1,61 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Apicurio Registry" [ref=e6] [cursor=pointer]:
+      - /url: /dashboard
+      - img "Apicurio Registry" [ref=e7]
+    - button [ref=e14] [cursor=pointer]:
+      - img [ref=e15]
+  - main [ref=e17]:
+    - tablist [ref=e21]:
+      - tab "Dashboard" [selected] [ref=e22] [cursor=pointer]:
+        - generic [ref=e23]: Dashboard
+      - tab "Explore" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: Explore
+      - tab "Search" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: Search
+      - tab "Global rules" [ref=e28] [cursor=pointer]:
+        - generic [ref=e29]: Global rules
+      - tab "Settings" [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: Settings
+    - generic [ref=e33]:
+      - heading "Registry Dashboard" [level=1] [ref=e35]
+      - paragraph [ref=e37]: Welcome to Apicurio Registry. Manage your schemas and API definitions in one central location.
+    - generic [ref=e39]:
+      - generic [ref=e41]:
+        - generic [ref=e43]:
+          - generic [ref=e45]: Groups
+          - generic [ref=e47]:
+            - img [ref=e49]
+            - generic [ref=e51]: "1"
+        - generic [ref=e53]:
+          - generic [ref=e55]: Artifacts
+          - generic [ref=e57]:
+            - img [ref=e59]
+            - generic [ref=e61]: "0"
+        - generic [ref=e63]:
+          - generic [ref=e65]: Versions
+          - generic [ref=e67]:
+            - img [ref=e69]
+            - generic [ref=e71]: "0"
+      - generic [ref=e73]:
+        - generic [ref=e75]: Recent Artifacts
+        - paragraph [ref=e78]: No artifacts found. Create your first artifact to get started.
+      - generic [ref=e80]:
+        - generic [ref=e82]: Quick Actions
+        - generic [ref=e84]:
+          - button "Create Artifact" [ref=e86] [cursor=pointer]:
+            - img [ref=e88]
+            - text: Create Artifact
+          - button "Search Registry" [ref=e91] [cursor=pointer]:
+            - img [ref=e93]
+            - text: Search Registry
+          - button "Explore Groups" [ref=e96] [cursor=pointer]:
+            - img [ref=e98]
+            - text: Explore Groups
+          - button "Settings" [ref=e101] [cursor=pointer]:
+            - img [ref=e103]
+            - text: Settings
+```
