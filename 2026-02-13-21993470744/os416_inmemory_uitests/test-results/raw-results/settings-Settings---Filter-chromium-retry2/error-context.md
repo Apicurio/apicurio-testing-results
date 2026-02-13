@@ -1,0 +1,115 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Apicurio Registry" [ref=e6] [cursor=pointer]:
+      - /url: /dashboard
+      - img "Apicurio Registry" [ref=e7]
+    - button [ref=e14] [cursor=pointer]:
+      - img [ref=e15]
+  - main [ref=e17]:
+    - tablist [ref=e21]:
+      - tab "Dashboard" [ref=e22] [cursor=pointer]:
+        - generic [ref=e23]: Dashboard
+      - tab "Explore" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: Explore
+      - tab "Search" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: Search
+      - tab "Global rules" [ref=e28] [cursor=pointer]:
+        - generic [ref=e29]: Global rules
+      - tab "Settings" [selected] [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: Settings
+    - generic [ref=e32]:
+      - generic [ref=e33]: Configure global settings for this Registry instance.
+      - generic [ref=e35]:
+        - generic [ref=e39]:
+          - img [ref=e41]
+          - textbox "Filter by keyword" [ref=e43]
+        - button "Search" [ref=e45] [cursor=pointer]:
+          - img [ref=e48]
+    - generic [ref=e50]:
+      - group [ref=e51]:
+        - generic [ref=e53]: Compatibility settings
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: Canonical hash mode (compatibility API):Off
+              - generic [ref=e58]: When selected, the Schema Registry compatibility API uses the canonical hash instead of the regular hash of the content.
+            - checkbox "Canonical hash mode (compatibility API)" [ref=e61] [cursor=pointer]
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - generic [ref=e65]: Legacy ID mode (compatibility API):Off
+              - generic [ref=e66]: When selected, the Schema Registry compatibility API uses global ID instead of content ID for artifact identifiers.
+            - checkbox "Legacy ID mode (compatibility API)" [ref=e69] [cursor=pointer]
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]: Maximum number of Subjects returned (compatibility API)
+              - generic [ref=e74]: Determines the maximum number of Subjects that will be returned by the ccompat API (for the '/subjects' endpoint).
+              - generic [ref=e75]: "1000"
+            - button [ref=e77] [cursor=pointer]:
+              - img [ref=e78]
+      - group [ref=e80]:
+        - generic [ref=e82]: Web console settings
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]: Download link expiry
+            - generic [ref=e87]: The number of seconds that a generated link to a .zip download file is active before expiring.
+            - generic [ref=e88]: "30"
+          - button [ref=e90] [cursor=pointer]:
+            - img [ref=e91]
+      - group [ref=e93]:
+        - generic [ref=e95]: Semantic versioning settings
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e99]: Automatically create semver branches:Off
+              - generic [ref=e100]: When enabled, automatically create or update branches for major ('A.x') and minor ('A.B.x') artifact versions.
+            - checkbox "Automatically create semver branches" [ref=e103] [cursor=pointer]
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - generic [ref=e107]: Ensure all version numbers are 'semver' compatible:Off
+              - generic [ref=e108]: When enabled, validate that all artifact versions conform to Semantic Versioning 2 format (https://semver.org).
+            - checkbox "Ensure all version numbers are 'semver' compatible" [ref=e111] [cursor=pointer]
+      - group [ref=e113]:
+        - generic [ref=e115]: Additional properties
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]: Delete artifact:On
+              - generic [ref=e120]: When selected, users are permitted to delete artifacts.
+            - generic [ref=e122] [cursor=pointer]:
+              - checkbox "Delete artifact" [checked] [ref=e123]
+              - img [ref=e126]
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]: Delete artifact version:On
+              - generic [ref=e131]: When selected, users are permitted to delete artifact versions.
+            - generic [ref=e133] [cursor=pointer]:
+              - checkbox "Delete artifact version" [checked] [ref=e134]
+              - img [ref=e137]
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]: Delete group:On
+              - generic [ref=e142]: When selected, users are permitted to delete groups.
+            - generic [ref=e144] [cursor=pointer]:
+              - checkbox "Delete group" [checked] [ref=e145]
+              - img [ref=e148]
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: Log level
+              - generic [ref=e153]: "Set the log level for Apicurio Registry. Valid values: TRACE, DEBUG, INFO, WARN, ERROR, OFF, ALL"
+              - generic [ref=e154]: INFO
+            - button [ref=e156] [cursor=pointer]:
+              - img [ref=e157]
+          - generic [ref=e159]:
+            - generic [ref=e160]:
+              - generic [ref=e161]: Storage read-only mode:Off
+              - generic [ref=e162]: When selected, Registry will return an error for operations that write to the storage (this property excepted).
+            - checkbox "Storage read-only mode" [ref=e165] [cursor=pointer]
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: Update artifact version content:Off
+              - generic [ref=e170]: When selected, users are permitted to update the content of artifact versions (only when in the DRAFT state).
+            - checkbox "Update artifact version content" [ref=e173] [cursor=pointer]
+```
