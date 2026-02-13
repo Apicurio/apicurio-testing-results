@@ -1,0 +1,178 @@
+Auto-detected KUBERNETES_SERVICE_DNS_DOMAIN: cluster.local
++ exec /usr/bin/tini -w -e 143 -- java -Dlog4j2.configurationFile=file:/opt/strimzi/custom-config/log4j2.properties -Dvertx.cacheDirBase=/tmp/vertx-cache -Djava.security.egd=file:/dev/./urandom -XX:+ExitOnOutOfMemoryError -XX:MinRAMPercentage=15 -XX:MaxRAMPercentage=20 -classpath :lib/io.strimzi.cluster-operator-0.49.1.jar:lib/io.strimzi.api-0.49.1.jar:lib/io.fabric8.kubernetes-model-apiextensions-7.4.0.jar:lib/io.strimzi.config-model-0.49.1.jar:lib/io.strimzi.operator-common-0.49.1.jar:lib/io.strimzi.crd-annotations-0.49.1.jar:lib/org.quartz-scheduler.quartz-2.5.0.jar:lib/org.eclipse.jetty.jetty-server-12.0.22.jar:lib/org.eclipse.jetty.jetty-io-12.0.22.jar:lib/org.eclipse.jetty.jetty-util-12.0.22.jar:lib/org.eclipse.jetty.jetty-http-12.0.22.jar:lib/javax.servlet.javax.servlet-api-3.1.0.jar:lib/io.fabric8.openshift-client-7.4.0.jar:lib/io.fabric8.openshift-client-api-7.4.0.jar:lib/io.fabric8.openshift-model-autoscaling-7.4.0.jar:lib/io.fabric8.openshift-model-operator-7.4.0.jar:lib/io.fabric8.openshift-model-operatorhub-7.4.0.jar:lib/io.fabric8.openshift-model-machine-7.4.0.jar:lib/io.fabric8.openshift-model-whereabouts-7.4.0.jar:lib/io.fabric8.openshift-model-monitoring-7.4.0.jar:lib/io.fabric8.openshift-model-storageversionmigrator-7.4.0.jar:lib/io.fabric8.openshift-model-tuned-7.4.0.jar:lib/io.fabric8.openshift-model-console-7.4.0.jar:lib/io.fabric8.openshift-model-config-7.4.0.jar:lib/io.fabric8.openshift-model-machineconfiguration-7.4.0.jar:lib/io.fabric8.openshift-model-miscellaneous-7.4.0.jar:lib/io.fabric8.openshift-model-hive-7.4.0.jar:lib/io.fabric8.openshift-model-installer-7.4.0.jar:lib/io.fabric8.kubernetes-client-7.4.0.jar:lib/io.fabric8.kubernetes-httpclient-jdk-7.4.0.jar:lib/io.fabric8.kubernetes-client-api-7.4.0.jar:lib/io.fabric8.kubernetes-model-gatewayapi-7.4.0.jar:lib/io.fabric8.kubernetes-model-resource-7.4.0.jar:lib/io.fabric8.kubernetes-model-admissionregistration-7.4.0.jar:lib/io.fabric8.kubernetes-model-autoscaling-7.4.0.jar:lib/io.fabric8.kubernetes-model-batch-7.4.0.jar:lib/io.fabric8.kubernetes-model-certificates-7.4.0.jar:lib/io.fabric8.kubernetes-model-discovery-7.4.0.jar:lib/io.fabric8.kubernetes-model-extensions-7.4.0.jar:lib/io.fabric8.kubernetes-model-flowcontrol-7.4.0.jar:lib/io.fabric8.kubernetes-model-metrics-7.4.0.jar:lib/io.fabric8.kubernetes-model-scheduling-7.4.0.jar:lib/io.fabric8.kubernetes-model-node-7.4.0.jar:lib/org.slf4j.slf4j-api-2.0.17.jar:lib/org.snakeyaml.snakeyaml-engine-2.10.jar:lib/com.fasterxml.jackson.datatype.jackson-datatype-jsr310-2.18.3.jar:lib/io.fabric8.kubernetes-model-core-7.4.0.jar:lib/io.fabric8.kubernetes-model-common-7.4.0.jar:lib/io.fabric8.kubernetes-model-events-7.4.0.jar:lib/io.fabric8.kubernetes-model-policy-7.4.0.jar:lib/io.fabric8.kubernetes-model-rbac-7.4.0.jar:lib/io.fabric8.kubernetes-model-apps-7.4.0.jar:lib/io.fabric8.kubernetes-model-storageclass-7.4.0.jar:lib/io.fabric8.kubernetes-model-networking-7.4.0.jar:lib/io.fabric8.kubernetes-model-coordination-7.4.0.jar:lib/io.fabric8.openshift-model-7.4.0.jar:lib/io.fabric8.zjsonpatch-0.3.0.jar:lib/com.fasterxml.jackson.core.jackson-core-2.18.3.jar:lib/com.fasterxml.jackson.core.jackson-databind-2.18.3.jar:lib/com.fasterxml.jackson.core.jackson-annotations-2.18.3.jar:lib/com.fasterxml.jackson.dataformat.jackson-dataformat-yaml-2.18.3.jar:lib/org.yaml.snakeyaml-2.5.jar:lib/io.vertx.vertx-core-5.0.5.jar:lib/io.vertx.vertx-core-logging-5.0.5.jar:lib/io.netty.netty-common-4.2.7.Final.jar:lib/io.netty.netty-buffer-4.2.7.Final.jar:lib/io.netty.netty-handler-4.2.7.Final.jar:lib/io.netty.netty-codec-base-4.2.7.Final.jar:lib/io.netty.netty-handler-proxy-4.2.7.Final.jar:lib/io.netty.netty-codec-http-4.2.7.Final.jar:lib/io.netty.netty-codec-compression-4.2.7.Final.jar:lib/io.netty.netty-codec-http2-4.2.7.Final.jar:lib/io.netty.netty-resolver-4.2.7.Final.jar:lib/io.netty.netty-resolver-dns-4.2.7.Final.jar:lib/io.netty.netty-codec-dns-4.2.7.Final.jar:lib/io.strimzi.certificate-manager-0.49.1.jar:lib/org.apache.logging.log4j.log4j-core-2.25.0.jar:lib/org.apache.logging.log4j.log4j-api-2.25.0.jar:lib/org.apache.logging.log4j.log4j-slf4j2-impl-2.25.0.jar:lib/org.apache.logging.log4j.log4j-layout-template-json-2.25.0.jar:lib/io.strimzi.kafka-oauth-server-0.17.1.jar:lib/io.strimzi.kafka-oauth-server-plain-0.17.1.jar:lib/io.strimzi.kafka-oauth-client-0.17.1.jar:lib/io.strimzi.kafka-oauth-common-0.17.1.jar:lib/com.nimbusds.nimbus-jose-jwt-10.0.2.jar:lib/com.jayway.jsonpath.json-path-2.9.0.jar:lib/net.minidev.json-smart-2.5.2.jar:lib/net.minidev.accessors-smart-2.5.2.jar:lib/org.ow2.asm.asm-9.7.1.jar:lib/org.apache.kafka.kafka-clients-4.1.1.jar:lib/com.github.luben.zstd-jni-1.5.6-10.jar:lib/org.lz4.lz4-java-1.8.0.jar:lib/org.xerial.snappy.snappy-java-1.1.10.7.jar:lib/org.apache.kafka.kafka-server-common-4.1.1.jar:lib/com.yammer.metrics.metrics-core-2.2.0.jar:lib/net.sf.jopt-simple.jopt-simple-5.0.4.jar:lib/org.pcollections.pcollections-4.0.2.jar:lib/io.netty.netty-transport-4.2.7.Final.jar:lib/io.netty.netty-transport-native-epoll-4.2.7.Final-linux-x86_64.jar:lib/io.netty.netty-transport-native-unix-common-4.2.7.Final.jar:lib/io.netty.netty-transport-classes-epoll-4.2.7.Final.jar:lib/io.netty.netty-transport-native-epoll-4.2.7.Final-linux-aarch_64.jar:lib/io.micrometer.micrometer-core-1.14.5.jar:lib/io.micrometer.micrometer-commons-1.14.5.jar:lib/io.micrometer.micrometer-observation-1.14.5.jar:lib/org.hdrhistogram.HdrHistogram-2.2.2.jar:lib/org.latencyutils.LatencyUtils-2.0.3.jar:lib/io.micrometer.micrometer-registry-prometheus-1.14.5.jar:lib/io.prometheus.prometheus-metrics-core-1.3.6.jar:lib/io.prometheus.prometheus-metrics-model-1.3.6.jar:lib/io.prometheus.prometheus-metrics-config-1.3.6.jar:lib/io.prometheus.prometheus-metrics-tracer-common-1.3.6.jar:lib/io.prometheus.prometheus-metrics-exposition-formats-1.3.6.jar:lib/io.prometheus.prometheus-metrics-exposition-textformats-1.3.6.jar:lib/io.vertx.vertx-micrometer-metrics-5.0.5.jar:lib/io.netty.netty-codec-socks-4.2.7.Final.jar:lib/jakarta.xml.bind.jakarta.xml.bind-api-3.0.1.jar:lib/com.sun.activation.jakarta.activation-2.0.1.jar io.strimzi.operator.cluster.Main
+2026-02-13 16:45:55 INFO  Main:60 - ClusterOperator 0.49.1 is starting
+2026-02-13 16:45:55 INFO  Util:119 - Using config:
+	PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+	container: oci
+	STRIMZI_DEFAULT_TOPIC_OPERATOR_IMAGE: quay.io/strimzi/operator:0.49.1
+	JAVA_OPTS:  -Dlog4j2.configurationFile=file:/opt/strimzi/custom-config/log4j2.properties -Dvertx.cacheDirBase=/tmp/vertx-cache -Djava.security.egd=file:/dev/./urandom  -XX:+ExitOnOutOfMemoryError -XX:MinRAMPercentage=15 -XX:MaxRAMPercentage=20
+	NSS_SDB_USE_CACHE: no
+	STRIMZI_HOME: /opt/strimzi
+	PWD: /opt/strimzi
+	STRIMZI_LEADER_ELECTION_IDENTITY: strimzi-cluster-operator-586d796fb5-vd96z
+	JAVA_MAIN: io.strimzi.operator.cluster.Main
+	KUBERNETES_PORT_443_TCP: tcp://172.30.0.1:443
+	STRIMZI_LEADER_ELECTION_ENABLED: true
+	STRIMZI_VERSION: 0.49.1
+	STRIMZI_DEFAULT_KANIKO_EXECUTOR_IMAGE: quay.io/strimzi/kaniko-executor:0.49.1
+	STRIMZI_NAMESPACE: ksql0491
+	TINI_SHA256_S390X: 931b70a182af879ca249ae9de87ef68423121b38d235c78997fafc680ceab32d
+	STRIMZI_DEFAULT_MAVEN_BUILDER: quay.io/strimzi/maven-builder:0.49.1
+	STRIMZI_FEATURE_GATES: 
+	TINI_SHA256_AMD64: 93dcc18adc78c65a028a84799ecf8ad40c936fdfc5f2a57b1acda5a8117fa82c
+	KUBERNETES_SERVICE_DNS_DOMAIN: cluster.local
+	STRIMZI_LEADER_ELECTION_LEASE_NAME: strimzi-cluster-operator
+	KUBERNETES_SERVICE_PORT_HTTPS: 443
+	SHLVL: 0
+	STRIMZI_DEFAULT_KAFKA_BRIDGE_IMAGE: quay.io/strimzi/kafka-bridge:0.33.1
+	KUBERNETES_PORT: tcp://172.30.0.1:443
+	JAVA_HOME: /usr/lib/jvm/jre-17
+	TERM: xterm
+	STRIMZI_FULL_RECONCILIATION_INTERVAL_MS: 120000
+	KUBERNETES_SERVICE_HOST: 172.30.0.1
+	JAVA_CLASSPATH: :lib/io.strimzi.cluster-operator-0.49.1.jar:lib/io.strimzi.api-0.49.1.jar:lib/io.fabric8.kubernetes-model-apiextensions-7.4.0.jar:lib/io.strimzi.config-model-0.49.1.jar:lib/io.strimzi.operator-common-0.49.1.jar:lib/io.strimzi.crd-annotations-0.49.1.jar:lib/org.quartz-scheduler.quartz-2.5.0.jar:lib/org.eclipse.jetty.jetty-server-12.0.22.jar:lib/org.eclipse.jetty.jetty-io-12.0.22.jar:lib/org.eclipse.jetty.jetty-util-12.0.22.jar:lib/org.eclipse.jetty.jetty-http-12.0.22.jar:lib/javax.servlet.javax.servlet-api-3.1.0.jar:lib/io.fabric8.openshift-client-7.4.0.jar:lib/io.fabric8.openshift-client-api-7.4.0.jar:lib/io.fabric8.openshift-model-autoscaling-7.4.0.jar:lib/io.fabric8.openshift-model-operator-7.4.0.jar:lib/io.fabric8.openshift-model-operatorhub-7.4.0.jar:lib/io.fabric8.openshift-model-machine-7.4.0.jar:lib/io.fabric8.openshift-model-whereabouts-7.4.0.jar:lib/io.fabric8.openshift-model-monitoring-7.4.0.jar:lib/io.fabric8.openshift-model-storageversionmigrator-7.4.0.jar:lib/io.fabric8.openshift-model-tuned-7.4.0.jar:lib/io.fabric8.openshift-model-console-7.4.0.jar:lib/io.fabric8.openshift-model-config-7.4.0.jar:lib/io.fabric8.openshift-model-machineconfiguration-7.4.0.jar:lib/io.fabric8.openshift-model-miscellaneous-7.4.0.jar:lib/io.fabric8.openshift-model-hive-7.4.0.jar:lib/io.fabric8.openshift-model-installer-7.4.0.jar:lib/io.fabric8.kubernetes-client-7.4.0.jar:lib/io.fabric8.kubernetes-httpclient-jdk-7.4.0.jar:lib/io.fabric8.kubernetes-client-api-7.4.0.jar:lib/io.fabric8.kubernetes-model-gatewayapi-7.4.0.jar:lib/io.fabric8.kubernetes-model-resource-7.4.0.jar:lib/io.fabric8.kubernetes-model-admissionregistration-7.4.0.jar:lib/io.fabric8.kubernetes-model-autoscaling-7.4.0.jar:lib/io.fabric8.kubernetes-model-batch-7.4.0.jar:lib/io.fabric8.kubernetes-model-certificates-7.4.0.jar:lib/io.fabric8.kubernetes-model-discovery-7.4.0.jar:lib/io.fabric8.kubernetes-model-extensions-7.4.0.jar:lib/io.fabric8.kubernetes-model-flowcontrol-7.4.0.jar:lib/io.fabric8.kubernetes-model-metrics-7.4.0.jar:lib/io.fabric8.kubernetes-model-scheduling-7.4.0.jar:lib/io.fabric8.kubernetes-model-node-7.4.0.jar:lib/org.slf4j.slf4j-api-2.0.17.jar:lib/org.snakeyaml.snakeyaml-engine-2.10.jar:lib/com.fasterxml.jackson.datatype.jackson-datatype-jsr310-2.18.3.jar:lib/io.fabric8.kubernetes-model-core-7.4.0.jar:lib/io.fabric8.kubernetes-model-common-7.4.0.jar:lib/io.fabric8.kubernetes-model-events-7.4.0.jar:lib/io.fabric8.kubernetes-model-policy-7.4.0.jar:lib/io.fabric8.kubernetes-model-rbac-7.4.0.jar:lib/io.fabric8.kubernetes-model-apps-7.4.0.jar:lib/io.fabric8.kubernetes-model-storageclass-7.4.0.jar:lib/io.fabric8.kubernetes-model-networking-7.4.0.jar:lib/io.fabric8.kubernetes-model-coordination-7.4.0.jar:lib/io.fabric8.openshift-model-7.4.0.jar:lib/io.fabric8.zjsonpatch-0.3.0.jar:lib/com.fasterxml.jackson.core.jackson-core-2.18.3.jar:lib/com.fasterxml.jackson.core.jackson-databind-2.18.3.jar:lib/com.fasterxml.jackson.core.jackson-annotations-2.18.3.jar:lib/com.fasterxml.jackson.dataformat.jackson-dataformat-yaml-2.18.3.jar:lib/org.yaml.snakeyaml-2.5.jar:lib/io.vertx.vertx-core-5.0.5.jar:lib/io.vertx.vertx-core-logging-5.0.5.jar:lib/io.netty.netty-common-4.2.7.Final.jar:lib/io.netty.netty-buffer-4.2.7.Final.jar:lib/io.netty.netty-handler-4.2.7.Final.jar:lib/io.netty.netty-codec-base-4.2.7.Final.jar:lib/io.netty.netty-handler-proxy-4.2.7.Final.jar:lib/io.netty.netty-codec-http-4.2.7.Final.jar:lib/io.netty.netty-codec-compression-4.2.7.Final.jar:lib/io.netty.netty-codec-http2-4.2.7.Final.jar:lib/io.netty.netty-resolver-4.2.7.Final.jar:lib/io.netty.netty-resolver-dns-4.2.7.Final.jar:lib/io.netty.netty-codec-dns-4.2.7.Final.jar:lib/io.strimzi.certificate-manager-0.49.1.jar:lib/org.apache.logging.log4j.log4j-core-2.25.0.jar:lib/org.apache.logging.log4j.log4j-api-2.25.0.jar:lib/org.apache.logging.log4j.log4j-slf4j2-impl-2.25.0.jar:lib/org.apache.logging.log4j.log4j-layout-template-json-2.25.0.jar:lib/io.strimzi.kafka-oauth-server-0.17.1.jar:lib/io.strimzi.kafka-oauth-server-plain-0.17.1.jar:lib/io.strimzi.kafka-oauth-client-0.17.1.jar:lib/io.strimzi.kafka-oauth-common-0.17.1.jar:lib/com.nimbusds.nimbus-jose-jwt-10.0.2.jar:lib/com.jayway.jsonpath.json-path-2.9.0.jar:lib/net.minidev.json-smart-2.5.2.jar:lib/net.minidev.accessors-smart-2.5.2.jar:lib/org.ow2.asm.asm-9.7.1.jar:lib/org.apache.kafka.kafka-clients-4.1.1.jar:lib/com.github.luben.zstd-jni-1.5.6-10.jar:lib/org.lz4.lz4-java-1.8.0.jar:lib/org.xerial.snappy.snappy-java-1.1.10.7.jar:lib/org.apache.kafka.kafka-server-common-4.1.1.jar:lib/com.yammer.metrics.metrics-core-2.2.0.jar:lib/net.sf.jopt-simple.jopt-simple-5.0.4.jar:lib/org.pcollections.pcollections-4.0.2.jar:lib/io.netty.netty-transport-4.2.7.Final.jar:lib/io.netty.netty-transport-native-epoll-4.2.7.Final-linux-x86_64.jar:lib/io.netty.netty-transport-native-unix-common-4.2.7.Final.jar:lib/io.netty.netty-transport-classes-epoll-4.2.7.Final.jar:lib/io.netty.netty-transport-native-epoll-4.2.7.Final-linux-aarch_64.jar:lib/io.micrometer.micrometer-core-1.14.5.jar:lib/io.micrometer.micrometer-commons-1.14.5.jar:lib/io.micrometer.micrometer-observation-1.14.5.jar:lib/org.hdrhistogram.HdrHistogram-2.2.2.jar:lib/org.latencyutils.LatencyUtils-2.0.3.jar:lib/io.micrometer.micrometer-registry-prometheus-1.14.5.jar:lib/io.prometheus.prometheus-metrics-core-1.3.6.jar:lib/io.prometheus.prometheus-metrics-model-1.3.6.jar:lib/io.prometheus.prometheus-metrics-config-1.3.6.jar:lib/io.prometheus.prometheus-metrics-tracer-common-1.3.6.jar:lib/io.prometheus.prometheus-metrics-exposition-formats-1.3.6.jar:lib/io.prometheus.prometheus-metrics-exposition-textformats-1.3.6.jar:lib/io.vertx.vertx-micrometer-metrics-5.0.5.jar:lib/io.netty.netty-codec-socks-4.2.7.Final.jar:lib/jakarta.xml.bind.jakarta.xml.bind-api-3.0.1.jar:lib/com.sun.activation.jakarta.activation-2.0.1.jar
+	STRIMZI_DEFAULT_CRUISE_CONTROL_IMAGE: quay.io/strimzi/kafka:0.49.1-kafka-4.1.1
+	TINI_VERSION: v0.19.0
+	STRIMZI_OPERATION_TIMEOUT_MS: 300000
+	KUBERNETES_PORT_443_TCP_ADDR: 172.30.0.1
+	STRIMZI_LEADER_ELECTION_LEASE_NAMESPACE: ksql0491
+	STRIMZI_DEFAULT_BUILDAH_IMAGE: quay.io/strimzi/buildah:0.49.1
+	STRIMZI_KAFKA_MIRROR_MAKER_2_IMAGES: 4.0.0=quay.io/strimzi/kafka:0.49.1-kafka-4.0.0
+4.0.1=quay.io/strimzi/kafka:0.49.1-kafka-4.0.1
+4.1.0=quay.io/strimzi/kafka:0.49.1-kafka-4.1.0
+4.1.1=quay.io/strimzi/kafka:0.49.1-kafka-4.1.1
+
+	KUBERNETES_PORT_443_TCP_PROTO: tcp
+	STRIMZI_DEFAULT_USER_OPERATOR_IMAGE: quay.io/strimzi/operator:0.49.1
+	KUBERNETES_SERVICE_PORT: 443
+	STRIMZI_DEFAULT_KAFKA_EXPORTER_IMAGE: quay.io/strimzi/kafka:0.49.1-kafka-4.1.1
+	TINI_SHA256_ARM64: 07952557df20bfd2a95f9bef198b445e006171969499a1d361bd9e6f8e5e0e81
+	STRIMZI_DEFAULT_KAFKA_INIT_IMAGE: quay.io/strimzi/operator:0.49.1
+	TINI_SHA256_PPC64LE: 3f658420974768e40810001a038c29d003728c5fe86da211cff5059e48cfdfde
+	HOSTNAME: strimzi-cluster-operator-586d796fb5-vd96z
+	STRIMZI_KAFKA_CONNECT_IMAGES: 4.0.0=quay.io/strimzi/kafka:0.49.1-kafka-4.0.0
+4.0.1=quay.io/strimzi/kafka:0.49.1-kafka-4.0.1
+4.1.0=quay.io/strimzi/kafka:0.49.1-kafka-4.1.0
+4.1.1=quay.io/strimzi/kafka:0.49.1-kafka-4.1.1
+
+	STRIMZI_KAFKA_IMAGES: 4.0.0=quay.io/strimzi/kafka:0.49.1-kafka-4.0.0
+4.0.1=quay.io/strimzi/kafka:0.49.1-kafka-4.0.1
+4.1.0=quay.io/strimzi/kafka:0.49.1-kafka-4.1.0
+4.1.1=quay.io/strimzi/kafka:0.49.1-kafka-4.1.1
+
+	KUBERNETES_PORT_443_TCP_PORT: 443
+	STRIMZI_OPERATOR_NAME: strimzi-cluster-operator-586d796fb5-vd96z
+	HOME: /
+	STRIMZI_OPERATOR_NAMESPACE: ksql0491
+	MALLOC_ARENA_MAX: 2
+
+2026-02-13 16:45:56 INFO  Main:63 - Cluster Operator configuration is ClusterOperatorConfig{
+	namespaces='[ksql0491]'
+	reconciliationIntervalMs=120000
+	operationTimeoutMs=300000
+	connectBuildTimeoutMs=300000
+	networkPolicyGeneration=true
+	versions='versions{4.0.0={metadata: 4.0 kafka-image: quay.io/strimzi/kafka:0.49.1-kafka-4.0.0 connect-image: quay.io/strimzi/kafka:0.49.1-kafka-4.0.0 mirrormaker2-image: quay.io/strimzi/kafka:0.49.1-kafka-4.0.0}, 4.0.1={metadata: 4.0 kafka-image: quay.io/strimzi/kafka:0.49.1-kafka-4.0.1 connect-image: quay.io/strimzi/kafka:0.49.1-kafka-4.0.1 mirrormaker2-image: quay.io/strimzi/kafka:0.49.1-kafka-4.0.1}, 4.1.0={metadata: 4.1 kafka-image: quay.io/strimzi/kafka:0.49.1-kafka-4.1.0 connect-image: quay.io/strimzi/kafka:0.49.1-kafka-4.1.0 mirrormaker2-image: quay.io/strimzi/kafka:0.49.1-kafka-4.1.0}, 4.1.1={metadata: 4.1 kafka-image: quay.io/strimzi/kafka:0.49.1-kafka-4.1.1 connect-image: quay.io/strimzi/kafka:0.49.1-kafka-4.1.1 mirrormaker2-image: quay.io/strimzi/kafka:0.49.1-kafka-4.1.1}}'
+	imagePullPolicy='null'
+	imagePullSecrets='null'
+	operatorNamespace='ksql0491'
+	operatorNamespaceLabels='null'
+	customResourceSelector='null'
+	featureGates='FeatureGates(ServerSideApplyPhase1=false, UseConnectBuildWithBuildah=false)'
+	dnsCacheTtlSec=30
+	podSetReconciliationOnly=false
+	podSetControllerWorkQueueSize=1024
+	operatorName='strimzi-cluster-operator-586d796fb5-vd96z'
+	podSecurityProviderClass='io.strimzi.plugin.security.profiles.impl.BaselinePodSecurityProvider'
+	leaderElectionConfig='LeaderElectionConfig{leaseName='strimzi-cluster-operator', namespace='ksql0491', identity='strimzi-cluster-operator-586d796fb5-vd96z', leaseDuration=PT15S, renewDeadline=PT10S, retryPeriod=PT2S}'
+	podDisruptionBudgetGeneration=true}
+2026-02-13 16:46:00 INFO  Main:282 - Health and metrics server is ready on port 8080
+2026-02-13 16:46:00 INFO  Main:244 - Waiting to become a leader
+2026-02-13 16:46:00 INFO  LeaderElectionManager:69 - Starting the Leader Elector
+2026-02-13 16:46:01 INFO  LeaderElectionManager:121 - The new leader is strimzi-cluster-operator-586d796fb5-vd96z
+2026-02-13 16:46:01 INFO  LeaderElectionManager:103 - Started being a leader
+2026-02-13 16:46:01 INFO  Main:226 - I'm the new leader
+2026-02-13 16:46:01 WARN  PlatformFeaturesAvailability:156 - API Group route.openshift.io is supported
+2026-02-13 16:46:01 WARN  PlatformFeaturesAvailability:156 - API Group build.openshift.io is supported
+2026-02-13 16:46:01 WARN  PlatformFeaturesAvailability:156 - API Group image.openshift.io is supported
+2026-02-13 16:46:01 INFO  Main:115 - Environment facts gathered: PlatformFeaturesAvailability(KubernetesVersion=1.33,OpenShiftRoutes=true,OpenShiftBuilds=true,OpenShiftImageStreams=true)
+2026-02-13 16:46:01 INFO  PodSecurityProviderFactory:43 - Found PodSecurityProvider io.strimzi.plugin.security.profiles.impl.BaselinePodSecurityProvider
+2026-02-13 16:46:01 INFO  PodSecurityProviderFactory:62 - Initializing PodSecurityProvider io.strimzi.plugin.security.profiles.impl.BaselinePodSecurityProvider
+2026-02-13 16:46:01 INFO  ClusterOperator:82 - Creating ClusterOperator for namespace ksql0491
+2026-02-13 16:46:01 INFO  ClusterOperator:95 - Starting ClusterOperator for namespace ksql0491
+2026-02-13 16:46:01 INFO  StrimziPodSetController:547 - Starting the StrimziPodSet controller
+2026-02-13 16:46:01 INFO  StrimziPodSetController:516 - Starting StrimziPodSet controller for namespace ksql0491
+2026-02-13 16:46:01 WARN  VersionUsageUtils:60 - The client is using resource type 'strimzipodsets' with unstable version 'v1beta2'
+2026-02-13 16:46:01 WARN  VersionUsageUtils:60 - The client is using resource type 'kafkas' with unstable version 'v1beta2'
+2026-02-13 16:46:01 WARN  VersionUsageUtils:60 - The client is using resource type 'kafkaconnects' with unstable version 'v1beta2'
+2026-02-13 16:46:01 WARN  VersionUsageUtils:60 - The client is using resource type 'kafkamirrormaker2s' with unstable version 'v1beta2'
+2026-02-13 16:46:02 INFO  StrimziPodSetController:519 - Waiting for informers to sync
+2026-02-13 16:46:02 INFO  ClusterOperator:109 - Opened watch for Kafka operator
+2026-02-13 16:46:02 INFO  ClusterOperator:109 - Opened watch for KafkaConnect operator
+2026-02-13 16:46:02 INFO  ClusterOperator:109 - Opened watch for KafkaBridge operator
+2026-02-13 16:46:02 INFO  ClusterOperator:109 - Opened watch for KafkaMirrorMaker2 operator
+2026-02-13 16:46:02 INFO  ClusterOperator:109 - Opened watch for KafkaRebalance operator
+2026-02-13 16:46:02 INFO  ClusterOperator:117 - Opened watch for KafkaNodePool operator
+2026-02-13 16:46:03 INFO  ClusterOperator:124 - Opened watch for KafkaConnector operator
+2026-02-13 16:46:03 INFO  ClusterOperator:132 - Setting up periodic reconciliation for namespace ksql0491
+2026-02-13 16:46:03 INFO  Main:194 - Cluster Operator verticle started in namespace ksql0491 without label selector
+2026-02-13 16:46:04 INFO  StrimziPodSetController:524 - Informers are in-sync
+2026-02-13 16:46:24 WARN  MeterRegistry:170 - This Gauge has been already registered (MeterId{name='vertx.http.server.active.connections', tags=[]}), the Gauge registration will be ignored. Note that subsequent logs will be logged at debug level.
+2026-02-13 16:46:32 WARN  KafkaAssemblyOperator:772 - KafkaNodePool dual-role in namespace ksql0491 was ADDED, but the Kafka cluster my-cluster to which it belongs does not exist
+2026-02-13 16:46:32 INFO  AbstractOperator:519 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Kafka my-cluster in namespace ksql0491 was ADDED
+2026-02-13 16:46:33 INFO  AbstractOperator:265 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Kafka my-cluster will be checked for creation or modification
+2026-02-13 16:46:33 INFO  AbstractOperator:519 - Reconciliation #2(watch) Kafka(ksql0491/my-cluster): Kafka my-cluster in namespace ksql0491 was MODIFIED
+2026-02-13 16:46:33 INFO  CrdOperator:123 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Status of Kafka my-cluster in namespace ksql0491 has been updated
+2026-02-13 16:46:33 INFO  Ca:948 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Generating CA with subject=Subject(organizationName='io.strimzi', commonName='cluster-ca v0', dnsNames=[], ipAddresses=[])
+2026-02-13 16:46:33 INFO  Ca:948 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Generating CA with subject=Subject(organizationName='io.strimzi', commonName='clients-ca v0', dnsNames=[], ipAddresses=[])
+2026-02-13 16:46:35 INFO  Ca:454 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Generating certificate Subject(organizationName='io.strimzi', commonName='cluster-operator', dnsNames=[], ipAddresses=[]), signed by CA cluster-ca
+2026-02-13 16:46:35 WARN  VersionUsageUtils:60 - The client is using resource type 'kafkanodepools' with unstable version 'v1beta2'
+2026-02-13 16:46:36 INFO  CrdOperator:123 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Status of KafkaNodePool dual-role in namespace ksql0491 has been updated
+2026-02-13 16:46:36 INFO  KafkaAssemblyOperator:769 - Reconciliation #3(watch) Kafka(ksql0491/my-cluster): KafkaNodePool dual-role in namespace ksql0491 was MODIFIED
+2026-02-13 16:46:36 INFO  Ca:454 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Generating certificate Subject(organizationName='io.strimzi', commonName='my-cluster-kafka', dnsNames=[my-cluster-kafka-brokers.ksql0491.svc, my-cluster-kafka-brokers.ksql0491.svc.cluster.local, my-cluster-dual-role-0.my-cluster-kafka-brokers.ksql0491.svc.cluster.local, my-cluster-kafka-brokers.ksql0491, my-cluster-kafka-brokers, my-cluster-kafka-bootstrap.ksql0491, my-cluster-kafka-bootstrap.ksql0491.svc.cluster.local, my-cluster-kafka-bootstrap.ksql0491.svc, my-cluster-dual-role-0.my-cluster-kafka-brokers.ksql0491.svc, my-cluster-kafka-bootstrap], ipAddresses=[]), signed by CA cluster-ca
+2026-02-13 16:46:37 INFO  StrimziPodSetController:348 - Reconciliation #4(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:46:37 INFO  StrimziPodSetController:384 - Reconciliation #4(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:46:37 INFO  StrimziPodSetController:348 - Reconciliation #5(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:46:37 INFO  StrimziPodSetController:384 - Reconciliation #5(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:46:37 INFO  StrimziPodSetController:348 - Reconciliation #6(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:46:37 INFO  StrimziPodSetController:384 - Reconciliation #6(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:46:40 INFO  StrimziPodSetController:348 - Reconciliation #7(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:46:40 INFO  StrimziPodSetController:384 - Reconciliation #7(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:46:40 INFO  StrimziPodSetController:348 - Reconciliation #8(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:46:40 INFO  StrimziPodSetController:384 - Reconciliation #8(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:46:40 INFO  StrimziPodSetController:348 - Reconciliation #9(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:46:40 INFO  StrimziPodSetController:384 - Reconciliation #9(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:46:57 INFO  StrimziPodSetController:348 - Reconciliation #10(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:46:57 INFO  StrimziPodSetController:384 - Reconciliation #10(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:47:07 INFO  StrimziPodSetController:348 - Reconciliation #11(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:47:07 INFO  StrimziPodSetController:384 - Reconciliation #11(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:47:21 INFO  StrimziPodSetController:348 - Reconciliation #12(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:47:21 INFO  StrimziPodSetController:384 - Reconciliation #12(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:47:32 INFO  AbstractOperator:400 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Reconciliation is in progress
+2026-02-13 16:47:43 INFO  StrimziPodSetController:348 - Reconciliation #13(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:47:43 INFO  StrimziPodSetController:384 - Reconciliation #13(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:47:43 INFO  StrimziPodSetController:348 - Reconciliation #14(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:47:43 INFO  StrimziPodSetController:384 - Reconciliation #14(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:47:48 INFO  Ca:454 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Generating certificate Subject(organizationName='io.strimzi', commonName='my-cluster-entity-topic-operator', dnsNames=[], ipAddresses=[]), signed by CA cluster-ca
+2026-02-13 16:47:48 INFO  Ca:454 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Generating certificate Subject(organizationName='io.strimzi', commonName='my-cluster-entity-user-operator', dnsNames=[], ipAddresses=[]), signed by CA cluster-ca
+2026-02-13 16:48:03 INFO  ClusterOperator:135 - Triggering periodic reconciliation for namespace ksql0491
+2026-02-13 16:48:03 WARN  VersionUsageUtils:60 - The client is using resource type 'kafkabridges' with unstable version 'v1beta2'
+2026-02-13 16:48:03 WARN  VersionUsageUtils:60 - The client is using resource type 'kafkarebalances' with unstable version 'v1beta2'
+2026-02-13 16:48:03 WARN  VersionUsageUtils:60 - The client is using resource type 'kafkaconnectors' with unstable version 'v1beta2'
+2026-02-13 16:48:10 INFO  AbstractOperator:519 - Reconciliation #16(watch) Kafka(ksql0491/my-cluster): Kafka my-cluster in namespace ksql0491 was MODIFIED
+2026-02-13 16:48:10 INFO  CrdOperator:123 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): Status of Kafka my-cluster in namespace ksql0491 has been updated
+2026-02-13 16:48:10 INFO  AbstractOperator:545 - Reconciliation #1(watch) Kafka(ksql0491/my-cluster): reconciled
+2026-02-13 16:48:10 INFO  AbstractOperator:265 - Reconciliation #15(timer) Kafka(ksql0491/my-cluster): Kafka my-cluster will be checked for creation or modification
+2026-02-13 16:48:12 INFO  AbstractOperator:265 - Reconciliation #16(watch) Kafka(ksql0491/my-cluster): Kafka my-cluster will be checked for creation or modification
+2026-02-13 16:48:12 INFO  AbstractOperator:545 - Reconciliation #15(timer) Kafka(ksql0491/my-cluster): reconciled
+2026-02-13 16:48:15 INFO  AbstractOperator:545 - Reconciliation #16(watch) Kafka(ksql0491/my-cluster): reconciled
+2026-02-13 16:50:03 INFO  ClusterOperator:135 - Triggering periodic reconciliation for namespace ksql0491
+2026-02-13 16:50:03 INFO  AbstractOperator:265 - Reconciliation #17(timer) Kafka(ksql0491/my-cluster): Kafka my-cluster will be checked for creation or modification
+2026-02-13 16:50:04 INFO  AbstractOperator:545 - Reconciliation #17(timer) Kafka(ksql0491/my-cluster): reconciled
+2026-02-13 16:51:01 INFO  StrimziPodSetController:348 - Reconciliation #18(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:51:01 INFO  StrimziPodSetController:384 - Reconciliation #18(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:51:01 INFO  StrimziPodSetController:348 - Reconciliation #19(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): StrimziPodSet will be reconciled
+2026-02-13 16:51:01 INFO  StrimziPodSetController:384 - Reconciliation #19(watch) StrimziPodSet(ksql0491/my-cluster-dual-role): reconciled
+2026-02-13 16:52:03 INFO  ClusterOperator:135 - Triggering periodic reconciliation for namespace ksql0491
+2026-02-13 16:52:03 INFO  AbstractOperator:265 - Reconciliation #20(timer) Kafka(ksql0491/my-cluster): Kafka my-cluster will be checked for creation or modification
+2026-02-13 16:52:04 INFO  AbstractOperator:545 - Reconciliation #20(timer) Kafka(ksql0491/my-cluster): reconciled
