@@ -1,0 +1,67 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Apicurio Registry" [ref=e6] [cursor=pointer]:
+      - /url: /dashboard
+      - img "Apicurio Registry" [ref=e7]
+    - button [ref=e14] [cursor=pointer]:
+      - img [ref=e15]
+  - main [ref=e17]:
+    - tablist [ref=e21]:
+      - tab "Dashboard" [selected] [ref=e22] [cursor=pointer]:
+        - generic [ref=e23]: Dashboard
+      - tab "Explore" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: Explore
+      - tab "Search" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: Search
+      - tab "Global rules" [ref=e28] [cursor=pointer]:
+        - generic [ref=e29]: Global rules
+      - tab "Settings" [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: Settings
+    - generic [ref=e33]:
+      - heading "Registry Dashboard" [level=1] [ref=e35]
+      - paragraph [ref=e37]: Welcome to Apicurio Registry. Manage your schemas and API definitions in one central location.
+    - generic [ref=e39]:
+      - generic [ref=e41]:
+        - generic [ref=e43]:
+          - generic [ref=e45]: Groups
+          - generic [ref=e47]:
+            - img [ref=e49]
+            - generic [ref=e51]: "1"
+        - generic [ref=e53]:
+          - generic [ref=e55]: Artifacts
+          - generic [ref=e57]:
+            - img [ref=e59]
+            - generic [ref=e61]: "1"
+        - generic [ref=e63]:
+          - generic [ref=e65]: Versions
+          - generic [ref=e67]:
+            - img [ref=e69]
+            - generic [ref=e71]: "2"
+      - generic [ref=e73]:
+        - generic [ref=e75]: Recent Artifacts
+        - generic [ref=e79]:
+          - generic "OpenAPI Definition" [ref=e81]
+          - generic [ref=e82]:
+            - link "Empty API Spec" [ref=e83] [cursor=pointer]:
+              - /url: /explore/ExploreTest/MyArtifact
+            - generic [ref=e84]: ExploreTest/MyArtifact
+          - generic [ref=e86]: 21 seconds ago
+      - generic [ref=e88]:
+        - generic [ref=e90]: Quick Actions
+        - generic [ref=e92]:
+          - button "Create Artifact" [ref=e94] [cursor=pointer]:
+            - img [ref=e96]
+            - text: Create Artifact
+          - button "Search Registry" [ref=e99] [cursor=pointer]:
+            - img [ref=e101]
+            - text: Search Registry
+          - button "Explore Groups" [ref=e104] [cursor=pointer]:
+            - img [ref=e106]
+            - text: Explore Groups
+          - button "Settings" [ref=e109] [cursor=pointer]:
+            - img [ref=e111]
+            - text: Settings
+```
