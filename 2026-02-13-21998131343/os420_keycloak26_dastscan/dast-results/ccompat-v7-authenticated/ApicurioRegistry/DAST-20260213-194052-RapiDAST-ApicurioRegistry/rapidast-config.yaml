@@ -1,0 +1,26 @@
+application:
+  authentication:
+    headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ4SERFZmNydlJpdUJ0VEJ6RW5ua3BZazMyZ3prbWJyM2piNnpLMzBBc1k4In0.eyJleHAiOjE3NzEwMTE5NDIsImlhdCI6MTc3MTAxMTY0MiwianRpIjoib25ydHJvOjc4OWE4ZjRmLTkzMjYtNWM5YS1mNWUzLTllODllZDYwOTQ3NSIsImlzcyI6Imh0dHBzOi8va2V5Y2xvYWsta2V5Y2xvYWsyNi5hcHBzLmNpNDIwLmFwaWN1cmlvLXRlc3Rpbmcub3JnL3JlYWxtcy9yZWdpc3RyeSIsInN1YiI6IjdjMDIyYmVmLTVlYzEtNDBlOC1iZDA3LWMxNjA1Zjg3N2JjMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InJhcGlkYXN0LWNsaWVudCIsInNpZCI6IjdiOGQ5NWIwLWRlYzItNGI4Ny05ZjMzLWEyMjU2N2UyYjYwMCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsic3ItYWRtaW4iXX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoicmVnaXN0cnktYWRtaW4ifQ.1C-eokjYSVQHOxOan2Bi0uEZ4cS4kNYN8X6LMSwXlLJRGkX8nbPH-PTpuwa5SLwSVpNFOjCZGFrmPMnZ5_eteixK0k7z8Yj4Lw_HUM2qxfUq1_rHQ1Labp5DdGLBW_1VByBAystrdITdwTf_3QkugslydouOxVaJvoCi8-Jw03hBDHYBad4HsCaV6CWo31f1KxYxVz9NW1KxGA_JrnnDXTkHiOC0D4CLmXvD2dHgpowbi_395ySR1I_9XhXVsnyv8J70xgglaJdWizRlg8xxm1nmqknbIWhUfu94GEzZdYCJMBl64AUcvYFJOxwH8uB5Lz7OC3lA2RW7ARuVL8YB6A
+    type: headers
+  shortName: ApicurioRegistry
+  url: https://registry-app-keycloak26.apps.ci420.apicurio-testing.org/apis/ccompat/v7
+config:
+  configVersion: 5
+scanners:
+  zap:
+    activeScan:
+      policy: Kubernetes-API-scan
+    apiScan:
+      apis:
+        apiUrl: https://registry-app-keycloak26.apps.ci420.apicurio-testing.org/api-specifications/ccompat/v7/openapi.json
+    report:
+      format:
+      - json
+      - html
+    spider:
+      maxDuration: 0
+    spiderAjax:
+      browserId: firefox-headless
+      maxDuration: 0
