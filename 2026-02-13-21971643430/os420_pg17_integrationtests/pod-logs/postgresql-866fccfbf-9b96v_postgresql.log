@@ -1,0 +1,203 @@
+chmod: changing permissions of '/var/run/postgresql': Operation not permitted
+The files belonging to this database system will be owned by user "1000790000".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data/pgdata ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2026-02-13 02:40:48.350 UTC [30] LOG:  starting PostgreSQL 17.8 (Debian 17.8-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-02-13 02:40:48.350 UTC [30] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-02-13 02:40:48.372 UTC [33] LOG:  database system was shut down at 2026-02-13 02:40:46 UTC
+2026-02-13 02:40:48.381 UTC [30] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+2026-02-13 02:40:48.780 UTC [30] LOG:  received fast shutdown request
+waiting for server to shut down....2026-02-13 02:40:48.783 UTC [30] LOG:  aborting any active transactions
+2026-02-13 02:40:48.787 UTC [30] LOG:  background worker "logical replication launcher" (PID 36) exited with exit code 1
+2026-02-13 02:40:48.787 UTC [31] LOG:  shutting down
+2026-02-13 02:40:48.789 UTC [31] LOG:  checkpoint starting: shutdown immediate
+2026-02-13 02:40:49.261 UTC [31] LOG:  checkpoint complete: wrote 925 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.453 s, sync=0.004 s, total=0.475 s; sync files=301, longest=0.002 s, average=0.001 s; distance=4256 kB, estimate=4256 kB; lsn=0/1915970, redo lsn=0/1915970
+2026-02-13 02:40:49.273 UTC [30] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2026-02-13 02:40:49.338 UTC [1] LOG:  starting PostgreSQL 17.8 (Debian 17.8-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-02-13 02:40:49.338 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-02-13 02:40:49.338 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-02-13 02:40:49.356 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-02-13 02:40:49.388 UTC [46] LOG:  database system was shut down at 2026-02-13 02:40:49 UTC
+2026-02-13 02:40:49.400 UTC [1] LOG:  database system is ready to accept connections
+2026-02-13 02:40:52.565 UTC [52] FATAL:  role "-d" does not exist
+2026-02-13 02:40:57.577 UTC [55] FATAL:  role "-d" does not exist
+2026-02-13 02:41:02.491 UTC [58] FATAL:  role "-d" does not exist
+2026-02-13 02:41:07.477 UTC [61] FATAL:  role "-d" does not exist
+2026-02-13 02:41:12.481 UTC [64] FATAL:  role "-d" does not exist
+2026-02-13 02:41:17.480 UTC [67] FATAL:  role "-d" does not exist
+2026-02-13 02:41:20.184 UTC [71] FATAL:  role "-d" does not exist
+2026-02-13 02:41:22.488 UTC [74] FATAL:  role "-d" does not exist
+2026-02-13 02:41:27.476 UTC [77] FATAL:  role "-d" does not exist
+2026-02-13 02:41:30.183 UTC [80] FATAL:  role "-d" does not exist
+2026-02-13 02:41:32.480 UTC [83] FATAL:  role "-d" does not exist
+2026-02-13 02:41:37.480 UTC [86] FATAL:  role "-d" does not exist
+2026-02-13 02:41:40.176 UTC [89] FATAL:  role "-d" does not exist
+2026-02-13 02:41:42.482 UTC [92] FATAL:  role "-d" does not exist
+2026-02-13 02:41:47.480 UTC [95] FATAL:  role "-d" does not exist
+2026-02-13 02:41:50.176 UTC [99] FATAL:  role "-d" does not exist
+2026-02-13 02:41:52.475 UTC [102] FATAL:  role "-d" does not exist
+2026-02-13 02:41:57.481 UTC [105] FATAL:  role "-d" does not exist
+2026-02-13 02:42:00.181 UTC [108] FATAL:  role "-d" does not exist
+2026-02-13 02:42:02.481 UTC [111] FATAL:  role "-d" does not exist
+2026-02-13 02:42:07.474 UTC [114] FATAL:  role "-d" does not exist
+2026-02-13 02:42:10.176 UTC [117] FATAL:  role "-d" does not exist
+2026-02-13 02:42:12.482 UTC [120] FATAL:  role "-d" does not exist
+2026-02-13 02:42:17.480 UTC [123] FATAL:  role "-d" does not exist
+2026-02-13 02:42:20.176 UTC [127] FATAL:  role "-d" does not exist
+2026-02-13 02:42:22.480 UTC [130] FATAL:  role "-d" does not exist
+2026-02-13 02:42:27.486 UTC [133] FATAL:  role "-d" does not exist
+2026-02-13 02:42:30.252 UTC [136] FATAL:  role "-d" does not exist
+2026-02-13 02:42:32.564 UTC [139] FATAL:  role "-d" does not exist
+2026-02-13 02:42:37.496 UTC [142] FATAL:  role "-d" does not exist
+2026-02-13 02:42:40.183 UTC [145] FATAL:  role "-d" does not exist
+2026-02-13 02:42:42.494 UTC [148] FATAL:  role "-d" does not exist
+2026-02-13 02:42:47.492 UTC [152] FATAL:  role "-d" does not exist
+2026-02-13 02:42:50.183 UTC [176] FATAL:  role "-d" does not exist
+2026-02-13 02:42:52.480 UTC [179] FATAL:  role "-d" does not exist
+2026-02-13 02:42:57.484 UTC [182] FATAL:  role "-d" does not exist
+2026-02-13 02:43:00.175 UTC [185] FATAL:  role "-d" does not exist
+2026-02-13 02:43:02.476 UTC [188] FATAL:  role "-d" does not exist
+2026-02-13 02:43:07.481 UTC [191] FATAL:  role "-d" does not exist
+2026-02-13 02:43:10.181 UTC [195] FATAL:  role "-d" does not exist
+2026-02-13 02:43:12.475 UTC [198] FATAL:  role "-d" does not exist
+2026-02-13 02:43:17.474 UTC [201] FATAL:  role "-d" does not exist
+2026-02-13 02:43:20.182 UTC [204] FATAL:  role "-d" does not exist
+2026-02-13 02:43:22.480 UTC [207] FATAL:  role "-d" does not exist
+2026-02-13 02:43:27.476 UTC [210] FATAL:  role "-d" does not exist
+2026-02-13 02:43:30.188 UTC [214] FATAL:  role "-d" does not exist
+2026-02-13 02:43:32.487 UTC [217] FATAL:  role "-d" does not exist
+2026-02-13 02:43:37.483 UTC [220] FATAL:  role "-d" does not exist
+2026-02-13 02:43:40.176 UTC [223] FATAL:  role "-d" does not exist
+2026-02-13 02:43:42.483 UTC [226] FATAL:  role "-d" does not exist
+2026-02-13 02:43:47.477 UTC [229] FATAL:  role "-d" does not exist
+2026-02-13 02:43:50.183 UTC [233] FATAL:  role "-d" does not exist
+2026-02-13 02:43:52.480 UTC [236] FATAL:  role "-d" does not exist
+2026-02-13 02:43:57.475 UTC [239] FATAL:  role "-d" does not exist
+2026-02-13 02:44:00.185 UTC [242] FATAL:  role "-d" does not exist
+2026-02-13 02:44:02.480 UTC [245] FATAL:  role "-d" does not exist
+2026-02-13 02:44:07.480 UTC [248] FATAL:  role "-d" does not exist
+2026-02-13 02:44:10.177 UTC [252] FATAL:  role "-d" does not exist
+2026-02-13 02:44:12.476 UTC [255] FATAL:  role "-d" does not exist
+2026-02-13 02:44:17.474 UTC [258] FATAL:  role "-d" does not exist
+2026-02-13 02:44:20.182 UTC [261] FATAL:  role "-d" does not exist
+2026-02-13 02:44:22.480 UTC [264] FATAL:  role "-d" does not exist
+2026-02-13 02:44:27.548 UTC [267] FATAL:  role "-d" does not exist
+2026-02-13 02:44:30.184 UTC [271] FATAL:  role "-d" does not exist
+2026-02-13 02:44:32.475 UTC [274] FATAL:  role "-d" does not exist
+2026-02-13 02:44:37.474 UTC [277] FATAL:  role "-d" does not exist
+2026-02-13 02:44:40.182 UTC [280] FATAL:  role "-d" does not exist
+2026-02-13 02:44:42.480 UTC [283] FATAL:  role "-d" does not exist
+2026-02-13 02:44:47.481 UTC [286] FATAL:  role "-d" does not exist
+2026-02-13 02:44:50.189 UTC [290] FATAL:  role "-d" does not exist
+2026-02-13 02:44:52.481 UTC [293] FATAL:  role "-d" does not exist
+2026-02-13 02:44:57.488 UTC [296] FATAL:  role "-d" does not exist
+2026-02-13 02:45:00.184 UTC [299] FATAL:  role "-d" does not exist
+2026-02-13 02:45:02.480 UTC [302] FATAL:  role "-d" does not exist
+2026-02-13 02:45:07.475 UTC [305] FATAL:  role "-d" does not exist
+2026-02-13 02:45:10.184 UTC [309] FATAL:  role "-d" does not exist
+2026-02-13 02:45:12.481 UTC [312] FATAL:  role "-d" does not exist
+2026-02-13 02:45:17.474 UTC [315] FATAL:  role "-d" does not exist
+2026-02-13 02:45:20.178 UTC [318] FATAL:  role "-d" does not exist
+2026-02-13 02:45:22.474 UTC [321] FATAL:  role "-d" does not exist
+2026-02-13 02:45:27.475 UTC [324] FATAL:  role "-d" does not exist
+2026-02-13 02:45:30.178 UTC [328] FATAL:  role "-d" does not exist
+2026-02-13 02:45:32.474 UTC [331] FATAL:  role "-d" does not exist
+2026-02-13 02:45:37.482 UTC [334] FATAL:  role "-d" does not exist
+2026-02-13 02:45:40.178 UTC [337] FATAL:  role "-d" does not exist
+2026-02-13 02:45:42.477 UTC [340] FATAL:  role "-d" does not exist
+2026-02-13 02:45:47.480 UTC [343] FATAL:  role "-d" does not exist
+2026-02-13 02:45:49.487 UTC [44] LOG:  checkpoint starting: time
+2026-02-13 02:45:50.183 UTC [347] FATAL:  role "-d" does not exist
+2026-02-13 02:45:52.481 UTC [350] FATAL:  role "-d" does not exist
+2026-02-13 02:45:57.476 UTC [353] FATAL:  role "-d" does not exist
+2026-02-13 02:46:00.177 UTC [356] FATAL:  role "-d" does not exist
+2026-02-13 02:46:02.481 UTC [359] FATAL:  role "-d" does not exist
+2026-02-13 02:46:07.483 UTC [362] FATAL:  role "-d" does not exist
+2026-02-13 02:46:09.738 UTC [44] LOG:  checkpoint complete: wrote 205 buffers (1.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=20.241 s, sync=0.005 s, total=20.252 s; sync files=164, longest=0.002 s, average=0.001 s; distance=1062 kB, estimate=1062 kB; lsn=0/1A1F248, redo lsn=0/1A1F1B8
+2026-02-13 02:46:10.178 UTC [366] FATAL:  role "-d" does not exist
+2026-02-13 02:46:12.478 UTC [369] FATAL:  role "-d" does not exist
+2026-02-13 02:46:17.475 UTC [372] FATAL:  role "-d" does not exist
+2026-02-13 02:46:20.183 UTC [375] FATAL:  role "-d" does not exist
+2026-02-13 02:46:22.477 UTC [378] FATAL:  role "-d" does not exist
+2026-02-13 02:46:27.481 UTC [381] FATAL:  role "-d" does not exist
+2026-02-13 02:46:30.182 UTC [385] FATAL:  role "-d" does not exist
+2026-02-13 02:46:32.483 UTC [388] FATAL:  role "-d" does not exist
+2026-02-13 02:46:37.480 UTC [391] FATAL:  role "-d" does not exist
+2026-02-13 02:46:40.177 UTC [394] FATAL:  role "-d" does not exist
+2026-02-13 02:46:42.477 UTC [397] FATAL:  role "-d" does not exist
+2026-02-13 02:46:47.476 UTC [400] FATAL:  role "-d" does not exist
+2026-02-13 02:46:50.177 UTC [404] FATAL:  role "-d" does not exist
+2026-02-13 02:46:50.526 UTC [149] ERROR:  duplicate key value violates unique constraint "uq_content_1"
+2026-02-13 02:46:50.526 UTC [149] DETAIL:  Key (contenthash)=(c837af46024b4434ee4b6c8f3aa96724a6758418a379f267c561700abd90c740) already exists.
+2026-02-13 02:46:50.526 UTC [149] STATEMENT:  INSERT INTO content (contentId, canonicalHash, contentHash, contentType, content, refs) VALUES ($1, $2, $3, $4, $5, $6)
+2026-02-13 02:46:52.475 UTC [407] FATAL:  role "-d" does not exist
+2026-02-13 02:46:57.475 UTC [410] FATAL:  role "-d" does not exist
+2026-02-13 02:47:00.183 UTC [413] FATAL:  role "-d" does not exist
+2026-02-13 02:47:02.475 UTC [416] FATAL:  role "-d" does not exist
+2026-02-13 02:47:07.475 UTC [419] FATAL:  role "-d" does not exist
+2026-02-13 02:47:10.176 UTC [423] FATAL:  role "-d" does not exist
+2026-02-13 02:47:12.481 UTC [426] FATAL:  role "-d" does not exist
+2026-02-13 02:47:17.475 UTC [429] FATAL:  role "-d" does not exist
+2026-02-13 02:47:20.192 UTC [432] FATAL:  role "-d" does not exist
+2026-02-13 02:47:22.474 UTC [435] FATAL:  role "-d" does not exist
+2026-02-13 02:47:27.555 UTC [438] FATAL:  role "-d" does not exist
+2026-02-13 02:47:30.182 UTC [442] FATAL:  role "-d" does not exist
+2026-02-13 02:47:32.475 UTC [445] FATAL:  role "-d" does not exist
+2026-02-13 02:47:37.483 UTC [448] FATAL:  role "-d" does not exist
+2026-02-13 02:47:40.183 UTC [451] FATAL:  role "-d" does not exist
+2026-02-13 02:47:42.476 UTC [454] FATAL:  role "-d" does not exist
+2026-02-13 02:47:47.474 UTC [457] FATAL:  role "-d" does not exist
+2026-02-13 02:47:50.183 UTC [461] FATAL:  role "-d" does not exist
+2026-02-13 02:47:52.481 UTC [464] FATAL:  role "-d" does not exist
+2026-02-13 02:47:57.484 UTC [467] FATAL:  role "-d" does not exist
+2026-02-13 02:48:00.177 UTC [470] FATAL:  role "-d" does not exist
+2026-02-13 02:48:02.480 UTC [473] FATAL:  role "-d" does not exist
+2026-02-13 02:48:07.484 UTC [476] FATAL:  role "-d" does not exist
+2026-02-13 02:48:10.176 UTC [480] FATAL:  role "-d" does not exist
+2026-02-13 02:48:12.476 UTC [483] FATAL:  role "-d" does not exist
+2026-02-13 02:48:17.475 UTC [486] FATAL:  role "-d" does not exist
+2026-02-13 02:48:20.184 UTC [489] FATAL:  role "-d" does not exist
+2026-02-13 02:48:22.480 UTC [492] FATAL:  role "-d" does not exist
+2026-02-13 02:48:27.475 UTC [495] FATAL:  role "-d" does not exist
+2026-02-13 02:48:30.177 UTC [499] FATAL:  role "-d" does not exist
+2026-02-13 02:48:32.475 UTC [502] FATAL:  role "-d" does not exist
+2026-02-13 02:48:37.481 UTC [505] FATAL:  role "-d" does not exist
+2026-02-13 02:48:40.177 UTC [508] FATAL:  role "-d" does not exist
+2026-02-13 02:48:42.475 UTC [511] FATAL:  role "-d" does not exist
+2026-02-13 02:48:47.474 UTC [514] FATAL:  role "-d" does not exist
