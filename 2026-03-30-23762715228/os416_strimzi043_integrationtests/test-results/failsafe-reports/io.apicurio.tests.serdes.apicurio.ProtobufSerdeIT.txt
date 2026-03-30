@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 60.13 s <<< FAILURE! -- in io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT
+io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT -- Time elapsed: 60.13 s <<< ERROR!
+java.lang.RuntimeException: Timed out while starting Kafka containers
+	at io.strimzi.test.container.StrimziKafkaCluster.start(StrimziKafkaCluster.java:752)
+	at io.apicurio.tests.utils.KafkaFacade.start(KafkaFacade.java:76)
+	at io.apicurio.tests.utils.KafkaFacade.startIfNeeded(KafkaFacade.java:60)
+	at io.apicurio.tests.serdes.apicurio.ProtobufSerdeIT.setupEnvironment(ProtobufSerdeIT.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at io.strimzi.test.container.StrimziKafkaCluster.start(StrimziKafkaCluster.java:745)
+	... 5 more
+
