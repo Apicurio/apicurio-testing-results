@@ -1,0 +1,82 @@
+---------------------------------------------
+Performing the Initial Config...
+---------------------------------------------
+Generating application config at: /opt/app-root/src/config.js
+Config successfully writen to file.
+---------------------------------------------
+Patching base hrefs...
+---------------------------------------------
+Updating base href in index.html file at: /opt/app-root/src/index.html
+Successfully updated the base href value.
+---------------------------------------------
+Config Complete. Nginx Server Started.....
+---------------------------------------------
+2026/03/31 17:59:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:67
+nginx: [warn] the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:67
+10.128.2.2 - - [31/Mar/2026:17:59:55 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:02 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:05 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:12 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:15 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:22 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:25 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:32 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:35 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:42 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:45 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:52 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:00:55 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:02 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:05 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:12 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:15 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:22 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:25 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:32 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:35 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:42 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:45 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:52 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:01:55 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:02 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:05 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:12 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:15 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:22 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:25 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:32 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:35 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:42 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:45 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:52 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:02:55 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:02 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:05 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:12 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:15 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:22 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:25 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:32 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:35 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:42 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:45 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:52 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:03:55 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:02 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:05 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:12 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:15 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:22 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:25 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:32 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:35 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:42 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:45 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:52 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:04:55 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:05:02 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:05:05 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:05:12 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:05:15 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:05:22 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
+10.128.2.2 - - [31/Mar/2026:18:05:25 +0000] "GET /config.js HTTP/1.1" 200 210 "-" "kube-probe/1.33" "-"
