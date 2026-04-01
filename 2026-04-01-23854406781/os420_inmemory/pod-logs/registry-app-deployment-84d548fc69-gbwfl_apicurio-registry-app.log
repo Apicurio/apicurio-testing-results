@@ -1,0 +1,27 @@
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-04+00-01 15:30:38 WARN [null] (main) Unrecognized configuration key "quarkus.otel.instrument.kafka" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2026-04+00-01 15:30:38 WARN [null] (main) The "quarkus.log.console.json" config property is deprecated and should not be used anymore.
+2026-04+00-01 15:30:38 WARN [null] (main) The "quarkus.http.cors" config property is deprecated and should not be used anymore.
+2026-04+00-01 15:30:38 WARN [null] (main) The "quarkus.log.console.color" config property is deprecated and should not be used anymore.
+2026-04+00-01 15:30:38 WARN [null] (main) The "quarkus.log.console.enable" config property is deprecated and should not be used anymore.
+2026-04+00-01 15:30:40 INFO [null] (executor-thread-2) SqlRegistryStorage constructed successfully.
+2026-04+00-01 15:30:40 INFO [null] (executor-thread-2) Using h2 SQL storage.
+2026-04+00-01 15:30:40 INFO [null] (executor-thread-2) Acquiring database initialization lock...
+2026-04+00-01 15:30:40 INFO [null] (executor-thread-2) Database initialization lock acquired.
+2026-04+00-01 15:30:40 INFO [null] (executor-thread-2) Checking to see if the DB is initialized.
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Database not initialized.
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Initializing the Apicurio Registry database.
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) 	Database type: h2
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Checking to see if the DB is up-to-date.
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Build's DB version is 102
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Releasing database initialization lock...
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Database initialization lock released.
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Using the following RegistryStorage implementation: io.apicurio.registry.storage.impl.sql.SqlRegistryStorage_ClientProxy
+2026-04+00-01 15:30:41 INFO [null] (executor-thread-2) Elasticsearch search index DISABLED
+2026-04+00-01 15:30:41 INFO [null] (main) Applied initial log level configuration at startup: io.apicurio = INFO
+2026-04+00-01 15:30:42 INFO [io.apicurio.registry.storage.impl.search.ElasticsearchStartupIndexer] (executor-thread-3) Storage is ready ? checking if Elasticsearch startup reindex is needed.
+2026-04+00-01 15:30:42 INFO [io.apicurio.registry.storage.impl.search.ElasticsearchStartupIndexer] (executor-thread-3) Elasticsearch search indexing is disabled, skipping startup reindex.
+2026-04+00-01 15:30:54 INFO [io.quarkus.vertx.http.runtime.filters.accesslog.JBossLoggingAccessLogReceiver] (executor-thread-2) "apicurio-registry.access method="GET" path="/apis/registry/v3/system/info" response_code="200" response_time="-" remote_ip="10.128.2.19" remote_user="-" user_agent="curl/8.5.0""

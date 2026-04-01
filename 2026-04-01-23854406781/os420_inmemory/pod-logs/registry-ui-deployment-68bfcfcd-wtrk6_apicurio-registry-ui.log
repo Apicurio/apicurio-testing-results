@@ -1,0 +1,18 @@
+---------------------------------------------
+Performing the Initial Config...
+---------------------------------------------
+Generating application config at: /opt/app-root/src/config.js
+Config successfully writen to file.
+---------------------------------------------
+Patching base hrefs...
+---------------------------------------------
+Updating base href in index.html file at: /opt/app-root/src/index.html
+Successfully updated the base href value.
+---------------------------------------------
+Config Complete. Nginx Server Started.....
+---------------------------------------------
+2026/04/01 15:30:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:67
+nginx: [warn] the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:67
+10.131.0.2 - - [01/Apr/2026:15:30:55 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.33" "-"
+10.131.0.2 - - [01/Apr/2026:15:31:02 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.33" "-"
+10.131.0.2 - - [01/Apr/2026:15:31:05 +0000] "GET /config.js HTTP/1.1" 200 168 "-" "kube-probe/1.33" "-"
