@@ -1,0 +1,39 @@
+Changes detected in configuration. Updating the server image.
+WARNING: Hostname v1 options [hostname-strict-backchannel] are still in use, please review your configuration
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-resource-attributes: Available only when Tracing is enabled.
+	- tracing-service-name: Available only when Tracing is enabled.
+Updating the configuration and installing your custom providers, if any. Please wait.
+2026-04-01 12:06:09,976 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 27489ms
+Server configuration updated and persisted. Run the following command to review the configuration:
+
+	kc.sh show-config
+
+Next time you run the server, just run:
+
+	kc.sh --verbose start --optimized
+
+WARNING: Hostname v1 options [hostname-strict-backchannel] are still in use, please review your configuration
+WARNING: The following used run time options are UNAVAILABLE and will be ignored during build time:
+ 	- tracing-service-name: Available only when Tracing is enabled.
+	- tracing-resource-attributes: Available only when Tracing is enabled.
+2026-04-01 12:06:14,954 INFO  [org.keycloak.url.HostnameV2ProviderFactory] (main) If hostname is specified, hostname-strict is effectively ignored
+2026-04-01 12:06:21,672 INFO  [org.hibernate.orm.jdbc.batch] (JPA Startup Thread) HHH100501: Automatic JDBC statement batching enabled (maximum batch size 32)
+2026-04-01 12:06:21,705 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: scripts:v1, token-exchange:v1
+2026-04-01 12:06:24,469 INFO  [org.keycloak.quarkus.runtime.storage.database.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2026-04-01 12:06:40,304 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups JDBC_PING discovery enabled.
+2026-04-01 12:06:41,155 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups Encryption enabled (mTLS).
+2026-04-01 12:06:41,586 INFO  [org.keycloak.jgroups.certificates.CertificateReloadManager] (main) Starting JGroups certificate reload manager
+2026-04-01 12:06:41,796 INFO  [org.infinispan.CONTAINER] (main) ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2026-04-01 12:06:42,280 INFO  [org.infinispan.CLUSTER] (main) ISPN000078: Starting JGroups channel `ISPN` with stack `jdbc-ping`
+2026-04-01 12:06:42,355 INFO  [org.jgroups.JChannel] (main) local_addr: 00000000-0000-0000-0000-000000000001(machine-id=27 bytes), name: keycloak-instance-0-11972
+2026-04-01 12:06:42,365 INFO  [org.jgroups.protocols.FD_SOCK2] (main) server listening on *:57800
+2026-04-01 12:06:42,478 INFO  [org.infinispan.CLUSTER] (main) ISPN000094: Received new cluster view for channel ISPN: [keycloak-instance-0-11972(machine-id=27 bytes)|0] (1) [keycloak-instance-0-11972(machine-id=27 bytes)]
+2026-04-01 12:06:42,479 INFO  [org.keycloak.jgroups.certificates.CertificateReloadManager] (main) Reloading JGroups Certificate
+2026-04-01 12:06:42,591 INFO  [org.infinispan.CLUSTER] (main) ISPN000079: Channel `ISPN` local address is `keycloak-instance-0-11972(machine-id=27 bytes)`, physical addresses are `[10.128.2.35:7800]`
+2026-04-01 12:06:43,374 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-instance-0-11972, Site name: null
+2026-04-01 12:06:43,865 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2026-04-01 12:06:46,973 INFO  [org.keycloak.services] (main) KC-SERVICES0077: Created temporary admin user with username temp-admin
+2026-04-01 12:06:47,261 INFO  [io.quarkus] (main) Keycloak 26.5.4 on JVM (powered by Quarkus 3.27.2) started in 36.998s. Listening on: http://0.0.0.0:8080. Management interface listening on http://0.0.0.0:9000.
+2026-04-01 12:06:47,261 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-04-01 12:06:47,261 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-postgresql, keycloak, narayana-jta, opentelemetry, reactive-routes, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
