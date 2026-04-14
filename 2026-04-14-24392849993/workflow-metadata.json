@@ -35,9 +35,9 @@
   },
   "execution": {
     "started_at": "2026-04-14T09:59:40Z",
-    "completed_at": "2026-04-14T10:52:05Z",
-    "duration_seconds": 3145,
-    "duration_formatted": "00:52:25"
+    "completed_at": "2026-04-14T10:59:20Z",
+    "duration_seconds": 3580,
+    "duration_formatted": "00:59:40"
   },
   "status": {
     "overall_result": "unknown"
@@ -116,10 +116,10 @@
   {
     "name": "Run Operator Tests / Test on OCP 4.20 / Provision cluster / Provision OCP 4.20 cluster ci420fab",
     "id": 71243188482,
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "started_at": "2026-04-14T09:59:52Z",
-    "completed_at": null,
+    "completed_at": "2026-04-14T10:52:15Z",
     "runner_name": "GitHub Actions 1000097180",
     "runner_group_name": "GitHub Actions"
   },
@@ -146,11 +146,41 @@
   {
     "name": "Run Operator Tests / Test on OCP 4.16 / Save Workflow Metadata",
     "id": 71250346980,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-04-14T10:51:47Z",
+    "completed_at": "2026-04-14T10:52:09Z",
+    "runner_name": "GitHub Actions 1000097221",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run Operator Tests / Test on OCP 4.20 / Operator tests",
+    "id": 71250417974,
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2026-04-14T10:52:19Z",
+    "completed_at": "2026-04-14T10:52:31Z",
+    "runner_name": "GitHub Actions 1000097224",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run Operator Tests / Test on OCP 4.20 / Destroy cluster / Destroy OCP cluster ci420fab",
+    "id": 71250452886,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-04-14T10:52:34Z",
+    "completed_at": "2026-04-14T10:59:00Z",
+    "runner_name": "GitHub Actions 1000097225",
+    "runner_group_name": "GitHub Actions"
+  },
+  {
+    "name": "Run Operator Tests / Test on OCP 4.20 / Save Workflow Metadata",
+    "id": 71251314318,
     "status": "in_progress",
     "conclusion": null,
-    "started_at": "2026-04-14T10:51:47Z",
+    "started_at": "2026-04-14T10:59:03Z",
     "completed_at": null,
-    "runner_name": "GitHub Actions 1000097221",
+    "runner_name": "GitHub Actions 1000097236",
     "runner_group_name": "GitHub Actions"
   }
 ]
